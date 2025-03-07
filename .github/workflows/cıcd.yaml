@@ -16,18 +16,18 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Prepare Docker
-        uses: KRYAYKN/ACTION-Prepare-Docker@m1 
+        uses: KRYAYKN/ACTION-Prepare-Docker@main 
 
       - name: Create Staging Directory
-        uses: KRYAYKN/ACTION-Creating-Staging-Directory@m1
+        uses: KRYAYKN/ACTION-Creating-Staging-Directory@main
         with:
           Build_StagingDirectory: ${{ github.workspace }}\Build\Staging
        
       - name: Install BcContainerHelper
-        uses: KRYAYKN/ACTION-DEVOPS-Install-Bccontainer-Helper@m1  
+        uses: KRYAYKN/ACTION-DEVOPS-Install-Bccontainer-Helper@main  
        
       - name: Create BC Container
-        uses: KRYAYKN/ACTION-Create-BC-Container@m1
+        uses: KRYAYKN/ACTION-Create-BC-Container@main
         with:
           CONTAINERNAME: ${{ vars.CONTAINERNAME }}
           ARTIFACTNAME: ${{ vars.ARTIFACTNAME }}
@@ -37,12 +37,12 @@ jobs:
           RepositoryDirectory: ${{ github.workspace }}
 
       - name: Increment App Version
-        uses: KRYAYKN/ACTION-Increase-App-Version@m1
+        uses: KRYAYKN/ACTION-Increase-App-Version@main
         with:
           Build_StagingDirectory: ${{ github.workspace }}\Build\Staging
           
       - name: Compile AL Application
-        uses: KRYAYKN/ACTION-Compile-AL-App@m1
+        uses: KRYAYKN/ACTION-Compile-AL-App@main
         with:
           CONTAINERNAME: ${{ vars.CONTAINERNAME }}
           BC_USERNAME: ${{ secrets.BC_USERNAME }}
@@ -67,16 +67,16 @@ jobs:
           path: ${{ github.workspace }}\Artifacts
 
       - name: Ensure Artifacts Directory Exists
-        uses: KRYAYKN/ACTION-Ensure-Artifacts-Directory@m1
+        uses: KRYAYKN/ACTION-Ensure-Artifacts-Directory@main
         with:
           ArtifactsDirectory: ${{ github.workspace }}\Artifacts    
 
       - name: Install BcContainerHelper
-        uses: KRYAYKN/ACTION-Install-Bccontainer-Helper@m1
+        uses: KRYAYKN/ACTION-Install-Bccontainer-Helper@main
 
 
       - name: Publish AL Application
-        uses: KRYAYKN/ACTION-Publish-AL-App@m1
+        uses: KRYAYKN/ACTION-Publish-AL-App@main
         with:
           containerName: ${{ vars.CONTAINERNAME }}
           artifactName: ${{ vars.ARTIFACTNAME }}
