@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - feature/FEM-579
+      - feature/FEM-1
 
 jobs:
   compile-app:
