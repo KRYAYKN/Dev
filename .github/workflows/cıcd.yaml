@@ -24,7 +24,7 @@ jobs:
           Build_StagingDirectory: ${{ github.workspace }}\Build\Staging
        
       - name: Install BcContainerHelper
-        uses: KRYAYKN/ACTION-DEVOPS-Install-Bccontainer-Helper@main  
+        uses: KRYAYKN/ACTION-Install-Bccontainer-Helper@main  
        
       - name: Create BC Container
         uses: KRYAYKN/ACTION-Create-BC-Container@main
