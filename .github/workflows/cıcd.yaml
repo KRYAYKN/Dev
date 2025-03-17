@@ -1,15 +1,35 @@
 name: Compile and Publish AL Application Workflow
 
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.head_ref }}-${{ github.event.pull_request.base.ref || github.ref_name }}
+  cancel-in-progress: true
+  
 on:
   workflow_dispatch:
   push:
-    branches:
-      - feature/FEM-1
+   # branches:
+     # - feature/FEM-1
 
 jobs:
+  set-environment:
+    runs-on: ubuntu-latest
+    outputs:
+      validation-environment: ${{ steps.environment.outputs.validation-environment }}
+      release-environment: ${{ steps.environment.outputs.release-environment }}
+      ignore-validation: ${{ steps.environment.outputs.ignore-validation-for-environment }}
+    steps:
+
+      - uses: KRYAYKN/dev1@main
+        id: environment
+        with:
+          source-branch: ${{ github.head_ref }}
+          destination-branch: ${{ github.base_ref }}
+          event-name: ${{ github.event_name }}
+          list-ignore-validation-for-environments: ${{ vars.IGNORE_VALIDATION_FOR_ENVIRONMENT }}  
   compile-app:
-    runs-on: windows-latest
-    environment: LocalizationSandbox
+    runs-on: windows-latest  
+    needs: set-environment
+    environment: ${{ needs.set-environment.outputs.validation-environment }}
     steps:
       
       - name: Checkout Code
@@ -57,7 +77,7 @@ jobs:
 
   publish-app:
     runs-on: windows-latest
-    environment: LocalizationSandbox
+    environment: ${{ needs.set-environment.outputs.release-environment }}
     needs: compile-app
     steps:
       - name: Download Build Artifact
@@ -81,7 +101,7 @@ jobs:
           containerName: ${{ vars.CONTAINERNAME }}
           artifactName: ${{ vars.ARTIFACTNAME }}
           TENANT_ID: ${{ secrets.TENANT_ID }}
-          ENVIRONMENT: ${{ vars.ENVIRONMENT }}
+          ENVIRONMENT: ${{ needs.set-environment.outputs.release-environment }} 
           REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
           ArtifactsDirectory: ${{ github.workspace }}\Artifacts
 

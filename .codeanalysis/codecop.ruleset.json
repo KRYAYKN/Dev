@@ -1,0 +1,106 @@
+{
+    "name": "CodeCop Rules",
+    "description": "Professional CodeCop ruleset for Business Central development",
+    "rules": [
+      {
+        "id": "AA0005",
+        "action": "Error",
+        "justification": "Variables must have meaningful names"
+      },
+      {
+        "id": "AA0008",
+        "action": "Error",
+        "justification": "Use StrSubstNo instead of string concatenation"
+      },
+      {
+        "id": "AA0013",
+        "action": "Error",
+        "justification": "Use CamelCase naming for procedures"
+      },
+      {
+        "id": "AA0021",
+        "action": "Error",
+        "justification": "Use documented procedures for exit points"
+      },
+      {
+        "id": "AA0037",
+        "action": "Error",
+        "justification": "Variables must be declared in alphabetical order"
+      },
+      {
+        "id": "AA0072",
+        "action": "Error",
+        "justification": "Page fields must have ToolTips"
+      },
+      {
+        "id": "AA0074",
+        "action": "Error",
+        "justification": "Use standard handling for events"
+      },
+      {
+        "id": "AA0131",
+        "action": "Error",
+        "justification": "Use UPPERCASE for reserved words"
+      },
+      {
+        "id": "AA0139",
+        "action": "Error",
+        "justification": "Define object ID ranges in app.json"
+      },
+      {
+        "id": "AA0181",
+        "action": "Error",
+        "justification": "Prefer text constants over hard-coded text"
+      },
+      {
+        "id": "AA0198",
+        "action": "Error",
+        "justification": "Fields must match appropriate data types"
+      },
+      {
+        "id": "AA0214",
+        "action": "Error",
+        "justification": "Use correct spacing in statements"
+      },
+      {
+        "id": "AA0217",
+        "action": "Error",
+        "justification": "Do not use WITH statements"
+      },
+      {
+        "id": "AA0218",
+        "action": "Error",
+        "justification": "Procedure size must not exceed 100 lines"
+      },
+      {
+        "id": "AA0222",
+        "action": "Error",
+        "justification": "Don't hardcode URLs"
+      },
+      {
+        "id": "AA0231",
+        "action": "Error", 
+        "justification": "Variables must use proper naming conventions"
+      },
+      {
+        "id": "AA0240",
+        "action": "Warning",
+        "justification": "Avoid single line statements with IF"
+      },
+      {
+        "id": "AA0470",
+        "action": "Error",
+        "justification": "Always specify DataClassification for table fields"
+      },
+      {
+        "id": "AL0118",
+        "action": "Error",
+        "justification": "Avoid implicit WITH statements"
+      },
+      {
+        "id": "AL0254",
+        "action": "Error",
+        "justification": "Provide procedures with meaningful parameter names"
+      }
+    ]
+  }

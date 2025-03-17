@@ -1,0 +1,106 @@
+{
+    "name": "UICop Rules",
+    "description": "Professional UICop ruleset for Business Central UI development",
+    "rules": [
+      {
+        "id": "AA0072",
+        "action": "Error",
+        "justification": "Fields must have ToolTip property set"
+      },
+      {
+        "id": "AA0074",
+        "action": "Error",
+        "justification": "OnValidate triggers must not modify UI elements"
+      },
+      {
+        "id": "AA0175",
+        "action": "Error",
+        "justification": "Use AccessByPermission on actions and fields correctly"
+      },
+      {
+        "id": "AA0213",
+        "action": "Error",
+        "justification": "Don't set back-colors on pages"
+      },
+      {
+        "id": "AA0214",
+        "action": "Error",
+        "justification": "Page fields should have proper spacing"
+      },
+      {
+        "id": "AA0215",
+        "action": "Error",
+        "justification": "Do not add page controls that are not used"
+      },
+      {
+        "id": "AA0216",
+        "action": "Error",
+        "justification": "Required fields should be highlighted"
+      },
+      {
+        "id": "AA0219",
+        "action": "Error",
+        "justification": "Page actions must have meaningful captions"
+      },
+      {
+        "id": "AA0220",
+        "action": "Error",
+        "justification": "Use proper image on action items"
+      },
+      {
+        "id": "AA0221",
+        "action": "Error",
+        "justification": "ToolTips must be descriptive"
+      },
+      {
+        "id": "AA0222",
+        "action": "Error",
+        "justification": "Caption must be properly capitalized"
+      },
+      {
+        "id": "AA0223",
+        "action": "Error",
+        "justification": "Actions must have proper promotion in the UI"
+      },
+      {
+        "id": "AA0224",
+        "action": "Warning",
+        "justification": "Pages should have AboutTitle and AboutText properties"
+      },
+      {
+        "id": "AA0226",
+        "action": "Error",
+        "justification": "Fields should have ShowMandatory set when required"
+      },
+      {
+        "id": "AA0228",
+        "action": "Error",
+        "justification": "Page groups must have proper GroupType"
+      },
+      {
+        "id": "AA0233",
+        "action": "Error",
+        "justification": "PromotedCategory must be set for promoted actions"
+      },
+      {
+        "id": "AA0234",
+        "action": "Error",
+        "justification": "Use proper field grouping on pages"
+      },
+      {
+        "id": "AA0235",
+        "action": "Error",
+        "justification": "Arrange fields in logical layout on list pages"
+      },
+      {
+        "id": "AA0241",
+        "action": "Error",
+        "justification": "Fields with the same name should have consistent captions"
+      },
+      {
+        "id": "AA0448",
+        "action": "Error",
+        "justification": "Pages must have instructions"
+      }
+    ]
+  }
