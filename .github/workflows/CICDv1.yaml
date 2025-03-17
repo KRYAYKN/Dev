@@ -1,4 +1,4 @@
-name: Compile and Publish AL Application Workflow
+name: CICD-v1 Workflow
 
 concurrency:
   group: ci-${{ github.workflow }}-${{ github.head_ref }}-${{ github.event.pull_request.base.ref || github.ref_name }}
