@@ -92,6 +92,16 @@ jobs:
           LICENSE_FILE: ${{ secrets.LICENSE_FILE }}
           RepositoryDirectory: ${{ github.workspace }}
         continue-on-error: false
+
+      - name: Set container-created Output Manually
+        id: container-check
+        run: |
+          if (docker ps -a --filter "name=${{ vars.CONTAINERNAME }}" --format "{{.Names}}" | grep -q "${{ vars.CONTAINERNAME }}"); then
+            echo "container-created=true" >> $GITHUB_OUTPUT
+          else
+            echo "container-created=false" >> $GITHUB_OUTPUT
+          fi
+        shell: bash  
       
       # Save the container state to potentially be reused
       - name: Stop Business Central Container
@@ -395,13 +405,22 @@ jobs:
         uses: KRYAYKN/ACTION-Install-Bccontainer-Helper@main
         continue-on-error: true
         
-      - name: Clean Docker Resources
+      - name: Clean Up Docker Containers and Images
         run: |
-          docker ps -a | Where-Object {$_ -match "${{ vars.CONTAINERNAME }}"} | ForEach-Object { 
-            $containerId = $_.Split()[0]
-            Write-Host "Removing container $containerId"
-            docker rm -f $containerId 2>$null
+          echo "Removing all stopped containers..."
+          docker ps -a -q | ForEach-Object {
+            Write-Host "Removing container $_"
+            docker rm -f $_
           }
-          docker images | Where-Object {$_ -match "${{ vars.CONTAINERNAME }}"} | ForEach-
+      
+          echo "Removing all unused images..."
+          docker images -q | ForEach-Object {
+            Write-Host "Removing image $_"
+            docker rmi -f $_
+          }
+      
+          echo "Cleanup completed successfully."
+        shell: pwsh
+      
 
             #dddddDD
