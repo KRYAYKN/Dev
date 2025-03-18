@@ -96,15 +96,17 @@ jobs:
       # Save the container state to potentially be reused
       - name: Save Docker Container State
         run: |
-          $containerName = "${{ vars.CONTAINERNAME }}".ToLower()
+          $containerName = "${{ vars.CONTAINERNAME }}"
+          $imageName = $containerName.ToLower() + "_saved"  # Küçük harfe çevir
           if (-not (docker ps -q -f name=$containerName)) {
-            echo "::error::Container not running. Setup failed."
-            exit 1
+           echo "::error::Container not running. Setup failed."
+           exit 1
           }
-          docker commit $containerName "${containerName}_saved"
-          docker save "${containerName}_saved" -o container_state.tar
+          docker commit $containerName $imageName
+          docker save $imageName -o container_state.tar
           echo "Container saved successfully."
         shell: pwsh
+    
     
         
       - name: Upload Container State
