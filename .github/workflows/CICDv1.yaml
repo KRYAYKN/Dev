@@ -92,16 +92,20 @@ jobs:
           LICENSE_FILE: ${{ secrets.LICENSE_FILE }}
           RepositoryDirectory: ${{ github.workspace }}
         continue-on-error: false
-
+      
       - name: Set container-created Output Manually
         id: container-check
         run: |
-          if (docker ps -a --filter "name=${{ vars.CONTAINERNAME }}" --format "{{.Names}}" | grep -q "${{ vars.CONTAINERNAME }}"); then
-            echo "container-created=true" >> $GITHUB_OUTPUT
-          else
-            echo "container-created=false" >> $GITHUB_OUTPUT
-          fi
-        shell: bash  
+          $containerName = "${{ vars.CONTAINERNAME }}"
+          $containerExists = docker ps -a --filter "name=$containerName" --format "{{.Names}}"
+      
+          if ($containerExists -match $containerName) {
+              echo "container-created=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          } else {
+              echo "container-created=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          }
+        shell: pwsh
+      
       
       # Save the container state to potentially be reused
       - name: Stop Business Central Container
