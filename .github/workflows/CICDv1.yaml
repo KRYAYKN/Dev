@@ -94,16 +94,30 @@ jobs:
         continue-on-error: false
       
       # Save the container state to potentially be reused
+      - name: Stop Business Central Container
+        run: |
+          $containerName = "${{ vars.CONTAINERNAME }}"
+          echo "Stopping container: $containerName"
+          docker stop $containerName
+        shell: pwsh
+    
       - name: Save Docker Container State
         run: |
           $containerName = "${{ vars.CONTAINERNAME }}"
-          $imageName = $containerName.ToLower() + "_saved"  # Küçük harfe çevir
-          if (-not (docker ps -q -f name=$containerName)) {
-           echo "::error::Container not running. Setup failed."
-           exit 1
+          $imageName = $containerName.ToLower() + "_saved"
+        
+          # Konteynerin gerçekten durduğunu kontrol et
+          if (-not (docker ps -a -q -f name=$containerName)) {
+            echo "::error::Container not found. Setup failed."
+            exit 1
           }
+    
+          echo "Committing container: $containerName"
           docker commit $containerName $imageName
+    
+          echo "Saving Docker image: $imageName"
           docker save $imageName -o container_state.tar
+    
           echo "Container saved successfully."
         shell: pwsh
     
