@@ -60,7 +60,7 @@ jobs:
 
   compile-app:
     runs-on: windows-latest
-    needs: set-environment
+    needs: [set-environment, code-analysis]
     environment: ${{ needs.set-environment.outputs.release-environment }}
     steps:
       - name: Checkout Code

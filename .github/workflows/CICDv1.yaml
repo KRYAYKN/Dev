@@ -6,31 +6,7 @@ concurrency:
   
 on:
   workflow_dispatch:
-    inputs:
-      version_increment:
-        description: 'Sürüm artış türü'
-        required: true
-        default: 'patch'
-        type: choice
-        options:
-          - patch
-          - minor
-          - major
-  push:
-    branches:
-      - feature/FEM-1
-  pull_request:
-    branches:
-        - prod
-        - staging
-        - uat
-        - prerelease
-        - data-migration
-        - qa
-        - perftest
-        - 'release/**'
-        - 'deploy/**'
-        - 'validation/**'
+
 
 jobs:
   set-environment:
