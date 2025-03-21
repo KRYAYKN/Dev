@@ -6,10 +6,10 @@ concurrency:
   
 on:
   workflow_dispatch:
-  push:
+#  push:
    # branches:
      # - feature/FEM-1
-  pull_request:
+ # pull_request:
    # branches:
     #  - main
      # - release/*
