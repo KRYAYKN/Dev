@@ -12,10 +12,11 @@
     "logo": "",
     "dependencies": [
 
+
     ],
     "screenshots": [],
     "platform": "1.0.0.0",
-    "application": "25.3.0.0",
+    "application": "25.5.0.0",
     "idRanges": [
       {
         "from": 66100,

@@ -44,24 +44,11 @@ jobs:
           echo "Version Increment: ${{ github.event.inputs.version_increment || 'patch' }}"
         shell: bash
 
-  code-analysis:
-   runs-on: windows-latest
-   needs: [set-environment]
-   steps:
-     - name: Checkout Repository
-       uses: actions/checkout@v4
-        
-     - name: Run AL Code Analysis
-       uses: KRYAYKN/ACTION-Code-Analysis@main
-       with:
-         project-path: "${{ github.workspace }}"
-         package-cache-path: "${{ github.workspace }}/.alpackages"
-         output-path: "${{ github.workspace }}/Build"
-         ruleset-path: "${{ github.workspace }}/.alcop/ruleset.json"      
+  
 
   compile-app:
     runs-on: windows-latest
-    needs: [set-environment, code-analysis]
+    needs: [set-environment]
     environment: ${{ needs.set-environment.outputs.release-environment }}
     steps:
       - name: Checkout Code
@@ -140,3 +127,36 @@ jobs:
           ArtifactsDirectory: ${{ github.workspace }}\Artifacts
 
           #dddddddddddddddddddddddddd DDDDDDDD
+
+  run-al-tests:
+        runs-on: windows-latest
+        needs: [set-environment, publish-app]
+        if: needs.set-environment.outputs.release-environment == 'dev' || needs.set-environment.outputs.release-environment == 'test' || needs.set-environment.outputs.release-environment == 'qa'
+        environment: ${{ needs.set-environment.outputs.release-environment }}
+        steps:
+          - name: Checkout Repository
+            uses: actions/checkout@v4
+            
+          - name: Download Build Artifact
+            uses: actions/download-artifact@v4
+            with:
+                name: build-package
+                path: ${{ github.workspace }}\Artifacts
+            
+          - name: Run AL Tests
+            uses: KRYAYKN/ACTION-Unit-Test-Runner@main
+            with:
+                sandbox-url: ${{ needs.set-environment.outputs.release-environment }}
+                tenant-id: ${{ secrets.TENANT_ID }}
+                refresh-token: ${{ secrets.REFRESH_TOKEN }}
+                test-suite-name: "DEFAULT"
+                app-file-path: ${{ github.workspace }}\Artifacts\*.app
+            
+          - name: Publish Test Report
+            uses: dorny/test-reporter@v1
+            if: always()
+            with:
+                name: AL Test Results
+                path: TestResults.xml
+                reporter: java-junit
+                fail-on-error: true      
