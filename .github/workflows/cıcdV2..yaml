@@ -83,7 +83,7 @@ jobs:
           IncrementType: ${{ needs.set-environment.outputs.version-increment }}
           
       - name: Compile AL Application
-        uses: KRYAYKN/ACTION-Compile-AL-App@m1
+        uses: KRYAYKN/ACTION-Compile-AL-App@main
         with:
           CONTAINERNAME: ${{ vars.CONTAINERNAME }}
           BC_USERNAME: ${{ secrets.BC_USERNAME }}
