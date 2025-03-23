@@ -131,7 +131,7 @@ jobs:
   run-al-tests:
         runs-on: windows-latest
         needs: [set-environment, publish-app]
-        if: needs.set-environment.outputs.release-environment == 'dev' || needs.set-environment.outputs.release-environment == 'test' || needs.set-environment.outputs.release-environment == 'qa'
+        if: needs.set-environment.outputs.release-environment == 'LocalizationSandbox' || needs.set-environment.outputs.release-environment == 'test' || needs.set-environment.outputs.release-environment == 'qa'
         environment: ${{ needs.set-environment.outputs.release-environment }}
         steps:
           - name: Checkout Repository
