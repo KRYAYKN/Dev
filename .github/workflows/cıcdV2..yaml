@@ -126,7 +126,7 @@ jobs:
           REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
           ArtifactsDirectory: ${{ github.workspace }}\Artifacts
 
-          #dddddddddddddddddddddddddd DDDDDDDD
+          #dddddddddddddddddddddddddd DDDDDDDDdd
 
   run-al-tests:
         runs-on: windows-latest
