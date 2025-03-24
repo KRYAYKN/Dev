@@ -126,7 +126,7 @@ jobs:
           REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
           ArtifactsDirectory: ${{ github.workspace }}\Artifacts
 
-          #dddddddddddddddddddddddddd DDDDDDDDdd
+          #dddddddddddddddddddddddddd DDDDDDDDdddd
 
   run-al-tests:
         runs-on: windows-latest
@@ -150,7 +150,7 @@ jobs:
                 tenant-id: ${{ secrets.TENANT_ID }}
                 refresh-token: ${{ secrets.REFRESH_TOKEN }}
                 test-suite-name: "DEFAULT"
-                app-file-path: ${{ github.workspace }}\Artifacts\*.app
+                
             
           - name: Publish Test Report
             uses: dorny/test-reporter@v1
