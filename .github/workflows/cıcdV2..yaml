@@ -90,28 +90,8 @@ jobs:
           BC_PASSWORD: ${{ secrets.BC_PASSWORD }}
           Build_StagingDirectory: ${{ github.workspace }}\Artifacts
 
-      - name: Upload Build
-        uses: actions/upload-artifact@v4
-        with:
-          name: build-package
-          path: ${{ github.workspace }}\Artifacts
-
-  run-al-tests:
-    runs-on: windows-latest
-    needs: [set-environment, compile-app]
-    if: needs.set-environment.outputs.release-environment == 'LocalizationSandbox' || needs.set-environment.outputs.release-environment == 'test' || needs.set-environment.outputs.release-environment == 'qa'
-    environment: ${{ needs.set-environment.outputs.release-environment }}
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-        
-      - name: Download Build Artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: build-package
-          path: ${{ github.workspace }}\Artifacts
-            
       - name: Run AL Tests
+        if: needs.set-environment.outputs.release-environment == 'LocalizationSandbox' || needs.set-environment.outputs.release-environment == 'test' || needs.set-environment.outputs.release-environment == 'qa'
         uses: KRYAYKN/ACTION-Unit-Test-Runner@main
         with:
           container-name: ${{ vars.CONTAINERNAME }}
@@ -119,21 +99,25 @@ jobs:
           test-suite-name: "DEFAULT"
             
       - name: Publish Test Report
+        if: (needs.set-environment.outputs.release-environment == 'LocalizationSandbox' || needs.set-environment.outputs.release-environment == 'test' || needs.set-environment.outputs.release-environment == 'qa') && always()
         uses: dorny/test-reporter@v1
-        if: always()
         with:
           name: AL Test Results
           path: TestResults.xml
           reporter: java-junit
-          fail-on-error: true
-                    
-                
-                          
+          fail-on-error: true    
 
+      - name: Upload Build
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-package
+          path: ${{ github.workspace }}\Artifacts
+    
+                          
   publish-app:
     runs-on: windows-latest
     environment: ${{ needs.set-environment.outputs.release-environment }}
-    needs: [set-environment, compile-app, run-al-tests]
+    needs: [set-environment, compile-app]
     if: needs.set-environment.outputs.release-environment != ''
     steps:
       - name: Download Build Artifact
