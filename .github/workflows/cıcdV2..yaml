@@ -90,6 +90,12 @@ jobs:
           BC_PASSWORD: ${{ secrets.BC_PASSWORD }}
           Build_StagingDirectory: ${{ github.workspace }}\Artifacts
 
+      - name: Upload Build
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-package
+          path: ${{ github.workspace }}\Artifacts    
+
       - name: Run AL Tests
         if: needs.set-environment.outputs.release-environment == 'LocalizationSandbox' || needs.set-environment.outputs.release-environment == 'test' || needs.set-environment.outputs.release-environment == 'qa'
         uses: KRYAYKN/ACTION-Unit-Test-Runner@main
@@ -108,11 +114,7 @@ jobs:
           reporter: java-junit
           fail-on-error: true    
 
-      - name: Upload Build
-        uses: actions/upload-artifact@v4
-        with:
-          name: build-package
-          path: ${{ github.workspace }}\Artifacts
+
     
                           
   publish-app:
