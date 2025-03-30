@@ -101,7 +101,6 @@ jobs:
         uses: KRYAYKN/ACTION-Unit-Test-Runner@main
         with:
           container-name: ${{ vars.CONTAINERNAME }}
-          test-suite-name: "DEFAULT"
           BC_USERNAME: ${{ secrets.BC_USERNAME }}
           BC_PASSWORD: ${{ secrets.BC_PASSWORD }}
           Build_StagingDirectory: ${{ github.workspace }}\Artifacts
