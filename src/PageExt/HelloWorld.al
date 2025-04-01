@@ -6,6 +6,6 @@ pageextension 66110 CustomerListExt extends "Customer List"
 {
     trigger OnOpenPage();
     begin
-        Message('App published: Hello Formula DevOps world 21.03.2025 code analysis added  !!!');
+        Message('App published: Hello Formula DevOps world 21.03.2025 unit tests added  !!!');
     end;
 }
