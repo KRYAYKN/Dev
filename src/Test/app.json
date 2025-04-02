@@ -17,7 +17,6 @@
     "features": [
       "NoImplicitWith"
     ],
-    "test": true,
     "dependencies": [
       {
         "id": "ab48383d-1c96-45ad-99cb-4181188821f9",
