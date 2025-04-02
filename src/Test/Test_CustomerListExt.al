@@ -1,4 +1,4 @@
-codeunit 66111 "Customer List Ext Tests"
+codeunit 66601 "Customer List Ext Tests"
 {
     Subtype = Test;
     TestPermissions = Disabled;
