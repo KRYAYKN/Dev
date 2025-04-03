@@ -28,4 +28,5 @@ codeunit 66601 "Customer List Ext Tests"
         // [THEN] No error occurs if at least one customer exists
         Customer.FindFirst();
     end;
+
 }
