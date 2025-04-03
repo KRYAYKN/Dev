@@ -1,7 +1,7 @@
 codeunit 66601 "Customer List Ext Tests"
 {
     Subtype = Test;
-    TestPermissions = Disabled;
+
 
     [Test]
     procedure TestOpenCustomerList()

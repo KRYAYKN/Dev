@@ -36,7 +36,7 @@ jobs:
           destination-branch: ${{ github.base_ref }}
           event-name: ${{ github.event_name }}
           list-ignore-validation-for-environments: ${{ vars.IGNORE_VALIDATION_FOR_ENVIRONMENT }}
-          list-ignore-release-for-environments: ${{ vars.IGNORE_RELEASE_FOR_ENVIRONMENT }}
+
 
       - name: Log Environment Selection
         run: |
