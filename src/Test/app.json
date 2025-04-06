@@ -27,14 +27,14 @@
   {
     "id": "23de40a6-dfe8-4f80-80db-d70f83ce8caf",
     "name": "Test Runner",
-    "publisher": "Microsoft",
-    "version": "[25.0.0.0,30.0.0.0)"
+    "publisher": "Microsoft"
+
   },
   {
     "id": "5d86850b-0d76-4eca-bd7b-951ad998e997",
     "name": "Library Assert",
-    "publisher": "Microsoft",
-    "version": "[25.0.0.0,30.0.0.0)"
+    "publisher": "Microsoft"
+
   }
 ]
 }
