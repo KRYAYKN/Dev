@@ -22,7 +22,7 @@
     "id": "ab48383d-1c96-45ad-99cb-4181188821f9",
     "name": "Saint-gobain",
     "publisher": "pargesoft",
-    "version": "1.0.0.0"
+    "version": "[1.0.0.0,)"
   },
   {
     "id": "23de40a6-dfe8-4f80-80db-d70f83ce8caf",
