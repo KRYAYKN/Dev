@@ -1,0 +1,23 @@
+{
+    "id": "0f378e0f-b123-4cb1-9b3a-9de2c2c2c002",
+    "name": "Saint-gobain Test",
+    "publisher": "pargesoft",
+    "version": "1.0.0.0",
+    "brief": "Test app for Saint-gobain",
+    "description": "Unit tests for Saint-gobain app",
+    "application": "25.5.0.0",
+    "platform": "25.0.0.0",
+    "idRanges": [
+      {
+        "from": 66601,
+        "to": 66700
+      }
+    ],
+    "runtime": "12.0",
+    "features": [
+      "NoImplicitWith"
+    ],
+"dependencies": [
+
+]
+}

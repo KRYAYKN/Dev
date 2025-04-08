@@ -1,0 +1,70 @@
+{
+  "version": "0.2",
+  "toolInfo": {
+    "toolName": "Microsoft (R) AL Compiler",
+    "productVersion": "15.0.21",
+    "fileVersion": "15.0.21"
+  },
+  "issues": [
+    {
+      "ruleId": "AA0215",
+      "locations": [
+        {
+          "analysisTarget": [
+            {
+              "uri": "C:\\ProgramData\\BcContainerHelper\\Extensions\\testgb\\app\\Saint-gobain.test\\src\\Codeunit\\Test_CustomerListExt.al",
+              "region": {
+                "startLine": 1,
+                "startColumn": 16,
+                "endLine": 1,
+                "endColumn": 41
+              }
+            }
+          ]
+        }
+      ],
+      "shortMessage": "The file Test_CustomerListExt.al has an incorrect name. The valid name is CustomerListExtTests.Codeunit.al.",
+      "fullMessage": "Follow [the style guide](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/compliance/apptest-bestpracticesforalcode#file-naming) about the best practices for naming.",
+      "properties": {
+        "severity": "Warning",
+        "warningLevel": "1",
+        "defaultSeverity": "Warning",
+        "title": "Follow [the style guide](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/compliance/apptest-bestpracticesforalcode#file-naming) about the best practices for naming.",
+        "category": "Readability",
+        "helpLink": "https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/analyzers/codecop-aa0215?wt.mc_id=d365bc_inproduct_alextension",
+        "isEnabledByDefault": "True",
+        "isSuppressedInSource": "False"
+      }
+    },
+    {
+      "ruleId": "AA0215",
+      "locations": [
+        {
+          "analysisTarget": [
+            {
+              "uri": "C:\\ProgramData\\BcContainerHelper\\Extensions\\testgb\\app\\Saint-gobain.app\\src\\PageExt\\HelloWorld.al",
+              "region": {
+                "startLine": 5,
+                "startColumn": 21,
+                "endLine": 5,
+                "endColumn": 36
+              }
+            }
+          ]
+        }
+      ],
+      "shortMessage": "The file HelloWorld.al has an incorrect name. The valid name is CustomerListExt.PageExt.al.",
+      "fullMessage": "Follow [the style guide](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/compliance/apptest-bestpracticesforalcode#file-naming) about the best practices for naming.",
+      "properties": {
+        "severity": "Warning",
+        "warningLevel": "1",
+        "defaultSeverity": "Warning",
+        "title": "Follow [the style guide](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/compliance/apptest-bestpracticesforalcode#file-naming) about the best practices for naming.",
+        "category": "Readability",
+        "helpLink": "https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/analyzers/codecop-aa0215?wt.mc_id=d365bc_inproduct_alextension",
+        "isEnabledByDefault": "True",
+        "isSuppressedInSource": "False"
+      }
+    }
+  ]
+}

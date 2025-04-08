@@ -1,1 +1,0 @@
-curl --location --request POST 'https://saint-gobain.accelq.io/awb/api/2.0/saintgobain/FormulaERPMigration/test-exec/jobs/templates/14720/run' --header 'user_id: koray.ayakin@pargesoft.com' --header 'api_key: jNk1b9YCFkXO2cARWvttKVXt18uu04_Dxvv13W6kYVw' --header 'Content-Type: application/json'

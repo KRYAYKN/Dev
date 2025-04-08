@@ -1,5 +1,0 @@
-<assembly name="66601 Customer List Ext Tests" test-framework="PS Test Runner" run-date="2025-04-08" run-time="14:54:22" total="1" passed="1" failed="0" skipped="0" time="1.686">
-  <collection name="Customer List Ext Tests" total="1" passed="1" failed="0" skipped="0" time="1.686" Skipped="0">
-    <test name="Customer List Ext Tests:TestHelloWorldMessage" method="TestHelloWorldMessage" time="0.606" result="Pass" />
-  </collection>
-</assembly>
