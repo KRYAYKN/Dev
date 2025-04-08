@@ -1,0 +1,108 @@
+name: Compile and Publish AL Application Workflow
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.head_ref }}-${{ github.event.pull_request.base.ref || github.ref_name }}
+  cancel-in-progress: true
+  
+on:
+  workflow_dispatch:
+#  push:
+   # branches:
+     # - feature/FEM-1
+
+jobs:
+  set-environment:
+    runs-on: ubuntu-latest
+    outputs:
+      validation-environment: ${{ steps.environment.outputs.validation-environment }}
+      release-environment: ${{ steps.environment.outputs.release-environment }}
+      ignore-validation: ${{ steps.environment.outputs.ignore-validation-for-environment }}
+    steps:
+
+      - uses: KRYAYKN/dev1@main
+        id: environment
+        with:
+          source-branch: ${{ github.head_ref }}
+          destination-branch: ${{ github.base_ref }}
+          event-name: ${{ github.event_name }}
+          list-ignore-validation-for-environments: ${{ vars.IGNORE_VALIDATION_FOR_ENVIRONMENT }}  
+  compile-app:
+    runs-on: windows-latest  
+    needs: set-environment
+    environment: ${{ needs.set-environment.outputs.validation-environment }}
+    steps:
+      
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Prepare Docker
+        uses: KRYAYKN/ACTION-Prepare-Docker@main 
+
+      - name: Create Staging Directory
+        uses: KRYAYKN/ACTION-Creating-Staging-Directory@main
+        with:
+          Build_StagingDirectory: ${{ github.workspace }}\Build\Staging
+       
+      - name: Install BcContainerHelper
+        uses: KRYAYKN/ACTION-Install-Bccontainer-Helper@main  
+       
+      - name: Create BC Container
+        uses: KRYAYKN/ACTION-Create-BC-Container@main
+        with:
+          CONTAINERNAME: ${{ vars.CONTAINERNAME }}
+          ARTIFACTNAME: ${{ vars.ARTIFACTNAME }}
+          BC_USERNAME: ${{ secrets.BC_USERNAME }}
+          BC_PASSWORD: ${{ secrets.BC_PASSWORD }}
+          LICENSE_FILE: ${{ secrets.LICENSE_FILE }}
+          RepositoryDirectory: ${{ github.workspace }}
+
+      - name: Increment App Version
+        uses: KRYAYKN/ACTION-Increase-App-Version@main
+        with:
+          Build_StagingDirectory: ${{ github.workspace }}\Build\Staging
+          
+      - name: Compile AL Application
+        uses: KRYAYKN/ACTION-Compile-AL-App@main
+        with:
+          CONTAINERNAME: ${{ vars.CONTAINERNAME }}
+          BC_USERNAME: ${{ secrets.BC_USERNAME }}
+          BC_PASSWORD: ${{ secrets.BC_PASSWORD }}
+          Build_StagingDirectory: ${{ github.workspace }}\Artifacts
+
+      - name: Upload Build
+        uses: actions/upload-artifact@v4  
+        with:
+          name: build-package
+          path: ${{ github.workspace }}\Artifacts
+
+  publish-app:
+    runs-on: windows-latest
+    environment: ${{ needs.set-environment.outputs.release-environment }}
+    needs: compile-app
+    steps:
+      - name: Download Build Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: build-package
+          path: ${{ github.workspace }}\Artifacts
+
+      - name: Ensure Artifacts Directory Exists
+        uses: KRYAYKN/ACTION-Ensure-Artifacts-Directory@main
+        with:
+          ArtifactsDirectory: ${{ github.workspace }}\Artifacts    
+
+      - name: Install BcContainerHelper
+        uses: KRYAYKN/ACTION-Install-Bccontainer-Helper@main
+
+
+      - name: Publish AL Application
+        uses: KRYAYKN/ACTION-Publish-AL-App@main
+        with:
+          containerName: ${{ vars.CONTAINERNAME }}
+          artifactName: ${{ vars.ARTIFACTNAME }}
+          TENANT_ID: ${{ secrets.TENANT_ID }}
+          ENVIRONMENT: ${{ needs.set-environment.outputs.release-environment }} 
+          REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
+          ArtifactsDirectory: ${{ github.workspace }}\Artifacts
+
+          #dddDD

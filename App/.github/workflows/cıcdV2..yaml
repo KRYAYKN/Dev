@@ -1,0 +1,143 @@
+name: Compile and Publish AL Application Workflow
+
+on:
+  workflow_dispatch:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches:
+      - prod
+      - staging
+      - uat
+      - prerelease
+      - data-migration
+      - qa
+      - perftest
+      - 'release/**'
+      - 'deploy/**'
+      - 'validation/**'
+    paths-ignore:
+      - 'README.md'
+      - '.github/**'  
+
+jobs:
+  set-environment:
+    runs-on: ubuntu-latest
+    outputs:
+      validation-environment: ${{ steps.environment.outputs.release-environment }}
+      release-environment: ${{ steps.environment.outputs.release-environment }}
+      ignore-validation: ${{ steps.environment.outputs.ignore-validation-for-environment }}
+      version-increment: ${{ github.event.inputs.version_increment || 'patch' }}
+    steps:
+      - name: Determine Environment Settings
+        uses: KRYAYKN/dev1@main
+        id: environment
+        with:
+          source-branch: ${{ github.head_ref }}
+          destination-branch: ${{ github.base_ref }}
+          event-name: ${{ github.event_name }}
+          list-ignore-validation-for-environments: ${{ vars.IGNORE_VALIDATION_FOR_ENVIRONMENT }}
+
+      - name: Log Environment Selection
+        run: |
+          echo "Validation Environment: ${{ steps.environment.outputs.release-environment }}"
+          echo "Release Environment: ${{ steps.environment.outputs.release-environment }}"
+          echo "Version Increment: ${{ github.event.inputs.version_increment || 'patch' }}"
+        shell: bash
+
+  compile-app:
+    runs-on: windows-latest
+    needs: [set-environment]
+    environment: ${{ needs.set-environment.outputs.release-environment }}
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+      - name: Prepare Docker
+        uses: KRYAYKN/ACTION-Prepare-Docker@main
+      - name: Create Staging Directory
+        uses: KRYAYKN/ACTION-Creating-Staging-Directory@main
+        with:
+          Build_StagingDirectory: ${{ github.workspace }}\Build\Staging
+      - name: Install BcContainerHelper
+        uses: KRYAYKN/ACTION-Install-Bccontainer-Helper@main
+      - name: Create BC Container
+        uses: KRYAYKN/ACTION-Create-BC-Container@main
+        with:
+          CONTAINERNAME: ${{ vars.CONTAINERNAME }}
+          ARTIFACTNAME: ${{ vars.ARTIFACTNAME }}
+          BC_USERNAME: ${{ secrets.BC_USERNAME }}
+          BC_PASSWORD: ${{ secrets.BC_PASSWORD }}
+          LICENSE_FILE: ${{ secrets.LICENSE_FILE }}
+          RepositoryDirectory: ${{ github.workspace }}
+      - name: Increment App Version
+        if: needs.set-environment.outputs.release-environment != 'dev'
+        id: increment-version
+        uses: KRYAYKN/ACTION-Increase-App-Version@main
+        with:
+          Build_StagingDirectory: ${{ github.workspace }}\Build\Staging
+          IncrementType: ${{ needs.set-environment.outputs.version-increment }}
+      - name: Compile AL Application
+        uses: KRYAYKN/ACTION-Compile-AL-App@main
+        with:
+          CONTAINERNAME: ${{ vars.CONTAINERNAME }}
+          BC_USERNAME: ${{ secrets.BC_USERNAME }}
+          BC_PASSWORD: ${{ secrets.BC_PASSWORD }}
+          Build_StagingDirectory: ${{ github.workspace }}\Artifacts
+      - name: Upload Build
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-package
+          path: ${{ github.workspace }}\Artifacts
+
+  publish-app:
+    runs-on: windows-latest
+    environment: ${{ needs.set-environment.outputs.release-environment }}
+    needs: [set-environment, compile-app]
+    if: needs.set-environment.outputs.release-environment != ''
+    steps:
+      - name: Download Build Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: build-package
+          path: ${{ github.workspace }}\Artifacts
+      - name: Ensure Artifacts Directory Exists
+        uses: KRYAYKN/ACTION-Ensure-Artifacts-Directory@main
+        with:
+          ArtifactsDirectory: ${{ github.workspace }}\Artifacts
+      - name: Install BcContainerHelper
+        uses: KRYAYKN/ACTION-Install-Bccontainer-Helper@main
+      - name: Publish AL Application
+        uses: KRYAYKN/ACTION-Publish-AL-App@main
+        with:
+          containerName: ${{ vars.CONTAINERNAME }}
+          artifactName: ${{ vars.ARTIFACTNAME }}
+          TENANT_ID: ${{ secrets.TENANT_ID }}
+          ENVIRONMENT: ${{ needs.set-environment.outputs.release-environment }}
+          REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
+          ArtifactsDirectory: ${{ github.workspace }}\Artifacts
+
+  run-unit-tests-on-saas:
+    runs-on: windows-latest
+    environment: ${{ needs.set-environment.outputs.release-environment }}
+    needs: [set-environment, compile-app, publish-app]
+    if: needs.set-environment.outputs.release-environment == 'qa' || needs.set-environment.outputs.release-environment == 'LocalizationSandbox' || needs.set-environment.outputs.release-environment == 'test'
+    steps:
+      - name: Run Unit Tests on SaaS
+        uses: KRYAYKN/ACTION-Unit-Test-Runner@main
+        with:
+          CONTAINERNAME: 'filesonly'
+          TENANT_ID: ${{ secrets.TENANT_ID }}
+          ENVIRONMENT: ${{ needs.set-environment.outputs.release-environment }}
+          REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
+          ARTIFACTS_DIRECTORY: ${{ github.workspace }}\Artifacts
+      
+
+
+      - name: Publish Test Report
+        if: always()
+        uses: dorny/test-reporter@v1
+        with:
+          name: AL Test Results
+          path: TestResults.xml
+          reporter: java-junit
+          fail-on-error: true
+#ssssssssssssSSSSssss
