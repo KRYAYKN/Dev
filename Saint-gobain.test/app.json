@@ -18,6 +18,11 @@
       "NoImplicitWith"
     ],
 "dependencies": [
-
+  {
+    "id": "5d86850b-0d76-4eca-bd7b-951ad998e997",
+    "name": "Tests-TestLibraries",
+    "version": "25.2.27733.28023",
+    "publisher": "Microsoft"
+  }
 ]
 }

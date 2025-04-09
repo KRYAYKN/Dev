@@ -2,7 +2,7 @@
     "id": "ab48383d-1c96-45ad-99cb-4181188821f9",
     "name": "Saint-gobain",
     "publisher": "pargesoft",
-    "version": "1.0.20250407.63560",
+    "version": "1.0.20250407.63563",
     "brief": "",
     "description": "",
     "privacyStatement": "",
@@ -11,7 +11,12 @@
     "url": "",
     "logo": "",
     "dependencies": [
-
+      {
+        "id": "5d86850b-0d76-4eca-bd7b-951ad998e997",
+        "name": "Tests-TestLibraries",
+        "version": "25.2.27733.28023",
+        "publisher": "Microsoft"
+      }
 
     ],
     "screenshots": [],
