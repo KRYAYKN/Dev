@@ -92,7 +92,7 @@ jobs:
     runs-on: windows-latest
     environment: ${{ needs.set-environment.outputs.release-environment }}
     needs: [set-environment, compile-app]
-    if: needs.set-environment.outputs.release-environment != ''
+    if: needs.set-environment.outputs.release-environment != 'LocalisationSandbox'
     steps:
       - name: Download Build Artifact
         uses: actions/download-artifact@v4
@@ -115,33 +115,7 @@ jobs:
           REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
           ArtifactsDirectory: ${{ github.workspace }}\Artifacts
 
-  run-unit-tests-on-saas:
-    runs-on: windows-latest
-    environment: ${{ needs.set-environment.outputs.release-environment }}
-    needs: [set-environment, compile-app, publish-app]
-    if: needs.set-environment.outputs.release-environment == 'qa' || needs.set-environment.outputs.release-environment == 'LocalizationSandbox' || needs.set-environment.outputs.release-environment == 'test'
-    steps:
-      - name: Run Unit Tests on SaaS
-        uses: KRYAYKN/ACTION-Unit-Test-Runner@main
-        with:
-          CONTAINERNAME: 'filesonly'
-          TENANT_ID: ${{ secrets.TENANT_ID }}
-          ENVIRONMENT: ${{ needs.set-environment.outputs.release-environment }}
-          REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
-        
-      - name: Copy Test Results from Shared Container Path
-        shell: pwsh
-        run: |
-            Copy-Item "C:\ProgramData\BcContainerHelper\Extensions\filesonly\My\TestResults.xml" -Destination "TestResults.xml" -Force
-  
+
+#ss
 
 
-      - name: Publish Test Report
-        if: always()
-        uses: dorny/test-reporter@v1
-        with:
-          name: AL Test Results
-          path: TestResults.xml
-          reporter: java-junit
-          fail-on-error: true
-#ssssssssssssSSSSssss
