@@ -1,0 +1,25 @@
+name: Auto Merge QA PR
+on:
+  pull_request:
+    types: [labeled, synchronize]
+
+jobs:
+  auto-merge:
+    if: github.event.pull_request.base.ref == 'qa' && github.event.pull_request.head.ref == 'promotion/qa'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check for mergeability
+        run: |
+          echo "🔍 Mergeable state: ${{ github.event.pull_request.mergeable_state }}"
+          if [[ "${{ github.event.pull_request.mergeable_state }}" != "clean" ]]; then
+            echo "❌ Merge conflicts exist or PR is not ready."
+            exit 1
+          fi
+          echo "✅ No conflict."
+
+      - name: Enable Auto Merge (using GitHub CLI)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr merge ${{ github.event.pull_request.number }} --auto --merge

@@ -1,0 +1,18 @@
+name: Validate PR Source
+on:
+  pull_request:
+    branches:
+      - qa
+
+jobs:
+  validate-source:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fail if PR is not from promotion/qa
+        run: |
+          echo "🔍 Source branch: ${{ github.head_ref }}"
+          if [ "${{ github.head_ref }}" != "promotion/qa" ]; then
+            echo "❌ Only promotion/qa → qa PRs are allowed."
+            exit 1
+          fi
+          echo "✅ Valid source branch."
