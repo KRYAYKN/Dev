@@ -135,4 +135,4 @@ jobs:
             "title": "✅ AL App Published to QA Region",
             "text": "The AL app was successfully published to the following QA sandboxes:\n\n- BCSB-UK-QA\n- BCSB-DE-QA\n\nEnvironment: QA-RELEASE"
           }' ${{ secrets.TEAMS_WEBHOOK_URL }}
-#ss
+#sssss
