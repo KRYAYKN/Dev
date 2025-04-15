@@ -23,13 +23,14 @@ jobs:
   set-environment:
     runs-on: ubuntu-latest
     outputs:
-      validation-environment: ${{ steps.environment.outputs.release-environment }}
+      validation-environment: ${{ steps.environment.outputs.validation-environment }}
       release-environment: ${{ steps.environment.outputs.release-environment }}
       ignore-validation: ${{ steps.environment.outputs.ignore-validation-for-environment }}
       version-increment: ${{ github.event.inputs.version_increment || 'patch' }}
+      sandbox-list: ${{ steps.environment.outputs.sandbox-list }}
     steps:
       - name: Determine Environment Settings
-        uses: KRYAYKN/dev1@main
+        uses: KRYAYKN/ACTION-Environment-Identification@main
         id: environment
         with:
           source-branch: ${{ github.head_ref }}
@@ -39,8 +40,9 @@ jobs:
 
       - name: Log Environment Selection
         run: |
-          echo "Validation Environment: ${{ steps.environment.outputs.release-environment }}"
+          echo "Validation Environment: ${{ steps.environment.outputs.validation-environment }}"
           echo "Release Environment: ${{ steps.environment.outputs.release-environment }}"
+          echo "Sandbox List: ${{ steps.environment.outputs.sandbox-list }}"
           echo "Version Increment: ${{ github.event.inputs.version_increment || 'patch' }}"
         shell: bash
 
@@ -90,28 +92,46 @@ jobs:
 
   publish-app:
     runs-on: windows-latest
-    environment: ${{ needs.set-environment.outputs.release-environment }}
     needs: [set-environment, compile-app]
-    if: needs.set-environment.outputs.release-environment != 'LocalisationSandbox'
+    if: needs.set-environment.outputs.release-environment != ''
+    strategy:
+      matrix:
+        sandbox: ${{ fromJson(needs.set-environment.outputs.sandbox-list) }}
+    environment: ${{ needs.set-environment.outputs.release-environment }}
     steps:
       - name: Download Build Artifact
         uses: actions/download-artifact@v4
         with:
           name: build-package
           path: ${{ github.workspace }}\Artifacts
+
       - name: Ensure Artifacts Directory Exists
         uses: KRYAYKN/ACTION-Ensure-Artifacts-Directory@main
         with:
           ArtifactsDirectory: ${{ github.workspace }}\Artifacts
+
       - name: Install BcContainerHelper
         uses: KRYAYKN/ACTION-Install-Bccontainer-Helper@main
-      - name: Publish AL Application
+
+      - name: Publish AL App to ${{ matrix.sandbox }}
         uses: KRYAYKN/ACTION-Publish-AL-App@main
         with:
           containerName: ${{ vars.CONTAINERNAME }}
           artifactName: ${{ vars.ARTIFACTNAME }}
           TENANT_ID: ${{ secrets.TENANT_ID }}
-          ENVIRONMENT: ${{ needs.set-environment.outputs.release-environment }}
+          ENVIRONMENT: ${{ matrix.sandbox }}
           REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
           ArtifactsDirectory: ${{ github.workspace }}\Artifacts
-#SS
+
+  notify-teams:
+    runs-on: ubuntu-latest
+    needs: [publish-app]
+    if: always()
+    steps:
+      - name: Notify Teams
+        run: |
+          curl -H 'Content-Type: application/json' \
+          -d '{
+            "title": "✅ AL App Published to QA Region",
+            "text": "The AL app was successfully published to the following QA sandboxes:\n\n- BCSB-UK-QA\n- BCSB-DE-QA\n\nEnvironment: QA-RELEASE"
+          }' ${{ secrets.TEAMS_WEBHOOK_URL }}

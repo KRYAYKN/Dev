@@ -2,15 +2,41 @@
     "name": "Name",
     "description": "Description",    
     "rules": [
-        {
-            "id": "AA0001",
-            "action": "Warning",
-            "justification": "Justification"
-        },
-        {
-            "id": "AA0215",
-            "action": "Warning",
-            "justification": "Justification"
-        }
-    ]
+        { "id": "PTE0001", "action": "Error", "justification": "Object ID must be in free range" },
+        { "id": "PTE0002", "action": "Error", "justification": "Field ID must be in free range" },
+        { "id": "PTE0003", "action": "Error", "justification": "No CompanyOpen event subscriptions allowed in PTEs" },
+        { "id": "PTE0005", "action": "Error", "justification": "Must use allowed compilation target for SaaS" },
+        { "id": "PTE0006", "action": "Error", "justification": "Encryption APIs are not allowed in SaaS" },
+        { "id": "PTE0008", "action": "Error", "justification": "ApplicationArea property must be defined for all controls" },
+        { "id": "PTE0024", "action": "Error", "justification": "Moving tables or fields is not allowed in PTE" },
+    
+        { "id": "AW0001", "action": "Error", "justification": "API Pages must follow structural rules" },
+        { "id": "AW0003", "action": "Error", "justification": "API Pages must define an API version" },
+        { "id": "AW0004", "action": "Error", "justification": "API Pages must define a publisher" },
+        { "id": "AW0007", "action": "Error", "justification": "API Pages must define EntitySetName" },
+        { "id": "AW0008", "action": "Error", "justification": "API Pages must define EntityName" },
+        { "id": "AW0009", "action": "Error", "justification": "API Pages must define ODataKeyFields" },
+    
+        { "id": "AA0050", "action": "Warning", "justification": "Avoid including permissions for objects from other applications" },
+        { "id": "AA0136", "action": "Warning", "justification": "Avoid unreachable (dead) code" },
+        { "id": "AA0137", "action": "Warning", "justification": "Remove unused variables to improve code clarity" },
+        { "id": "AA0198", "action": "Error", "justification": "Do not use identical names for local/global variables and fields" },
+        { "id": "AA0202", "action": "Warning", "justification": "Avoid name collisions between local variables and other symbols" },
+        { "id": "AA0204", "action": "Warning", "justification": "Avoid name collisions for global variables" },
+        { "id": "AA0205", "action": "Warning", "justification": "Variables must be initialized before usage" },
+        { "id": "AA0207", "action": "Warning", "justification": "EventSubscriber methods must be local for safety" },
+        { "id": "AA0210", "action": "Info", "justification": "Avoid filtering on non-indexed fields for performance" },
+        { "id": "AA0215", "action": "Warning", "justification": "Follow AL naming conventions for maintainability" },
+        { "id": "AA0216", "action": "Warning", "justification": "Use text constants for user messages for localization support" },
+        { "id": "AA0217", "action": "Warning", "justification": "Use labels or constants with StrSubstNo for translation readiness" },
+        { "id": "AA0218", "action": "Warning", "justification": "Tooltip is required for all UI elements" },
+        { "id": "AA0220", "action": "Warning", "justification": "Tooltip value must be filled" },
+        { "id": "AA0222", "action": "Warning", "justification": "Avoid SIFT indexes on primary/unique keys for performance" },
+        { "id": "AA0225", "action": "Warning", "justification": "Caption property must be specified for all fields" },
+        { "id": "AA0231", "action": "Warning", "justification": "Avoid using concatenation or StrSubstNo inside Error() calls" },
+        { "id": "AA0232", "action": "Info", "justification": "FlowField definitions should be indexed for performance" },
+        { "id": "AA0234", "action": "Info", "justification": "Table fields must include tooltips" },
+        { "id": "AA0448", "action": "Warning", "justification": "Use FieldCaption instead of FieldName for localization correctness" }
+      ]
+    
 }
