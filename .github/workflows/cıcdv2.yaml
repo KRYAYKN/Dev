@@ -27,10 +27,10 @@ jobs:
       release-environment: ${{ steps.environment.outputs.release-environment }}
       ignore-validation: ${{ steps.environment.outputs.ignore-validation-for-environment }}
       version-increment: ${{ github.event.inputs.version_increment || 'patch' }}
-      sandbox-list: ${{ steps.environment.outputs.sandbox-list }}
+     
     steps:
       - name: Determine Environment Settings
-        uses: KRYAYKN/ACTION-Environment-Identification@main
+        uses: KRYAYKN/ACTION-Environment-Identification@master
         id: environment
         with:
           source-branch: ${{ github.head_ref }}
@@ -94,9 +94,6 @@ jobs:
     runs-on: windows-latest
     needs: [set-environment, compile-app]
     if: needs.set-environment.outputs.release-environment != ''
-    strategy:
-      matrix:
-        sandbox: ${{ fromJson(needs.set-environment.outputs.sandbox-list) }}
     environment: ${{ needs.set-environment.outputs.release-environment }}
     steps:
       - name: Download Build Artifact
@@ -113,13 +110,13 @@ jobs:
       - name: Install BcContainerHelper
         uses: KRYAYKN/ACTION-Install-Bccontainer-Helper@main
 
-      - name: Publish AL App to ${{ matrix.sandbox }}
+      - name: Publish AL App to ${{ vars.ENVIRONMENT }}
         uses: KRYAYKN/ACTION-Publish-AL-App@main
         with:
           containerName: ${{ vars.CONTAINERNAME }}
           artifactName: ${{ vars.ARTIFACTNAME }}
           TENANT_ID: ${{ secrets.TENANT_ID }}
-          ENVIRONMENT: ${{ matrix.sandbox }}
+          ENVIRONMENT: ${{ vars.ENVIRONMENT }}
           REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
           ArtifactsDirectory: ${{ github.workspace }}\Artifacts
 
