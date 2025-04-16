@@ -30,7 +30,7 @@ jobs:
      
     steps:
       - name: Determine Environment Settings
-        uses: KRYAYKN/ACTION-Environment-Identification@master
+        uses: KRYAYKN/dev1@main
         id: environment
         with:
           source-branch: ${{ github.head_ref }}
