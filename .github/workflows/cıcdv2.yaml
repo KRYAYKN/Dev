@@ -30,7 +30,7 @@ jobs:
       sandbox-list: ${{ steps.environment.outputs.sandbox-list }}
     steps:
       - name: Determine Environment Settings
-        uses: KRYAYKN/ACTION-Environment-Identification@main
+        uses: KRYAYKN/ACTION-Environment-Identification@master
         id: environment
         with:
           source-branch: ${{ github.head_ref }}
