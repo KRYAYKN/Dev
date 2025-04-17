@@ -4132,12 +4132,12 @@
     },
     {
       "id": "AL1100",
-      "action": "Fatal error",
+      "action": "Error",
       "justification": "File name '{0}' is empty, contains invalid characters, has a drive specification without an absolute path, or is too long."
     },
     {
       "id": "AL1101",
-      "action": "Fatal error",
+      "action": "Error",
       "justification": "Target must specify one of 'internal', 'solution', 'extension'."
     },
     {
@@ -4182,258 +4182,258 @@
     },
     {
       "id": "AL1401",
-      "action": "Designer customization warning",
+      "action": "Warning",
       "justification": "Reference '{0}' in application object '{1}' does not exist."
     },
     {
       "id": "AL1402",
-      "action": "Designer customization warning",
+      "action": "Warning",
       "justification": "{ 0} '{1}' is missing."
     },
     {
       "id": "AL1403",
-      "action": "Designer customization warning",
+      "action": "Warning",
       "justification": "'{0}' is an ambiguous reference between '{1}' defined by the extension '{2}' and '{3}' defined by the extension '{4}'."
     },
     {
       "id": "AL1404",
-      "action": "Designer customization warning",
+      "action": "Warning",
       "justification": "The action '{0}' is not found in the target '{1}'."
     },
     {
       "id": "AL1405",
-      "action": "Designer customization warning",
+      "action": "Warning",
       "justification": "The control '{0}' is not found in the target '{1}'."
     },
     {
       "id": "AL1406",
-      "action": "Designer customization warning",
+      "action": "Warning",
       "justification": "The view '{0}' is not found in the target '{1}'."
     },
     {
       "id": "AL1407",
-      "action": "Designer customization warning",
+      "action": "Warning",
       "justification": "At least one target has to be specified for the move."
     },
     {
       "id": "AL1408",
-      "action": "Designer customization warning",
+      "action": "Warning",
       "justification": "Invalid application object identifier. A number or an application object name is expected."
     },
     {
       "id": "AL1409",
-      "action": "Designer customization warning",
+      "action": "Warning",
       "justification": "Page '{0}' should be of type 'RoleCenter'."
     },
     {
       "id": "AL1410",
-      "action": "Designer customization warning",
+      "action": "Warning",
       "justification": "The target 0} '{1}' for the extension object is not found."
     },
     {
       "id": "AL1411",
-      "action": "Designer customization warning",
+      "action": "Warning",
       "justification": "Multiple page customizations have been specified for the same page (0) within the same profile."
     },
     {
       "id": "AL1412",
-      "action": "Designer customization warning",
+      "action": "Warning",
       "justification": "{0} '{1}' is marked for removal. {2}."
     },
     {
       "id": "AL1413",
-      "action": "Designer customization warning",
+      "action": "Warning",
       "justification": "A member of type {0} with name '{1}' is already defined in {2} '{3}' by the extension '{4}'."
     },
     {
       "id": "AL1414",
-      "action": "Designer customization information",
+      "action": "Info",
       "justification": "The page customization for page '{0}' does not make any modifications, so it can be removed without affecting any profiles or user personalization."
     },
     {
       "id": "AL1415",
-      "action": "Designer customization warning",
+      "action": "Warning",
       "justification": "{0} '{1}' is removed. (2)."
     },
     {
       "id": "AL1416",
-      "action": "Designer customization information",
+      "action": "Info",
       "justification": "The 0} '{1}' cannot be moved relatively to '{2}' because '{2}' is missing. This move is ignored."
     },
     {
       "id": "AL1417",
-      "action": "Designer customization information",
+      "action": "Info",
       "justification": "The {0} '{1}' cannot be added relatively to '{2}' because ' 2)' is missing. '{1}' is added at a default location instead."
     },
     {
       "id": "AL1418",
-      "action": "Designer customization warning",
+      "action": "Warning",
       "justification": "A Dataltem with name '{0}' could not be found in the target {1}."
     },
     {
       "id": "AL1419",
-      "action": "Designer customization warning",
+      "action": "Warning",
       "justification": "A Dataltem or Column with name '{0}' could not be found in the target (1)."
     },
     {
       "id": "AL1420",
-      "action": "Designer customization warning",
+      "action": "Warning",
       "justification": "The (0) '{1}' cannot be used as target of the ActionRef '(2)'. ActionRefs can only target Actions. Ignoring the ActionRef."
     },
     {
       "id": "AL1421",
-      "action": "Designer customization warning",
+      "action": "Warning",
       "justification": "The 0} '{1}' is using the '{2}' property. This will be automatically converted to the new syntax when customizing the related page in the webclient."
     },
     {
       "id": "AL1422",
-      "action": "Designer customization warning",
+      "action": "Warning",
       "justification": "The target action '{0}' cannot be resolved in page ' 1}'. Ignoring the ActionRef."
     },
     {
       "id": "AL1423",
-      "action": "Designer customization warning",
+      "action": "Warning",
       "justification": "'{0}' does not contain a definition for '{1}'."
     },
     {
       "id": "AL1424",
-      "action": "Designer customization warning",
+      "action": "Warning",
       "justification": "The name '{0}' does not exist in the current context."
     },
     {
       "id": "AL1425",
-      "action": "Designer customization warning",
+      "action": "Warning",
       "justification": "The field with ID '{0}' and name '{1}' cannot be used as source expression in the page customization '{2}' targeting page '{3}'. Ignoring the page field."
     },
     {
       "id": "AL1426",
-      "action": "Designer customization warning",
+      "action": "Warning",
       "justification": "The namespace '{0}' is unknown."
     },
      {
       "Id": "PTE0001",
-      "action": "Object ID must be in free range.",
-      "justification": "Error"
+      "action": "Error",
+      "justification": "Object ID must be in free range."
     },
     {
       "Id": "PTE0002",
-      "action": "Field ID must be in free range.",
-      "justification": "Error"
+      "action": "Error",
+      "justification": "Field ID must be in free range."
     },
     {
       "Id": "PTE0003",
-      "action": "Table ID must be in free range.",
-      "justification": "Error"
+      "action": "Error",
+      "justification": "Table ID must be in free range."
     },
     {
       "Id": "PTE0004",
-      "action": "Page ID must be in free range.",
-      "justification": "Error"
+      "action": "Error",
+      "justification": "Page ID must be in free range."
     },
     {
       "Id": "PTE0005",
-      "action": "Codeunit ID must be in free range.",
-      "justification": "Error"
+      "action": "Error",
+      "justification": "Codeunit ID must be in free range."
     },
     {
       "Id": "PTE0006",
-      "action": "Query ID must be in free range.",
-      "justification": "Error"
+      "action": "Error",
+      "justification": "Query ID must be in free range."
     },
     {
       "Id": "PTE0007",
-      "action": "Report ID must be in free range.",
-      "justification": "Error"
+      "action": "Error",
+      "justification": "Report ID must be in free range."
     },
     {
       "Id": "PTE0008",
-      "action": "XmlPort ID must be in free range.",
-      "justification": "Error"
+      "action": "Error",
+      "justification": "XmlPort ID must be in free range."
     },
     {
       "Id": "PTE0009",
-      "action": "MenuSuite ID must be in free range.",
-      "justification": "Error"
+      "action": "Error",
+      "justification": "MenuSuite ID must be in free range."
     },
     {
       "Id": "PTE0010",
-      "action": "Notification ID must be in free range.",
-      "justification": "Error"
+      "action": "Error",
+      "justification": "Notification ID must be in free range."
     },
     {
       "Id": "PTE0011",
-      "action": "Profile ID must be in free range.",
-      "justification": "Error"
+      "action": "Error",
+      "justification": "Profile ID must be in free range."
     },
     {
       "Id": "PTE0012",
-      "action": "PageExtension ID must be in free range.",
-      "justification": "Error"
+      "action": "Error",
+      "justification": "PageExtension ID must be in free range."
     },
     {
       "Id": "PTE0013",
-      "action": "TableExtension ID must be in free range.",
-      "justification": "Error"
+      "action": "Error",
+      "justification": "TableExtension ID must be in free range."
     },
     {
       "Id": "PTE0014",
-      "action": "Enum ID must be in free range.",
-      "justification": "Error"
+      "action": "Error",
+      "justification": "Enum ID must be in free range."
     },
     {
       "Id": "PTE0015",
-      "action": "DotNet ID must be in free range.",
-      "justification": "Error"
+      "action": "Error",
+      "justification": "DotNet ID must be in free range."
     },
     {
       "Id": "PTE0016",
-      "action": "ControlAddIn ID must be in free range.",
-      "justification": "Error"
+      "action": "Error",
+      "justification": "ControlAddIn ID must be in free range."
     },
     {
       "Id": "PTE0017",
-      "action": "PermissionSet ID must be in free range.",
-      "justification": "Error"
+      "action": "Error",
+      "justification": "PermissionSet ID must be in free range."
     },
     {
       "Id": "PTE0018",
-      "action": "Permission ID must be in free range.",
-      "justification": "Error"
+      "action": "Error",
+      "justification": "Permission ID must be in free range."
     },
     {
       "Id": "PTE0019",
-      "action": "Interface ID must be in free range.",
-      "justification": "Error"
+      "action": "Error",
+      "justification": "Interface ID must be in free range."
     },
     {
       "Id": "PTE0020",
-      "action": "ReportExtension ID must be in free range.",
-      "justification": "Error"
+      "action": "Error",
+      "justification": "ReportExtension ID must be in free range."
     },
     {
       "Id": "PTE0021",
-      "action": "ProfileExtension ID must be in free range.",
-      "justification": "Error"
+      "action": "Error",
+      "justification": "ProfileExtension ID must be in free range."
     },
     {
       "Id": "PTE0022",
-      "action": "The table field ordinal value should be within the allowed range.",
-      "justification": "Warning"
+      "action": "Warning",
+      "justification": "The table field ordinal value should be within the allowed range."
     },
     {
       "Id": "PTE0023",
-      "action": "The enum ordinal value should be within the allowed range",
-      "justification": "Info"
+      "action": "Info",
+      "justification": "The enum ordinal value should be within the allowed range"
     },
     {
       "Id": "PTE0024",
-      "action": "Moving tables or fields is not allowed on per-tenant extensions.",
-      "justification": "Error"
+      "action": "Error",
+      "justification": "Moving tables or fields is not allowed on per-tenant extensions."
     },
     {
       "Id": "PTE0025",
-      "action": "Avoid using duplicate object names",
-      "justification": "Warning"
+      "action": "Warning",
+      "justification": "Avoid using duplicate object names"
     },
     {
       "id": "AW0001",
