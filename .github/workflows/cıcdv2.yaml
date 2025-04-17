@@ -6,7 +6,6 @@ on:
     types: [opened, synchronize, reopened]
     branches:
       - prod
-      - staging
       - uat
       - prerelease
       - data-migration
@@ -130,6 +129,6 @@ jobs:
           curl -H 'Content-Type: application/json' \
           -d '{
             "title": "✅ AL App Published to QA Region",
-            "text": "The AL app was successfully published to the following QA sandboxes:\n\n- BCSB-UK-QA\n- BCSB-DE-QA\n\nEnvironment: QA-RELEASE"
+            "text": "The AL app was successfully published to the ${{ vars.ENVIRONMENT }}"
           }' ${{ secrets.TEAMS_WEBHOOK_URL }}
 #sssssSS
