@@ -2914,7 +2914,7 @@
     },
     {
       "id": "AL0719",
-      "action": "Information",
+      "action": "Warning",
       "justification": "Argument {0}: The argument should be a valid Field type. An argument of type Joker or Variant might have an underlying type that is not a valid Field type."
     },
     {
@@ -3870,7 +3870,7 @@
     },
     {
       "id": "AL1031",
-      "action": "Information",
+      "action": "Info",
       "justification": "Successfully included translations for: {0}."
     },
     {
@@ -4097,7 +4097,7 @@
     },
     {
       "id": "AL1076",
-      "action": "Information",
+      "action": "Info",
       "justification": "A package that satisfies the dependency on app with ID {0} with name '{1}' and publisher '{2 ' was found, but the name or publisher has changed. New name '(3)' and new publisher '{4)'. Consider updating the dependency reference to the new name/publisher."
     },
     {
@@ -4112,12 +4112,12 @@
     },
     {
       "id": "AL1079",
-      "action": "Information",
+      "action": "Info",
       "justification": "Debugging will not work for this extension because 'allowDebugging' has been set to false and 'applyToDevExtension' to true."
     },
     {
       "id": "AL1080",
-      "action": "Information",
+      "action": "Info",
       "justification": "Source will still be visible for this extension via debugging because 'allowDebugging' has been set to true."
     },
     {
