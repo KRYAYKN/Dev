@@ -119,16 +119,13 @@ jobs:
           REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
           ArtifactsDirectory: ${{ github.workspace }}\Artifacts
 
-  notify-teams:
+  teams-notify:
+    if: always()
     runs-on: ubuntu-latest
-    needs: [publish-app]
-    if: success()
     steps:
-      - name: Notify Teams
-        run: |
-          curl -H 'Content-Type: application/json' \
-          -d '{
-            "title": "✅ AL App Published to QA Region",
-            "text": "The AL app was successfully published to the ${{ vars.ENVIRONMENT }}"
-          }' ${{ secrets.TEAMS_WEBHOOK_URL }}
+      - name: Notify Teams Based on Result
+        uses: ./.github/actions/teams-notification
+        with:
+          teams-webhook: ${{ secrets.TEAMS_WEBHOOK_URL }}
+          pipeline-status: ${{ job.status }}
 #sssssSS
