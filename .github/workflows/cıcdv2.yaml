@@ -120,8 +120,9 @@ jobs:
           ArtifactsDirectory: ${{ github.workspace }}\Artifacts
 
   teams-notify:
-    if: always()
     runs-on: ubuntu-latest
+    if: always()
+    needs: [publish-app]
     steps:
       - name: Notify Teams Based on Result
         uses: ./.github/actions/teams-notification
