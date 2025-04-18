@@ -93,7 +93,15 @@ jobs:
         uses: KRYAYKN/Teams-Notification@main
         with:
           teams-webhook: ${{ secrets.TEAMS_WEBHOOK_URL }}
-          pipeline-status: ${{ job.status }}    
+          pipeline-status: ${{ job.status }}
+          job-context: compile-app
+          repository: ${{ github.repository }}
+          pull-number: ${{ github.event.pull_request.number }}
+          ref-name: ${{ github.ref_name }}
+          actor: ${{ github.actor }}
+          commit-message: ${{ github.event.head_commit.message }}
+          run-id: ${{ github.run_id }}
+          
 
   publish-app:
     runs-on: windows-latest
@@ -131,4 +139,13 @@ jobs:
         with:
           teams-webhook: ${{ secrets.TEAMS_WEBHOOK_URL }}
           pipeline-status: ${{ job.status }}
+          job-context: publish-app
+          repository: ${{ github.repository }}
+          pull-number: ${{ github.event.pull_request.number }}
+          ref-name: ${{ github.ref_name }}
+          actor: ${{ github.actor }}
+          commit-message: ${{ github.event.head_commit.message }}
+          run-id: ${{ github.run_id }}
+          environment: ${{ vars.ENVIRONMENT }}
+        
 #sssssSS
