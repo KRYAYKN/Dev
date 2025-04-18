@@ -88,6 +88,12 @@ jobs:
         with:
           name: build-package
           path: ${{ github.workspace }}\Artifacts
+      - name: Notify Teams Based on Compile Result
+        if: always()
+        uses: KRYAYKN/Teams-Notification@main
+        with:
+          teams-webhook: ${{ secrets.TEAMS_WEBHOOK_URL }}
+          pipeline-status: ${{ job.status }}    
 
   publish-app:
     runs-on: windows-latest
@@ -119,13 +125,9 @@ jobs:
           REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
           ArtifactsDirectory: ${{ github.workspace }}\Artifacts
 
-  teams-notify:
-    runs-on: ubuntu-latest
-    if: always()
-    needs: [publish-app]
-    steps:
-      - name: Notify Teams Based on Result
-        uses: ./.github/actions/teams-notification
+      - name: Notify Teams Based on Publish Result
+        if: always()
+        uses: KRYAYKN/Teams-Notification@main
         with:
           teams-webhook: ${{ secrets.TEAMS_WEBHOOK_URL }}
           pipeline-status: ${{ job.status }}
