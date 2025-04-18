@@ -6,7 +6,6 @@ on:
     types: [opened, synchronize, reopened]
     branches:
       - prod
-      - staging
       - uat
       - prerelease
       - data-migration
@@ -89,6 +88,20 @@ jobs:
         with:
           name: build-package
           path: ${{ github.workspace }}\Artifacts
+      - name: Notify Teams Based on Compile Result
+        if: always()
+        uses: KRYAYKN/Teams-Notification@main
+        with:
+          teams-webhook: ${{ secrets.TEAMS_WEBHOOK_URL }}
+          pipeline-status: ${{ job.status }}
+          job-context: compile-app
+          repository: ${{ github.repository }}
+          pull-number: ${{ github.event.pull_request.number }}
+          ref-name: ${{ github.ref_name }}
+          actor: ${{ github.actor }}
+          commit-message: ${{ github.event.head_commit.message }}
+          run-id: ${{ github.run_id }}
+          
 
   publish-app:
     runs-on: windows-latest
@@ -120,16 +133,19 @@ jobs:
           REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
           ArtifactsDirectory: ${{ github.workspace }}\Artifacts
 
-  notify-teams:
-    runs-on: ubuntu-latest
-    needs: [publish-app]
-    if: success()
-    steps:
-      - name: Notify Teams
-        run: |
-          curl -H 'Content-Type: application/json' \
-          -d '{
-            "title": "✅ AL App Published to QA Region",
-            "text": "The AL app was successfully published to the following QA sandboxes:\n\n- BCSB-UK-QA\n- BCSB-DE-QA\n\nEnvironment: QA-RELEASE"
-          }' ${{ secrets.TEAMS_WEBHOOK_URL }}
+      - name: Notify Teams Based on Publish Result
+        if: always()
+        uses: KRYAYKN/Teams-Notification@main
+        with:
+          teams-webhook: ${{ secrets.TEAMS_WEBHOOK_URL }}
+          pipeline-status: ${{ job.status }}
+          job-context: publish-app
+          repository: ${{ github.repository }}
+          pull-number: ${{ github.event.pull_request.number }}
+          ref-name: ${{ github.ref_name }}
+          actor: ${{ github.actor }}
+          commit-message: ${{ github.event.head_commit.message }}
+          run-id: ${{ github.run_id }}
+          environment: ${{ vars.ENVIRONMENT }}
+        
 #sssssSS
