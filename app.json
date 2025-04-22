@@ -11,12 +11,7 @@
     "url": "",
     "logo": "",
     "dependencies": [
-      {
-        "id": "cf7f36db-3927-4670-a759-20ed45f0be9b",
-        "name": "SG Formula Customization",
-        "publisher": "Parge Yazilim Danismanlik Tic. A.S.",
-        "version": "25.04.21.1000"
-      },
+
       {
         "id": "5d86850b-0d76-4eca-bd7b-951ad998e997",
         "name": "Tests-TestLibraries",
