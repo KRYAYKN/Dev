@@ -1,0 +1,54 @@
+name: Test Environment and Region Determination
+
+on:
+  push:
+    branches:
+      - feature/FEM-004
+
+jobs:
+  set-environment:
+    runs-on: ubuntu-latest
+    outputs:
+      release-environment: ${{ steps.setenv.outputs.release-environment }}
+      validation-environment: ${{ steps.setenv.outputs.validation-environment }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set Environment
+        id: setenv
+        uses: KRYAYKN/ACTION-Environment-Identification@main
+        with:
+          source-branch: ${{ github.head_ref }}
+          destination-branch: ${{ github.base_ref }}
+
+  determine-region:
+    runs-on: ubuntu-latest
+    needs: set-environment
+    outputs:
+      region: ${{ steps.detect.outputs.region }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Determine Region
+        id: detect
+        uses: KRYAYKN/ACTION-Region-Determination@main
+        with:
+          source-branch: ${{ github.head_ref }}
+          destination-branch: ${{ github.base_ref }}
+
+      - name: Show Region Output
+        run: |
+          echo "Region: ${{ steps.detect.outputs.region }}"
+
+  debug-summary:
+    runs-on: ubuntu-latest
+    needs: [set-environment, determine-region]
+    steps:
+      - name: Show Final Summary
+        run: |
+          echo "🧪 Test Sonuçları:"
+          echo "Release Environment: ${{ needs.set-environment.outputs.release-environment }}"
+          echo "Validation Environment: ${{ needs.set-environment.outputs.validation-environment }}"
+          echo "Region: ${{ needs.determine-region.outputs.region }}"
