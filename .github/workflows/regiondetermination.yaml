@@ -17,7 +17,7 @@ jobs:
 
       - name: Set Environment
         id: setenv
-        uses: KRYAYKN/ACTION-Environment-Identification@main
+        uses: KRYAYKN/dev1@main
         with:
           source-branch: ${{ github.head_ref }}
           destination-branch: ${{ github.base_ref }}
