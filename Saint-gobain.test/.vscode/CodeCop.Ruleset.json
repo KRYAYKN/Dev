@@ -4367,7 +4367,7 @@
       },
       {
         "Id": "PTE0012",
-        "action": "Error",
+        "action": "Warning",
         "justification": "PageExtension ID must be in free range."
       },
       {
