@@ -1,0 +1,4521 @@
+{
+    "name": "Rulesets",
+    "description": "A set of rules to enforce specific coding standards in project.",
+    "rules": [
+      {
+        "id": "AL0100",
+        "action": "Error",
+        "justification": "Unterminated multiline comment."
+      },
+      {
+        "id": "AL0101",
+        "action": "Error",
+        "justification": "Constant value '{0}' is outside the range for a Decimal."
+      },
+      {
+        "id": "AL0102",
+        "action": "Error",
+        "justification": "Constant value '{0}' is outside the range for a BigInteger."
+      },
+      {
+        "id": "AL0103",
+        "action": "Error",
+        "justification": "Constant value '{0}' is outside the range for an Integer."
+      },
+      {
+        "id": "AL0104",
+        "action": "Error",
+        "justification": "Syntax error, '{0}' expected."
+      },
+      {
+        "id": "AL0105",
+        "action": "Error",
+        "justification": "Syntax error, identifier expected; '{1}' is a keyword."
+      },
+      {
+        "id": "AL0106",
+        "action": "Error",
+        "justification": "Syntax error, 'TO' or 'DOWNTO' expected."
+      },
+      {
+        "id": "AL0107",
+        "action": "Error",
+        "justification": "Syntax error, identifier expected."
+      },
+      {
+        "id": "AL0108",
+        "action": "Error",
+        "justification": "Indexers must have at least one value."
+      },
+      {
+        "id": "AL0109",
+        "action": "Error",
+        "justification": "Unexpected token."
+      },
+      {
+        "id": "AL0110",
+        "action": "Error",
+        "justification": "Orphaned ELSE statement. This is most likely because of an unnecessary semicolon placed just before the ELSE keyword."
+      },
+      {
+        "id": "AL0111",
+        "action": "Error",
+        "justification": "Semicolon expected."
+      },
+      {
+        "id": "AL0112",
+        "action": "Error",
+        "justification": "{0} is not a valid attribute."
+      },
+      {
+        "id": "AL0113",
+        "action": "Error",
+        "justification": "At least one dimension must be specified."
+      },
+      {
+        "id": "AL0114",
+        "action": "Error",
+        "justification": "Syntax error, integer literal expected."
+      },
+      {
+        "id": "AL0115",
+        "action": "Error",
+        "justification": "Object type expected."
+      },
+      {
+        "id": "AL0116",
+        "action": "Error",
+        "justification": "Invalid value for '{0}'. Allowed values are '{1}'."
+      },
+      {
+        "id": "AL0117",
+        "action": "Error",
+        "justification": "Illegal statement. Only assignment and method invocation can be used as a statement."
+      },
+      {
+        "id": "AL0118",
+        "action": "Error",
+        "justification": "The name '{0}' does not exist in the current context."
+      },
+      {
+        "id": "AL0119",
+        "action": "Error",
+        "justification": "The parameter name '{0}' is already defined."
+      },
+      {
+        "id": "AL0120",
+        "action": "Error",
+        "justification": "A local or parameter named '{0}' cannot be declared in this scope because that name is used in an enclosing local scope to define a local or parameter."
+      },
+      {
+        "id": "AL0121",
+        "action": "Error",
+        "justification": "The variable name '{0}' is already defined."
+      },
+      {
+        "id": "AL0122",
+        "action": "Error",
+        "justification": "Cannot implicitly convert type '{0}' to '{1}'."
+      },
+      {
+        "id": "AL0123",
+        "action": "Error",
+        "justification": "The return value name '{0}' is already defined."
+      },
+      {
+        "id": "AL0124",
+        "action": "Error",
+        "justification": "The property '{0}' cannot be used in this context."
+      },
+      {
+        "id": "AL0125",
+        "action": "Error",
+        "justification": "Method name expected."
+      },
+      {
+        "id": "AL0126",
+        "action": "Error",
+        "justification": "No overload for method '{0}' takes {1} arguments. Candidates: {2}."
+      },
+      {
+        "id": "AL0127",
+        "action": "Error",
+        "justification": "Member '{0}' cannot be used like a method."
+      },
+      {
+        "id": "AL0128",
+        "action": "Error",
+        "justification": "Language identifier expected."
+      },
+      {
+        "id": "AL0129",
+        "action": "Error",
+        "justification": "The left-hand side of an assignment must be a variable or field."
+      },
+      {
+        "id": "AL0130",
+        "action": "Error",
+        "justification": "A 'var' argument must be an assignable variable."
+      },
+      {
+        "id": "AL0131",
+        "action": "Error",
+        "justification": "The property CharAllowed must be specified in pairs of characters. The first character in the pair must be equal to or less than the second."
+      },
+      {
+        "id": "AL0132",
+        "action": "Error",
+        "justification": "'{0}' does not contain a definition for '{1}'"
+      },
+      {
+        "id": "AL0133",
+        "action": "Error",
+        "justification": "Argument (0): cannot convert from '{1}' to '{2}'."
+      },
+      {
+        "id": "AL0134",
+        "action": "Error",
+        "justification": "'{0}' is not recognized as a valid type."
+      },
+      {
+        "id": "AL0135",
+        "action": "Error",
+        "justification": "There is no argument given that corresponds to the required formal parameter '{0}' of '{1}'."
+      },
+      {
+        "id": "AL0136",
+        "action": "Error",
+        "justification": "The loop variable in a 'for' statement must be a numeric type."
+      },
+      {
+        "id": "AL0137",
+        "action": "Error",
+        "justification": "No enclosing loop out of which to break."
+      },
+      {
+        "id": "AL0138",
+        "action": "Error",
+        "justification": "The case expression cannot be an array."
+      },
+      {
+        "id": "AL0139",
+        "action": "Error",
+        "justification": "Since '{0}' doesn't have a return value, EXIT cannot be called with a value."
+      },
+      {
+        "id": "AL0140",
+        "action": "Error",
+        "justification": "The expression is not valid for the WITH statement."
+      },
+      {
+        "id": "AL0142",
+        "action": "Error",
+        "justification": "Only variables of type record can be marked as TEMPORARY."
+      },
+      {
+        "id": "AL0143",
+        "action": "Error",
+        "justification": "Cannot apply indexing with [] to an expression of type '{0}'."
+      },
+      {
+        "id": "AL0144",
+        "action": "Error",
+        "justification": "Wrong number of indices inside []; expected {0}."
+      },
+     {
+        "id": "AL0145",
+        "action": "Error",
+        "justification": "Assignment is not valid for arrays."
+      },
+      {
+        "id": "AL0146",
+        "action": "Error",
+        "justification": "The maximum number of array elements is {0}. Actual number is {1}."
+      },
+      {
+        "id": "AL0147",
+        "action": "Error",
+        "justification": "An array dimension must be a positive number."
+      },
+      {
+        "id": "AL0148",
+        "action": "Error",
+        "justification": "The table filter is not valid."
+      },
+      {
+        "id": "AL0149",
+        "action": "Error",
+        "justification": "There is an 'ELSE' statement without an 'IF' in property {0}."
+      },
+      {
+        "id": "AL0150",
+        "action": "Error",
+        "justification": "Invalid CONST expression. A valid integer or an identifier is expected."
+      },
+      {
+        "id": "AL0151",
+        "action": "Error",
+        "justification": "Expression must be an Option."
+      },
+      {
+        "id": "AL0152",
+        "action": "Error",
+        "justification": "The value '{0}' is used more than once."
+      },
+      {
+        "id": "AL0153",
+        "action": "Error",
+        "justification": "The property '{0}' cannot be blank."
+      },
+      {
+        "id": "AL0154",
+        "action": "Error",
+        "justification": "The maximum length for a field of type '{0}' is {1}."
+      },
+      {
+        "id": "AL0155",
+        "action": "Error",
+        "justification": "A member of type {0} with name '{1}' is already defined in {2} '{3}' by the extension '{4}'."
+      },
+      {
+        "id": "AL0156",
+        "action": "Error",
+        "justification": "'{0}' is not a valid field type."
+      },
+      {
+        "id": "AL0157",
+        "action": "Error",
+        "justification": "'{0}' is not a valid variable type."
+      },
+      {
+        "id": "AL0158",
+        "action": "Error",
+        "justification": "'{0}' is not a valid parameter type."
+      },
+      {
+        "id": "AL0159",
+        "action": "Error",
+        "justification": "'{0}' is not a valid return type."
+      },
+      {
+        "id": "AL0160",
+        "action": "Error",
+        "justification": "'{0}' is not a valid language identifier."
+      },
+      {
+        "id": "AL0161",
+        "action": "Error",
+        "justification": "'{0}' is inaccessible due to its protection level."
+      },
+      {
+        "id": "AL0162",
+        "action": "Error",
+        "justification": "'{0}' is not a valid trigger."
+      },
+      {
+        "id": "AL0163",
+        "action": "Error",
+        "justification": "Wrong signature. Correct signature for '{0}' is '{1}'."
+      },
+      {
+        "id": "AL0164",
+        "action": "Error",
+        "justification": "The trigger '{0}' is already defined."
+      },
+      {
+        "id": "AL0165",
+        "action": "Error",
+        "justification": "Triggers cannot be called directly."
+      },
+      {
+        "id": "AL0166",
+        "action": "Error",
+        "justification": "Argument (0): must be a member."
+      },
+      {
+        "id": "AL0167",
+        "action": "Error",
+        "justification": "The {0} '{1}' can only be used if the property '{2}' is set with any of the values of: '{3}'."
+      },
+     {
+        "id": "AL0168",
+        "action": "Error",
+        "justification": "The {0} '{1}' can only be used if the property '{2}' is set."
+      },
+      {
+        "id": "AL0169",
+        "action": "Error",
+        "justification": "The option value '{0}' is not valid."
+      },
+      {
+        "id": "AL0170",
+        "action": "Error",
+        "justification": "An '=' is expected for property {0}."
+      },
+      {
+        "id": "AL0171",
+        "action": "Error",
+        "justification": "The property value '{0}' on property '{1}' is not valid."
+      },
+      {
+        "id": "AL0172",
+        "action": "Error",
+        "justification": "Operator '{0}' is ambiguous on an operand of type '{1}'."
+      },
+      {
+        "id": "AL0173",
+        "action": "Error",
+        "justification": "Operator '{0}' cannot be applied to an operand of type '{1}'."
+      },
+      {
+        "id": "AL0174",
+        "action": "Error",
+        "justification": "Operator '{0}' is ambiguous on operands of type '{1}' and '{2}'."
+      },
+      {
+        "id": "AL0175",
+        "action": "Error",
+        "justification": "Operator '{0}' cannot be applied to operands of type '{1}' and '{2}'."
+      },
+      {
+        "id": "AL0176",
+        "action": "Error",
+        "justification": "Expected one of the calculation formula methods (Average, Count, Exist, Min, Max, Lookup, Sum)."
+      },
+      {
+        "id": "AL0177",
+        "action": "Error",
+        "justification": "Invalid application object identifier. A number or an application object name is expected."
+      },
+      {
+        "id": "AL0178",
+        "action": "Error",
+        "justification": "A 'FILTER' keyword or an identifier is expected."
+      },
+      {
+        "id": "AL0179",
+        "action": "Error",
+        "justification": "An identifier or a member access expression is expected."
+      },
+      {
+        "id": "AL0180",
+        "action": "Error",
+        "justification": "A 'FILTER' keyword is expected."
+      },
+      {
+        "id": "AL0181",
+        "action": "Error",
+        "justification": "Invalid filter expression."
+      },
+      {
+        "id": "AL0182",
+        "action": "Error",
+        "justification": "An identifier or a literal is expected as the value of a filter expression."
+      },
+      {
+        "id": "AL0183",
+        "action": "Error",
+        "justification": "Unexpected character '{0}'."
+      },
+      {
+        "id": "AL0184",
+        "action": "Error",
+        "justification": "The expression '{0}' is not valid."
+      },
+      {
+        "id": "AL0185",
+        "action": "Error",
+        "justification": "{0} '{1}' is missing."
+      },
+      {
+        "id": "AL0186",
+        "action": "Error",
+        "justification": "Reference '(0)' in application object '{1}' does not exist."
+      },
+      {
+        "id": "AL0187",
+        "action": "Error",
+        "justification": "Attribute '{0}' is valid only for {1}."
+      },
+      {
+        "id": "AL0189",
+        "action": "Error",
+        "justification": "Attribute '{0}' cannot be specified, because '{1}' is already specified."
+      },
+      {
+        "id": "AL0190",
+        "action": "Error",
+        "justification": "Constant value '{0}' is outside the range for a Time."
+      },
+      {
+        "id": "AL0191",
+        "action": "Error",
+        "justification": "Constant value '{0}' is outside the range for a Date. The syntax for defining Date format is YYYYMMDDD, where D is a mandatory letter. For example, 20180325D, read as the 25th of March, 2018."
+      },
+      {
+        "id": "AL0192",
+        "action": "Error",
+        "justification": "The return value must be used for the method '{0}'."
+      },
+     {
+        "id": "AL0193",
+        "action": "Error",
+        "justification": "Argument {0}: cannot convert from '{1}' to the type of Argument 1 '{2}'."
+      },
+      {
+        "id": "AL0195",
+        "action": "Error",
+        "justification": "Invalid permission kind. Expected: '{0}'."
+      },
+      {
+        "id": "AL0196",
+        "action": "Error",
+        "justification": "The call is ambiguous between the method '{0}' defined in {1} '{2}' by the extension '{3}' and the method '{4}' defined in {5} '{6}' by the extension '{7}'."
+      },
+      {
+        "id": "AL0197",
+        "action": "Error",
+        "justification": "An application object of type '{0}' with name '{1}' is already declared by the extension '{2}'."
+      },
+      {
+        "id": "AL0198",
+        "action": "Error",
+        "justification": "Expected one of the application object keywords ({0})."
+      },
+      {
+        "id": "AL0199",
+        "action": "Error",
+        "justification": "The type of the sum index field '{0}' must be numeric (Decimal, BigInteger, Integer, or Duration)."
+      },
+      {
+        "id": "AL0200",
+        "action": "Warning",
+        "justification": "Property '{0}' is obsolete and will be removed in a future version."
+      },
+      {
+        "id": "AL0201",
+        "action": "Error",
+        "justification": "The {0} FlowField is not a Boolean field. If a FlowField CalcFormula starts with 'Exist', then the FlowField must be a Boolean type field."
+      },
+      {
+        "id": "AL0202",
+        "action": "Error",
+        "justification": "The {0} FlowField is not an Integer field. If a FlowField CalcFormula starts with 'Count', then the FlowField must be an Integer type field."
+      },
+      {
+        "id": "AL0203",
+        "action": "Error",
+        "justification": "Cannot calculate Sum or Average for the field {0} because it is not a numeric field (Decimal, BigInteger, Integer, or Duration data type)."
+      },
+      {
+        "id": "AL0204",
+        "action": "Error",
+        "justification": "Field type {0} is not convertible to field type {1}."
+      },
+      {
+        "id": "AL0206",
+        "action": "Error",
+        "justification": "A field with ID {0} is already defined in ${1}'{2}' by the extension '{3}'."
+      },
+      {
+        "id": "AL0207",
+        "action": "Error",
+        "justification": "The expression must be of Text type."
+      },
+      {
+        "id": "AL0208",
+        "action": "Error",
+        "justification": "The expression must be of Boolean type."
+      },
+      {
+        "id": "AL0210",
+        "action": "Error",
+        "justification": "A control with $ID={0} is already defined."
+      },
+      {
+        "id": "AL0211",
+        "action": "Error",
+        "justification": "Unknown area type '{0}'."
+      },
+      {
+        "id": "AL0212",
+        "action": "Error",
+        "justification": "An area of type '{0}' is already defined."
+      },
+      {
+        "id": "AL0213",
+        "action": "Error",
+        "justification": "An area of type '{0}' is only valid on pages of type(s) '{1}'."
+      },
+      {
+        "id": "AL0214",
+        "action": "Error",
+        "justification": "An area of type 'FactBoxes' is not valid on Part type pages."
+      },
+      {
+        "id": "AL0215",
+        "action": "Error",
+        "justification": "A Part type page cannot contain other parts."
+      },
+      {
+        "id": "AL0216",
+        "action": "Error",
+        "justification": "Only parts are valid in an area of type 'FactBoxes'."
+      },
+      {
+        "id": "AL0217",
+        "action": "Error",
+        "justification": "Only parts and groups are valid in an area of type 'RoleCenter'."
+      },
+     {
+        "id": "AL0218",
+        "action": "Error",
+        "justification": "An integer literal value is expected for property {0}."
+      },
+      {
+        "id": "AL0219",
+        "action": "Error",
+        "justification": "Syntax error, string literal expected."
+      },
+      {
+        "id": "AL0220",
+        "action": "Error",
+        "justification": "Syntax error, boolean literal expected."
+      },
+      {
+        "id": "AL0221",
+        "action": "Error",
+        "justification": "The value '{0}' is not valid. The valid range is {1}..{2}."
+      },
+      {
+        "id": "AL0222",
+        "action": "Error",
+        "justification": "The ID '{0}' is not valid. ID's must be greater than zero."
+      },
+      {
+        "id": "AL0223",
+        "action": "Error",
+        "justification": "The {0} '{1}' can only be used if the property '{2}' is set to '{3}'."
+      },
+      {
+        "id": "AL0224",
+        "action": "Error",
+        "justification": "Expression expected."
+      },
+      {
+        "id": "AL0227",
+        "action": "Error",
+        "justification": "A key with ID {0} is already defined."
+      },
+      {
+        "id": "AL0228",
+        "action": "Error",
+        "justification": "A field group with ID {0} is already defined."
+      },
+      {
+        "id": "AL0229",
+        "action": "Error",
+        "justification": "The data type on the {0} field is not valid because the ExtendedDatatype property is set to Ratio. Valid data types are Integer, BigInteger and Decimal."
+      },
+      {
+        "id": "AL0230",
+        "action": "Error",
+        "justification": "The data type on the {0} field is not valid because the ExtendedDatatype property is set to PhoneNo, URL or Email. Valid data types are Code and Text."
+      },
+      {
+        "id": "AL0231",
+        "action": "Error",
+        "justification": "A member with ID '{0}' is already defined in {1} '{2}' by the extension '{3}'."
+      },
+      {
+        "id": "AL0232",
+        "action": "Error",
+        "justification": "The property value on field '{0}' must be positive or zero."
+      },
+      {
+        "id": "AL0234",
+        "action": "Error",
+        "justification": "An action with $ID={0} is already defined."
+      },
+      {
+        "id": "AL0235",
+        "action": "Warning",
+        "justification": "The expression CONST() on the option value '{0}' is obsolete. Use CONST(\"\") to refer to the empty option value."
+      },
+      {
+        "id": "AL0236",
+        "action": "Error",
+        "justification": "An empty CONST() expression is not allowed on field '{0}' of type '{1}'."
+      },
+      {
+        "id": "AL0238",
+        "action": "Error",
+        "justification": "No overload for attribute '{0}' expects {1} arguments."
+      },
+      {
+        "id": "AL0239",
+        "action": "Error",
+        "justification": "Attribute {0} is specified multiple times."
+      },
+      {
+        "id": "AL0240",
+        "action": "Error",
+        "justification": "The signature of procedure '{0}' does not match the signature required by attribute '{1}': parameter {2} is expected to be of type '{3}' but found type '{4}'. The expected signature is: {5}."
+      },
+      {
+        "id": "AL0241",
+        "action": "Error",
+        "justification": "The signature of procedure '{0}' does not match the signature required by attribute '{1}'. The expected signature is: {2}."
+      },
+      {
+        "id": "AL0242",
+        "action": "Error",
+        "justification": "Invalid attribute argument syntax: '{0}'."
+      },
+      {
+        "id": "AL0243",
+        "action": "Error",
+        "justification": "Attribute {0} can only be used within a codeunit of subtype {1}."
+      },
+     {
+        "id": "AL0244",
+        "action": "Error",
+        "justification": "The signature of procedure '{0}' does not match the signature required by attribute '{1}': return value is expected to be of type '{2}' but found type '{3}'. The expected signature is: {4}."
+      },
+      {
+        "id": "AL0245",
+        "action": "Error",
+        "justification": "The signature of procedure '{0}' does not match the signature required by attribute '{1}': procedure cannot be local."
+      },
+      {
+        "id": "AL0246",
+        "action": "Error",
+        "justification": "The property '{0}' cannot be customized."
+      },
+      {
+        "id": "AL0247",
+        "action": "Error",
+        "justification": "The target {0} '{1}' for the extension object is not found."
+      },
+      {
+        "id": "AL0250",
+        "action": "Error",
+        "justification": "The data type on the {0} field is not valid because the ExtendedDatatype property is set to Person. Valid data types are Media and MediaSet."
+      },
+      {
+        "id": "AL0251",
+        "action": "Warning",
+        "justification": "Application object '{0}' is missing."
+      },
+      {
+        "id": "AL0252",
+        "action": "Error",
+        "justification": "Expected 'Ascending' or 'Descending' value."
+      },
+      {
+        "id": "AL0254",
+        "action": "Warning",
+        "justification": "Sorting field '{0}' should be part of the keys for table '{1}'."
+      },
+      {
+        "id": "AL0255",
+        "action": "Error",
+        "justification": "Property '{0}' requires an application object reference for the 'RunObject' property."
+      },
+      {
+        "id": "AL0256",
+        "action": "Error",
+        "justification": "The flowfield '{0}' cannot be part of the keys for table '{1}'."
+      },
+      {
+        "id": "AL0257",
+        "action": "Error",
+        "justification": "Constant value '{0}' is outside the range for a DateTime data type, only 0 is valid."
+      },
+      {
+        "id": "AL0259",
+        "action": "Error",
+        "justification": "A SQLIndex defined for the primary key must contain the same fields as the key for table '{0}'."
+      },
+      {
+        "id": "AL0260",
+        "action": "Error",
+        "justification": "The key '{0}' on table '{1}' cannot start with the fields defined for the primary key. The server will append these to any alternate key."
+      },
+      {
+        "id": "AL0261",
+        "action": "Error",
+        "justification": "The identifier '{0}' can only be specified in the list once."
+      },
+      {
+        "id": "AL0262",
+        "action": "Error",
+        "justification": "The clustered key '{0}' has already been defined for table '{1}'."
+      },
+      {
+        "id": "AL0263",
+        "action": "Error",
+        "justification": "The primary key '{0}' on table '{1}' (the first one in the key list) must be enabled."
+      },
+      {
+        "id": "AL0264",
+        "action": "Error",
+        "justification": "An application object of type '{0}' with ID '{1}' is already declared by the extension '{2}'."
+      },
+      {
+        "id": "AL0267",
+        "action": "Error",
+        "justification": "Actions are not allowed on the control type."
+      },
+      {
+        "id": "AL0268",
+        "action": "Error",
+        "justification": "Grouping of actions is not allowed."
+      },
+      {
+        "id": "AL0269",
+        "action": "Warning",
+        "justification": "The referenced page '{0}' should be a list part or a card part."
+      },
+     {
+        "id": "AL0270",
+        "action": "Error",
+        "justification": "The control '{0}' is not found in the target '{1}'."
+      },
+      {
+        "id": "AL0271",
+        "action": "Error",
+        "justification": "The action '{0}' is not found in the target '{1}'."
+      },
+      {
+        "id": "AL0272",
+        "action": "Error",
+        "justification": "The anchoring symbol '{0}' must be a grouping symbol."
+      },
+      {
+        "id": "AL0273",
+        "action": "Warning",
+        "justification": "The name '{0}' is an Area type. Using an Area type name will limit extensibility as dependent extension won't be able to reference it."
+      },
+      {
+        "id": "AL0274",
+        "action": "Error",
+        "justification": "The anchoring symbol '{0}' cannot be an area."
+      },
+      {
+        "id": "AL0275",
+        "action": "Error",
+        "justification": "'{0}' is an ambiguous reference between '{1}' defined by the extension '{2}' and '{3}' defined by the extension '{4}'."
+      },
+      {
+        "id": "AL0276",
+        "action": "Error",
+        "justification": "A Time literal value is expected for property {0}."
+      },
+      {
+        "id": "AL0277",
+        "action": "Error",
+        "justification": "A Date literal value is expected for property {0}."
+      },
+      {
+        "id": "AL0278",
+        "action": "Error",
+        "justification": "A DateTime literal value is expected for property {0}."
+      },
+      {
+        "id": "AL0279",
+        "action": "Error",
+        "justification": "The key '{0}' on table '{1}' contains too many fields."
+      },
+      {
+        "id": "AL0280",
+        "action": "Error",
+        "justification": "The event '{0}' is not found in the target."
+      },
+      {
+        "id": "AL0281",
+        "action": "Error",
+        "justification": "Object member '{0}' is not an event."
+      },
+      {
+        "id": "AL0282",
+        "action": "Error",
+        "justification": "The member referenced by event subscriber '{0}' parameter '{1}' is not found."
+      },
+      {
+        "id": "AL0283",
+        "action": "Error",
+        "justification": "The event '{0}' must not have a return value."
+      },
+      {
+        "id": "AL0284",
+        "action": "Error",
+        "justification": "The type of the parameter '{1}' on the event subscriber '{0}' does not match the expected type '{2}'."
+      },
+     {
+        "id": "AL0285",
+        "action": "Error",
+        "justification": "The event '{0}' must not have a parameter name 'sender' when it specifies to include sender."
+      },
+      {
+        "id": "AL0286",
+        "action": "Error",
+        "justification": "The event '{0}' can't contain code."
+      },
+      {
+        "id": "AL0287",
+        "action": "Error",
+        "justification": "The event '{0}' can't contain local variables."
+      },
+      {
+        "id": "AL0288",
+        "action": "Error",
+        "justification": "Parameter '{0}' is only allowed to be 'var' if the publisher parameter is 'var'."
+      },
+      {
+        "id": "AL0290",
+        "action": "Error",
+        "justification": "Element name is not allowed for the event '{0}' and must be empty."
+      },
+      {
+        "id": "AL0291",
+        "action": "Error",
+        "justification": "Event trigger '{0}' can only be used if the page specifies the 'SourceTable' property."
+      },
+      {
+        "id": "AL0292",
+        "action": "Error",
+        "justification": "'FIELD', 'CONST' or 'FILTER' keyword is expected."
+      },
+      {
+        "id": "AL0293",
+        "action": "Error",
+        "justification": "Property value '{0}' is not in the field's Option Members."
+      },
+      {
+        "id": "AL0294",
+        "action": "Error",
+        "justification": "The type of property value '{0}' does not match the field's type."
+      },
+      {
+        "id": "AL0295",
+        "action": "Error",
+        "justification": "The field '{0}' is not found in the target '{1}'."
+      },
+      {
+        "id": "AL0296",
+        "action": "Error",
+        "justification": "The application object or method '{0}' has scope '{1}' and cannot be used for '{2}' development."
+      },
+      {
+        "id": "AL0297",
+        "action": "Error",
+        "justification": "The application object identifier '{0}' is not valid. It must be within the allowed ranges '{1}'."
+      },
+      {
+        "id": "AL0298",
+        "action": "Error",
+        "justification": "The data type of the expression assigned to the 'StyleExpr' property is not valid. Valid data types are Boolean, Text, or Code."
+      },
+      {
+        "id": "AL0299",
+        "action": "Warning",
+        "justification": "Member name '{0}' is only allowed on triggers."
+      },
+      {
+        "id": "AL0300",
+        "action": "Error",
+        "justification": "The property '{0}' is used as a method."
+      },
+      {
+        "id": "AL0301",
+        "action": "Error",
+        "justification": "A list must end with a member; not a separator {0}."
+      },
+      {
+        "id": "AL0302",
+        "action": "Error",
+        "justification": "Cannot use '{0}' in {1} '{2}' before it is declared."
+      },
+      {
+        "id": "AL0303",
+        "action": "Error",
+        "justification": "Attributes can only be defined on variables and methods."
+      },
+      {
+        "id": "AL0304",
+        "action": "Error",
+        "justification": "Length of the identifier '{0}' cannot exceed {1} characters."
+      },
+      {
+        "id": "AL0305",
+        "action": "Error",
+        "justification": "The length of the application object identifier '{0}' cannot exceed {1} characters."
+      },
+      {
+        "id": "AL0306",
+        "action": "Error",
+        "justification": "A field list has to contain at least one field."
+      },
+      {
+        "id": "AL0307",
+        "action": "Error",
+        "justification": "Property value cannot be validated because the source table is unreachable."
+      },
+      {
+        "id": "AL0308",
+        "action": "Error",
+        "justification": "The primary key '{0}' on table '{1}' (the first one in the key list) must have the MaintainSqlIndex property set to true."
+      },
+      {
+        "id": "AL0309",
+        "action": "Error",
+        "justification": "Table '{0}' contains too many keys."
+      },
+      {
+        "id": "AL0310",
+        "action": "Error",
+        "justification": "An instance is required for the non-static member '{0}'."
+      },
+      {
+        "id": "AL0311",
+        "action": "Error",
+        "justification": "Member '{0}' cannot be accessed with an instance reference; qualify it with '{1}' instead."
+      },
+      {
+       "id": "AL0313",
+       "action": "Error",
+       "justification": "Attribute '{0}' can only be used within {1}."
+      },
+      {
+        "id": "AL0314",
+        "action": "Error",
+        "justification": "The property '{0}' is only valid in controls of type '{1}'."
+      },
+      {
+        "id": "AL0315",
+        "action": "Error",
+        "justification": "Control '{0}' does not exist in group '{1}'."
+      },
+      {
+        "id": "AL0316",
+        "action": "Error",
+        "justification": "The expression must be of Integer type."
+      },
+      {
+        "id": "AL0317",
+        "action": "Error",
+        "justification": "A property with the same name has already been declared."
+      },
+      {
+        "id": "AL0318",
+        "action": "Error",
+        "justification": "The value assigned to the 'RunObject' property is not valid. Valid object types are codeunit, page, xmlport, report, and query."
+      },
+      {
+        "id": "AL0319",
+        "action": "Error",
+        "justification": "At least one target has to be specified for the move."
+      },
+      {
+        "id": "AL0320",
+        "action": "Error",
+        "justification": "The referenced page '{0}' must specify a 'SourceTable'."
+      },
+      {
+        "id": "AL0321",
+        "action": "Error",
+        "justification": "Variable {0} cannot be included in the data set."
+      },
+      {
+        "id": "AL0322",
+        "action": "Error",
+        "justification": "'{0}' is not valid for client expressions."
+      },
+      {
+        "id": "AL0323",
+        "action": "Error",
+        "justification": "The value assigned to the SystemPart type is not valid. Valid values are {0}."
+      },
+      {
+        "id": "AL0324",
+        "action": "Error",
+        "justification": "The language '{0}' must only be specified one time."
+      },
+      {
+        "id": "AL0325",
+        "action": "Error",
+        "justification": "The field '{0}' in the table '{1}' cannot be included in a key because its type is '{2}'."
+      },
+      {
+        "id": "AL0326",
+        "action": "Error",
+        "justification": "'{0}' is not a valid column type."
+      },
+      {
+        "id": "AL0327",
+        "action": "Error",
+        "justification": "Missing file '{0}'."
+      },
+      {
+        "id": "AL0329",
+        "action": "Error",
+        "justification": "The {0} property must reference a top-level Dataltem."
+      },
+      {
+        "id": "AL0331",
+        "action": "Error",
+        "justification": "The property 'DataltemLink' cannot be set on a top-level Dataltem."
+      },
+      {
+        "id": "AL0332",
+        "action": "Error",
+        "justification": "The control '{0}' must be of type '{1}'."
+      },
+      {
+        "id": "AL0333",
+        "action": "Error",
+        "justification": "The syntax for accessing fields is not valid. Specify target field with 'tableName.fieldName' syntax."
+      },
+      {
+        "id": "AL0334",
+        "action": "Error",
+        "justification": "The extension object '{0}' cannot be declared. Another extension for target '{1}' or the target itself is already declared in this module."
+      },
+      {
+        "id": "AL0335",
+        "action": "Error",
+        "justification": "Attributes must be specified before elements inside of an element."
+      },
+      {
+        "id": "AL0336",
+        "action": "Error",
+        "justification": "There must be exactly one root node and it has to be an element."
+      },
+      {
+        "id": "AL0337",
+        "action": "Error",
+        "justification": "None of the specified parent table elements has the name '{0}'."
+      },
+      {
+        "id": "AL0338",
+        "action": "Error",
+        "justification": "Event trigger '{0}' can only be used if the page specifies 'SourceTable'. Table '{1}' is missing."
+      },
+      {
+        "id": "AL0340",
+        "action": "Error",
+        "justification": "Page '{0}' should be of type 'RoleCenter'."
+      },
+      {
+        "id": "AL0341",
+        "action": "Error",
+        "justification": "'{0}' property is missing."
+      },
+      {
+        "id": "AL0342",
+        "action": "Error",
+        "justification": "You cannot combine two Dataltems at the same level because unions are not supported."
+      },
+      {
+        "id": "AL0343",
+        "action": "Error",
+        "justification": "Queries must define a top-level Dataltem."
+      },
+      {
+        "id": "AL0344",
+        "action": "Error",
+        "justification": "The property 'DataltemLink' must be set."
+      },
+      {
+        "id": "AL0345",
+        "action": "Error",
+        "justification": "The source of a Column or Filter must be a field defined on the table referenced by its parent Dataltem."
+      },
+      {
+        "id": "AL0346",
+        "action": "Error",
+        "justification": "The methods '{0}' can only be used on Columns that have a Date or DateTime type."
+      },
+      {
+        "id": "AL0347",
+        "action": "Error",
+        "justification": "The methods '{0}' can only be used on Columns that have a Decimal, BigInteger, Integer, or Duration type."
+      },
+      {
+        "id": "AL0349",
+        "action": "Error",
+        "justification": "Column '{0}' does not exist in application object '{1}'."
+      },
+      {
+        "id": "AL0350",
+        "action": "Error",
+        "justification": "The column '{0}' cannot be used multiple times when defining the order of the resulting dataset."
+      },
+      {
+        "id": "AL0351",
+        "action": "Error",
+        "justification": "The property 'DataltemLink' can only reference fields on ancestor data items."
+      },
+      {
+        "id": "AL0352",
+        "action": "Error",
+        "justification": "Queries must define at least one Column."
+      },
+      {
+        "id": "AL0353",
+        "action": "Error",
+        "justification": "A Column must have a valid data source or have the 'Method' property set to 'Count'."
+      },
+      {
+        "id": "AL0354",
+        "action": "Error",
+        "justification": "Cannot move element '{0}' relative to itself in page '{1}'."
+      },
+      {
+        "id": "AL0355",
+        "action": "Error",
+        "justification": "Cannot move the {0} '{1}' multiple times inside of a single move operation."
+      },
+      {
+        "id": "AL0356",
+        "action": "Error",
+        "justification": "Cannot modify the {0} '{1}' multiple times."
+      },
+      {
+        "id": "AL0357",
+        "action": "Error",
+        "justification": "Cannot add {0} '{1}' with the same name multiple times."
+      },
+      {
+        "id": "AL0358",
+        "action": "Error",
+        "justification": "Cannot move or modify the {0} '{1}' in the same '{2}' that you added."
+      },
+      {
+        "id": "AL0359",
+        "action": "Error",
+        "justification": "The XML node name is not valid. {0}."
+      },
+      {
+        "id": "AL0360",
+        "action": "Error",
+        "justification": "Text literal was not properly terminated. Use the character ' to terminate the literal."
+      },
+      {
+        "id": "AL0361",
+        "action": "Error",
+        "justification": "Identifier was not properly terminated. Use the character \" to terminate the identifier."
+      },
+      {
+        "id": "AL0362",
+        "action": "Error",
+        "justification": "The path must be relative to the project root."
+      },
+      {
+        "id": "AL0363",
+        "action": "Error",
+        "justification": "The directory separator used in this property value is not compatible with the current operating system."
+      },
+      {
+        "id": "AL0364",
+        "action": "Error",
+        "justification": "Option members must be accessed with ::."
+      },
+      {
+        "id": "AL0365",
+        "action": "Error",
+        "justification": "The property '{0}' cannot be set if the property '{1}' is set to '{2}'."
+      },
+      {
+        "id": "AL0366",
+        "action": "Error",
+        "justification": "A table has to have at least one Normal field."
+      },
+     {
+        "id": "AL0367",
+        "action": "Error",
+        "justification": "An array must have at least one dimension."
+      },
+      {
+        "id": "AL0368",
+        "action": "Error",
+        "justification": "The maximum number of array dimensions is {0}."
+      },
+      {
+        "id": "AL0369",
+        "action": "Error",
+        "justification": "Constant value '{0}' cannot be converted to a '{1}'."
+      },
+      {
+        "id": "AL0370",
+        "action": "Error",
+        "justification": "Division by constant zero."
+      },
+      {
+        "id": "AL0371",
+        "action": "Error",
+        "justification": "The operation overflows at compile time."
+      },
+      {
+        "id": "AL0372",
+        "action": "Error",
+        "justification": "The length of the String constant exceeds the current memory limit."
+      },
+      {
+        "id": "AL0373",
+        "action": "Error",
+        "justification": "The XML name cannot be empty."
+      },
+      {
+        "id": "AL0374",
+        "action": "Warning",
+        "justification": "The use of a unique ID has been deprecated and the ID can be removed."
+      },
+      {
+        "id": "AL0375",
+        "action": "Error",
+        "justification": "Option members cannot contain comma."
+      },
+      {
+        "id": "AL0376",
+        "action": "Error",
+        "justification": "A control of type '{0}' is not allowed in a parent control of type '{1}'."
+      },
+      {
+        "id": "AL0377",
+        "action": "Error",
+        "justification": "'{0}' is not a valid value for the '{1}' attribute on variables of type '{2}'."
+      },
+      {
+        "id": "AL0378",
+        "action": "Error",
+        "justification": "A page of type Role Center cannot have triggers."
+      },
+      {
+        "id": "AL0379",
+        "action": "Error",
+        "justification": "The name '{0}' cannot be used as an identifier because it does not comply with the Common Language Specification."
+      },
+     {
+        "id": "AL0380",
+        "action": "Error",
+        "justification": "Cannot move symbol '{0}' from '{1}' area to '{2}' area."
+      },
+      {
+        "id": "AL0381",
+        "action": "Error",
+        "justification": "The keys '{0}' and '{1}' have an identical list of fields."
+      },
+      {
+        "id": "AL0382",
+        "action": "Error",
+        "justification": "The option value '{0}' is defined more than once on field '{1}'."
+      },
+      {
+        "id": "AL0383",
+        "action": "Error",
+        "justification": "The option value '{0}' is not defined on field '{1}'."
+      },
+      {
+        "id": "AL0384",
+        "action": "Error",
+        "justification": "The name of all the columns and all the labels defined in a report must be unique."
+      },
+      {
+        "id": "AL0385",
+        "action": "Error",
+        "justification": "IncludeCaption can be set to true only if the source of the column is a named field."
+      },
+      {
+        "id": "AL0386",
+        "action": "Error",
+        "justification": "A required package dependency could not be found. Make sure that you have downloaded all the referenced packages and their dependencies."
+      },
+      {
+        "id": "AL0387",
+        "action": "Error",
+        "justification": "Namespace '{0}' is already specified."
+      },
+      {
+        "id": "AL0388",
+        "action": "Error",
+        "justification": "The date formula '{0}' must include plus (+) or minus (-)."
+      },
+      {
+        "id": "AL0389",
+        "action": "Error",
+        "justification": "The date formula '{0}' contains a number that is too large. The number must be in the range {1}..{2}."
+      },
+      {
+        "id": "AL0390",
+        "action": "Error",
+        "justification": "The date formula '{0}' must include a time unit. Time units can be: D, WD, W, M, Q, or Y. C specifies the current time unit based on date and can be used as a prefix to any of the time units."
+      },
+      {
+        "id": "AL0391",
+        "action": "Error",
+        "justification": "The date formula '{0}' must include a number."
+      },
+      {
+        "id": "AL0392",
+        "action": "Error",
+        "justification": "The input cannot be longer than {0}."
+      },
+      {
+        "id": "AL0393",
+        "action": "Error",
+        "justification": "Application object '{0}' is already referenced."
+      },
+      {
+        "id": "AL0395",
+        "action": "Error",
+        "justification": "You can only specify Move and Modify actions in the layout section of a page customization."
+      },
+      {
+        "id": "AL0396",
+        "action": "Error",
+        "justification": "Procedures and triggers are not allowed on page customizations."
+      },
+      {
+        "id": "AL0397",
+        "action": "Error",
+        "justification": "The name '{0}' clashes with '{1}' column's format column name."
+      },
+      {
+        "id": "AL0398",
+        "action": "Error",
+        "justification": "Constant value '{0}' is outside of the valid ordinal range for this '{1}' type."
+      },
+      {
+        "id": "AL0399",
+        "action": "Error",
+        "justification": "Global variables are not allowed on page customizations."
+      },
+      {
+        "id": "AL0401",
+        "action": "Error",
+        "justification": "Multiple page customizations have been specified for the same page {0} within the same profile."
+      },
+      {
+        "id": "AL0402",
+        "action": "Error",
+        "justification": "Expression {0} cannot be specified more than once in a 'case' statement."
+      },
+      {
+        "id": "AL0403",
+        "action": "Error",
+        "justification": "To modify '{0}' you must add at least one property or trigger."
+      },
+      {
+        "id": "AL0404",
+        "action": "Error",
+        "justification": "Property '{0}' is not allowed on a table extension."
+      },
+      {
+        "id": "AL0405",
+        "action": "Error",
+        "justification": "An option value is expected."
+      },
+      {
+        "id": "AL0406",
+        "action": "Error",
+        "justification": "The type for '{0}' is not valid. Expected '{1}', but found '{2}'."
+      },
+      {
+        "id": "AL0407",
+        "action": "Error",
+        "justification": "The generic '{0}' type expects {1} type arguments."
+      },
+      {
+        "id": "AL0408",
+        "action": "Error",
+        "justification": "The type '{0}' cannot be used as a type argument in this context."
+      },
+      {
+        "id": "AL0409",
+        "action": "Error",
+        "justification": "The '{0}' type is not a generic type."
+      },
+      {
+        "id": "AL0410",
+        "action": "Error",
+        "justification": "The report '{0}' doesn't contain a Request Page."
+      },
+      {
+        "id": "AL0411",
+        "action": "Error",
+        "justification": "{0} can be specified only once."
+      },
+      {
+        "id": "AL0412",
+        "action": "Error",
+        "justification": "Member '{0}' could not be declared in an object of type '{1}'."
+      },
+      {
+        "id": "AL0413",
+        "action": "Error",
+        "justification": "Procedure '{0}' cannot have a body."
+      },
+      {
+        "id": "AL0414",
+        "action": "Error",
+        "justification": "Procedure '{0}' must declare a body."
+      },
+      {
+        "id": "AL0415",
+        "action": "Error",
+        "justification": "Keyword 'local' cannot be specified for procedure '{0}'."
+      },
+      {
+        "id": "AL0416",
+        "action": "Error",
+        "justification": "Method '{0}' cannot have a return value."
+      },
+      {
+        "id": "AL0417",
+        "action": "Error",
+        "justification": "Control add-in '{0}' not found."
+      },
+      {
+        "id": "AL0418",
+        "action": "Error",
+        "justification": "The format of resource '{0}' is not valid. Resources in the control add-in should either be relative to the project root, or reference external files using the HTTP or HTTPS protocol."
+      },
+      {
+        "id": "AL0419",
+        "action": "Error",
+        "justification": "The event subscriber '{0}' is missing a parameter of type '{1}'."
+      },
+      {
+        "id": "AL0420",
+        "action": "Error",
+        "justification": "Parameter '{0}' cannot be 'var'."
+      },
+      {
+        "id": "AL0421",
+        "action": "Error",
+        "justification": "A 'foreach' statement can only be used with an expression of an enumerable type."
+      },
+      {
+        "id": "AL0422",
+        "action": "Error",
+        "justification": "Constant value {0} is not a valid value for APIVersion. Valid values are 'beta' or of type 'vX.Y' where X and Y represent positive integers."
+      },
+      {
+        "id": "AL0423",
+        "action": "Error",
+        "justification": "The property '{0}' can only be set if the specified fields are from the same table."
+      },
+      {
+        "id": "AL0424",
+        "action": "Warning",
+        "justification": "The multilanguage syntax should not be used because the app usestranslation files (the 'features' property of the app.json includes'TranslationFile'). Update the translation files and use the label syntaxinstead."
+      },
+      {
+        "id": "AL0425",
+        "action": "Error",
+        "justification": "The '{0}' trigger can only be used on codeunits that have the Subtype property set to '{1}'."
+      },
+      {
+        "id": "AL0426",
+        "action": "Error",
+        "justification": "The APIVersion {0} is specified multiple times."
+      },
+      {
+        "id": "AL0427",
+        "action": "Error",
+        "justification": "Field {0} cannot be converted to type {1}."
+      },
+      {
+        "id": "AL0428",
+        "action": "Error",
+        "justification": "Cannot specify {0} and {1} property at the same time. Use only the {1} property."
+      },
+      {
+        "id": "AL0429",
+        "action": "Error",
+        "justification": "A repeater control can only be added to pages that have a source table."
+      },
+      {
+        "id": "AL0430",
+        "action": "Error",
+        "justification": "The parameter '{0}' has a type which is not serializable and therefore cannot be used in the given context."
+      },
+      {
+        "id": "AL0432",
+        "action": "Warning",
+        "justification": "{0} '{1}' is marked for removal. {2}."
+      },
+      {
+        "id": "AL0433",
+        "action": "Error",
+        "justification": "{0} '{1}' is removed. {2}."
+      },
+      {
+        "id": "AL0434",
+        "action": "Error",
+        "justification": "Syntax error, numeric literal expected."
+      },
+      {
+        "id": "AL0435",
+        "action": "Error",
+        "justification": "Syntax error, literal expected."
+      },
+      {
+        "id": "AL0436",
+        "action": "Error",
+        "justification": "The value of the property '{0}' cannot be empty."
+      },
+      {
+        "id": "AL0437",
+        "action": "Error",
+        "justification": "The value of the '{0}' property cannot include empty members."
+      },
+      {
+        "id": "AL0438",
+        "action": "Error",
+        "justification": "The type of value '{0}' does not match the field's type."
+      },
+      {
+        "id": "AL0439",
+        "action": "Error",
+        "justification": "The label's property is not valid. Possible properties are: {0}."
+      },
+      {
+        "id": "AL0440",
+        "action": "Error",
+        "justification": "The {0} '{1}' already defines a method called '{2}' with the same parameter types in '{3}'."
+      },
+      {
+        "id": "AL0441",
+        "action": "Error",
+        "justification": "Parameter {0} is only available when the page specifies a 'SourceTable'."
+      },
+      {
+        "id": "AL0442",
+        "action": "Error",
+        "justification": "Parameter {0} is only available when the page specifies a 'SourceTable'. Table '{1}' is missing."
+      },
+      {
+        "id": "AL0443",
+        "action": "Error",
+        "justification": "The system object provided is not one of the valid system objects."
+      },
+      {
+        "id": "AL0444",
+        "action": "Error",
+        "justification": "Malformed {0} report layout at location '{1}'. The issue is: '{2}'."
+      },
+      {
+        "id": "AL0445",
+        "action": "Error",
+        "justification": "The file '{0}' is opened in another application. Close the application to be able to compile."
+      },
+      {
+        "id": "AL0447",
+        "action": "Error",
+        "justification": "The value '{0}' for the property '{1}' cannot be used for '{2}' development."
+      },
+      {
+        "id": "AL0448",
+        "action": "Error",
+        "justification": "Member is not allowed in this context."
+      },
+      {
+        "id": "AL0449",
+        "action": "Error",
+        "justification": "The alias '{0}' is already declared."
+      },
+      {
+        "id": "AL0450",
+        "action": "Error",
+        "justification": "Field '{0}' is removed and cannot be used in an active key."
+      },
+      {
+        "id": "AL0451",
+        "action": "Error",
+        "justification": "An assembly named '{0}' could not be found in the assembly probing paths '{1}'."
+      },
+      {
+        "id": "AL0452",
+        "action": "Error",
+        "justification": "The type '{0}' could not be found in assembly '{1}'."
+      },
+      {
+        "id": "AL0453",
+        "action": "Error",
+        "justification": "This feature is under development. It can be enabled by using the '{0}' feature flag."
+      },
+      {
+        "id": "AL0454",
+        "action": "Error",
+        "justification": "The {0} {1} of type {2} cannot be extended."
+      },
+      {
+        "id": "AL0455",
+        "action": "Error",
+        "justification": "Option ordinal value '{0}' is not valid. Valid values are -1 and positive integers."
+      },
+      {
+        "id": "AL0456",
+        "action": "Error",
+        "justification": "The number of option ordinal values is not valid. There must be as many option ordinal values as there are option members."
+      },
+      { 
+        "id": "AL0457",
+        "action": "Warning",
+        "justification": "The label syntax is not correct. Please move the '{0}' to its designated attribute."
+      },
+      {
+        "id": "AL0458",
+        "action": "Error",
+        "justification": "'{0}' is not a valid attribute on variables of type '{1}'."
+      },
+      {
+        "id": "AL0459",
+        "action": "Error",
+        "justification": "The attribute '{0}' is only allowed on global variables."
+      },
+      {
+        "id": "AL0460",
+        "action": "Error",
+        "justification": "Client-side events are supported only on pages and page extensions."
+      },
+      {
+        "id": "AL0461",
+        "action": "Error",
+        "justification": "'{0}' is not a valid event publisher."
+      },
+      {
+        "id": "AL0462",
+        "action": "Error",
+        "justification": "The publisher '{0}' does not have any public events named '{1}'."
+      },
+      {
+        "id": "AL0463",
+        "action": "Error",
+        "justification": "Parameter '{0}' must be 'var' if and only if the publisher parameter is 'var'."
+      },
+      {
+        "id": "AL0464",
+        "action": "Error",
+        "justification": "Could not determine a suitable default primary key for table ' 0}'. Please specify a primary key for the table."
+      },
+      {
+        "id": "AL0465",
+        "action": "Error",
+        "justification": "The property '{0}' does not accept references to external files."
+      },
+      {
+        "id": "AL0466",
+        "action": "Error",
+        "justification": "Cannot access file '{0}'. The file is most likely read-only."
+      },
+      {
+        "id": "AL0467",
+        "action": "Warning",
+        "justification": "Cannot access file '{0}'. The file is most likely read-only."
+      },
+      {
+        "id": "AL0468",
+        "action": "Warning",
+        "justification": "Length of the table field name '{0}' must not exceed (1) characters. Longer field names are prone to cause SQL errors."
+      },
+      {
+        "id": "AL0470",
+        "action": "Error",
+        "justification": "The referenced page ' 0}' of PageType 'HeadlinePart' is only allowed inside pages of PageType 'RoleCenter'."
+      },
+      {
+        "id": "AL0471",
+        "action": "Error",
+        "justification": "The format of link '{0}' is not valid. It should be using the HTTP or HTTPS protocol."
+      },
+      {
+        "id": "AL0472",
+        "action": "Warning",
+        "justification": "The source of the translation item does not match the label value. Ignoring the translation item."
+      },
+      {
+        "id": "AL0473",
+        "action": "Warning",
+        "justification": "The translated string of the translation item is too long. Trimming the translated string."
+      },
+      {
+        "id": "AL0474",
+        "action": "Error",
+        "justification": "The attribute '{0}' is only allowed on local variables."
+      },
+      {
+        "id": "AL0475",
+        "action": "Error",
+        "justification": "The attribute '{0}' cannot be used on variables of array type."
+      },
+      {
+        "id": "AL0476",
+        "action": "Error",
+        "justification": "The trigger '{0}' can only be used if the property '{1}' of '{2}' is set."
+      },
+      {
+        "id": "AL0477",
+        "action": "Error",
+        "justification": "The trigger '{0}' can only be used if the property '{1}' of '{2}' is set to '{3}'."
+      },
+      {
+        "id": "AL0478",
+        "action": "Error",
+        "justification": "The trigger '{0}' can only be used if the property '{1}' of '{2}' is set with any of the values of:'{3}'."
+      },
+      {
+        "id": "AL0479",
+        "action": "Warning",
+        "justification": "There must be only one translation item for each ID."
+      },
+      {
+        "id": "AL0480",
+        "action": "Error",
+        "justification": "Attributes cannot have nested elements."
+      },
+      {
+        "id": "AL0481",
+        "action": "Warning",
+        "justification": "The property Image can only be used on fields that are contained in a CueGroup control."
+      },
+      {
+        "id": "AL0482",
+        "action": "Warning",
+        "justification": "The image (0) is not valid in this context."
+      },
+      {
+        "id": "AL0483",
+        "action": "Warning",
+        "justification": "The property Image cannot be used on nested Action Groups inside the 'Sections' area."
+      },
+      {
+        "id": "AL0484",
+        "action": "Error",
+        "justification": "The property '{0}' must be alphanumeric."
+      },
+      {
+        "id": "AL0485",
+        "action": "Error",
+        "justification": "The property '{0}' is mandatory for objects of type API."
+      },
+     {
+        "id": "AL0486",
+        "action": "Warning",
+        "justification": "A member of type (0 with name '{1}' is already defined in (2) '{3}' by the extension '{4}'."
+      },
+      {
+        "id": "AL0487",
+        "action": "Error",
+        "justification": "The field '{0}' is not of field class 'Normal' and thus cannot be part of the (1) list."
+      },
+      {
+        "id": "AL0488",
+        "action": "Error",
+        "justification": "ControlAddin name must not contain characters {0}."
+      },
+      {
+        "id": "AL0489",
+        "action": "Error",
+        "justification": "The property expression is not valid. A CONST or FILTER expression is expected."
+      },
+      {
+        "id": "AL0490",
+        "action": "Error",
+        "justification": "The property expression is not valid. A CONST, FIELD, or FILTER expression is expected."
+      },
+      {
+        "id": "AL0491",
+        "action": "Error",
+        "justification": "The property expression is not valid. One of the following expressions is expected:"
+      },
+      {
+        "id": "AL0492",
+        "action": "Error",
+        "justification": "The RunObject property value of actions defined in the '{0}' area must only reference pages of type 'List'."
+      },
+      {
+        "id": "AL0493",
+        "action": "Warning",
+        "justification": "The RunObject property value of actions defined in the '{0}' area must only reference pages of type 'List'."
+      },
+      {
+        "id": "AL0494",
+        "action": "Error",
+        "justification": "The action area '{0}' can only directly contain groups."
+      },
+      {
+        "id": "AL0495",
+        "action": "Error",
+        "justification": "A member with ID '{0}' is already defined. Change the member name to generate a new ID."
+      },
+      {
+        "id": "AL0496",
+        "action": "Error",
+        "justification": "Attributes cannot be defined in this context."
+      },
+      {
+        "id": "AL0498",
+        "action": "Error",
+        "justification": "The attribute '{0}' can only be used on procedures that have the attribute '{1}'."
+      },
+      {
+        "id": "AL0499",
+        "action": "Error",
+        "justification": "The handler function (0) was not found. Make sure the procedure is defined and has a handler attribute."
+      },
+      {
+        "id": "AL0500",
+        "action": "Error",
+        "justification": "The HandlerFunctions attribute only accepts a string representing a comma separated list of procedure names without spaces."
+      },
+      {
+        "id": "AL0501",
+        "action": "Error",
+        "justification": "Eventsubscribers in test codeunits must use manual binding. Set the property EventSubscriberInstance to Manual."
+      },
+      {
+        "id": "AL0502",
+        "action": "Error",
+        "justification": "The LinkTable property must reference a table element node of the current XMLPort."
+      },
+      {
+        "id": "AL0503",
+        "action": "Error",
+        "justification": "Reference '{0}' in application object '{1}' is ambiguous."
+      },
+      {
+        "id": "AL0504",
+        "action": "Error",
+        "justification": "The enum '{0}' is not extensible."
+      },
+      {
+        "id": "AL0505",
+        "action": "Error",
+        "justification": "Pages of type API must have the 'DelayedInsert' property set to true. From runtime 7.2, 'DelayedInsert' can be set to false if the 'Editable' property or the 'InsertAllowed' property is set to false."
+      },
+      {
+        "id": "AL0506",
+        "action": "Error",
+        "justification": "The area '{0}' can only directly contain groups."
+      },
+      {
+        "id": "AL0509",
+        "action": "Warning",
+        "justification": "Constant value '{0}' is outside of the valid ordinal range for this option type."
+      },
+      {
+        "id": "AL0510",
+        "action": "Error",
+        "justification": "The.NET type '{0}' is not a valid control add-in."
+      },
+      {
+        "id": "AL0511",
+        "action": "Error",
+        "justification": "The property 'IsControlAddin' must be set on the .NET type '{0}' if the type represents a .NET control add-in."
+      },
+      {
+        "id": "AL0512",
+        "action": "Error",
+        "justification": "The manifest should define the 'supported Locales' manifest property in order to use a placeholder in the '(0)' property."
+      },
+      {
+        "id": "AL0513",
+        "action": "Error",
+        "justification": "The FieldGroup '{0}' is not found in the target '{1}'."
+      },
+      {
+        "id": "AL0514",
+        "action": "Error",
+        "justification": "The symbol file is not valid. An enum with ID '{0}' is already defined with a different name in module '{1}'."
+      },
+      {
+        "id": "AL0515",
+        "action": "Error",
+        "justification": "The symbol file is not valid. An enum with name '{0}' is already defined with a different ID in module '{1}'."
+      },
+      {
+        "id": "AL0516",
+        "action": "Error",
+        "justification": "The symbol file is not valid. An enum with ID '{0}' and name '{1}' is already defined in module '{2}', but with different values (OptionString)."
+      },
+      {
+        "id": "AL0517",
+        "action": "Error",
+        "justification": "The link '{0 ' specified in the HelpLink property must either contain one placeholder with value 0 for the user locale, or no placeholders."
+      },
+      {
+        "id": "AL0518",
+        "action": "Error",
+        "justification": "A method with name ' 0}' possessing one Handler attribute is already defined in this test codeunit."
+      },
+      {
+        "id": "AL0519",
+        "action": "Error",
+        "justification": "'{0}' is not valid value in this context."
+      },
+      {
+        "id": "AL0520",
+        "action": "Warning",
+        "justification": "{0} '{1}' is removed. (2)."
+      },
+      {
+        "id": "AL0521",
+        "action": "Error",
+        "justification": "The primary key '{0}' on table '{1}' (the first one in the key list) must not have the Unique property set."
+      },
+      {
+        "id": "AL0522",
+        "action": "Error",
+        "justification": "Property value {0} is not in the values for enum '{1}'."
+      },
+      {
+        "id": "AL0523",
+        "action": "Warning",
+        "justification": "The {0} '{1}' already defines a method called '{2}' with the same parameter types in '{3}'."
+      },
+      {
+        "id": "AL0524",
+        "action": "Warning",
+        "justification": "The base type already defines a method called '{0}' with the same parameter types."
+      },
+      {
+        "id": "AL0525",
+        "action": "Error",
+        "justification": "The system or virtual table '{0}' cannot be extended."
+      },
+      {
+        "id": "AL0526",
+        "action": "Error",
+        "justification": "The referenced page ' 0}' of type 'API' is only allowed inside pages of PageType 'API'."
+      },
+      {
+        "id": "AL0527",
+        "action": "Error",
+        "justification": "The SQL timestamp field '{0}' cannot be part of the keys for table '{1}'."
+      },
+      {
+        "id": "AL0528",
+        "action": "Error",
+        "justification": "The name of field controls in pages of the type API must be alphanumeric."
+      },
+      {
+        "id": "AL0529",
+        "action": "Error",
+        "justification": "must be alphanumeric.The name of columns in queries of the type API"
+      },
+      {
+        "id": "AL0530",
+        "action": "Error",
+        "justification": "The maximum length for the type '{0}' is {1}."
+      },
+      {
+        "id": "AL0531",
+        "action": "Error",
+        "justification": "The page '{1}' of type 'API' and its subpage '{2}' of type 'API' in the control '{0}' of type 'Part' must have the same value of property '{3}'."
+      },
+      {
+        "id": "AL0532",
+        "action": "Error",
+        "justification": "The page '{1}' of type 'API' and its control '{0}' of type 'Part' must have the same value of property '{2}'."
+      },
+      {
+        "id": "AL0533",
+        "action": "Error",
+        "justification": "The view '{0}' is not found in the target ' {1}'."
+      },
+      {
+        "id": "AL0534",
+        "action": "Warning",
+        "justification": "Length of the table key name '{0}' must not exceed 1) characters. Longer key names are prone to cause SQL errors."
+      },
+      {
+        "id": "AL0535",
+        "action": "Error",
+        "justification": "The referenced page '{0}' must be a List part, a Card part, or an API page."
+      },
+      {
+        "id": "AL0536",
+        "action": "Error",
+        "justification": "Adding new controls in a view is not allowed."
+      },
+      {
+        "id": "AL0537",
+        "action": "Error",
+        "justification": "Declaring views is only supported on pages of type {0}."
+      },
+      {
+        "id": "AL0538",
+        "action": "Error",
+        "justification": "Views only support setting one sorting direction on table fields."
+      },
+      {
+        "id": "AL0539",
+        "action": "Error",
+        "justification": "The field '{0}' cannot be used multiple times when defining the order of the page view."
+      },
+      {
+        "id": "AL0540",
+        "action": "Error",
+        "justification": "The view name '{0}' is not valid."
+      },
+      {
+        "id": "AL0541",
+        "action": "Error",
+        "justification": "The use of the variable '{0}' in the property value of '{1}' in view '{2}' is not allowed."
+      },
+      {
+        "id": "AL0542",
+        "action": "Error",
+        "justification": "The property {0} cannot be used on page '{1}' because this page does not have a source table."
+      },
+      {
+        "id": "AL0543",
+        "action": "Error",
+        "justification": "The manifest property 'contextSensitiveHelpUrl' must be set in order to use the property 'ContextSensitiveHelpPage'."
+      },
+      {
+        "id": "AL0544",
+        "action": "Error",
+        "justification": "The property 'ContextSensitive HelpPage' cannot contain a placeholder."
+      },
+      {
+        "id": "AL0545",
+        "action": "Warning",
+        "justification": "An area of type '{0}' is not valid on pages of type '{1}'."
+      },
+      {
+        "id": "AL0546",
+        "action": "Error",
+        "justification": "The control '{0}' cannot be modified in a view context because views only support modifying controls defined in the Content area."
+      },
+      {
+        "id": "AL0547",
+        "action": "Warning",
+        "justification": "The event '{0}' should not expose global variables."
+      },
+      {
+        "id": "AL0548",
+        "action": "Warning",
+        "justification": "Cannot move symbol '{0}' from '{1}' area to '{2}' area."
+      },
+      {
+        "id": "AL0549",
+        "action": "Error",
+        "justification": "Procedures and triggers are not allowed on page views."
+      },
+      {
+        "id": "AL0550",
+        "action": "Warning",
+        "justification": "Groups defined in the action area '{0}' should only contain actions."
+      },
+      {
+        "id": "AL0551",
+        "action": "Warning",
+        "justification": "The action area '{0}' can only contain actions."
+      },
+      {
+        "id": "AL0552",
+        "action": "Warning",
+        "justification": "The action area '{0}' can only directly contain groups."
+      },
+      {
+        "id": "AL0553",
+        "action": "Error",
+        "justification": "You cannot add actions of type '{0}' in the action area '{1}' from a page customization. You can only add actions of type '{2}'."
+      },
+      {
+        "id": "AL0554",
+        "action": "Error",
+        "justification": "You can only specify Move and Modify actions in the actions section of a page customization."
+      },
+      {
+        "id": "AL0555",
+        "action": "Error",
+        "justification": "The RunObject property value of actions defined in the '{0}' area must only reference objects of type {1}."
+      },
+      {
+        "id": "AL0556",
+        "action": "Error",
+        "justification": "The RunObject property value of actions defined in the '{0}' area must only reference objects of type {1}."
+      },
+      {
+        "id": "AL0557",
+        "action": "Warning",
+        "justification": "The name of the codeunit local variable '{0}' is identical to a field in table '{1}' and will shadow that table field."
+      },
+      {
+        "id": "AL0558",
+        "action": "Warning",
+        "justification": "The name of the codeunit global variable '{0}' is identical to a field in table '{1}'."
+      },
+      {
+        "id": "AL0559",
+        "action": "Warning",
+        "justification": "A Part type page cannot contain other parts."
+      },
+      {
+        "id": "AL0560",
+        "action": "Warning",
+        "justification": "Only parts and groups are valid in an area of type 'RoleCenter'."
+      },
+      {
+        "id": "AL0561",
+        "action": "Warning",
+        "justification": "Only parts are valid in an area of type 'FactBoxes'."
+      },
+      {
+        "id": "AL0562",
+        "action": "Warning",
+        "justification": "The value assigned to the SystemPart type is not valid. Valid values are (0)."
+      },
+      {
+        "id": "AL0563",
+        "action": "Warning",
+        "justification": "A control of type '{0}' is not allowed in a parent control of type '{1}'."
+      },
+     {
+        "id": "AL0564",
+        "action": "Error",
+        "justification": "The object {0} '{1}' is not extensible."
+      },
+      {
+        "id": "AL0565",
+        "action": "Error",
+        "justification": "Fast publishing requires a built application file to be present. The '{0}' application file contains a manifest which is not valid. Please rebuild the application file before continuing with fast publishing."
+      },
+      {
+        "id": "AL0566",
+        "action": "Error",
+        "justification": "The field '{0}' is using an Id (1) that is reserved for system fields."
+      },
+      {
+        "id": "AL0567",
+        "action": "Warning",
+        "justification": "The field '{0}' is using the same name as a system-provided field and will shadow that field."
+      },
+      {
+        "id": "AL0568",
+        "action": "Warning",
+        "justification": "Groups defined in the action area '{0}' should only contain actions or groups."
+      },
+      {
+        "id": "AL0569",
+        "action": "Warning",
+        "justification": "A page of type Role Center cannot have procedures."
+      },
+      {
+        "id": "AL0570",
+        "action": "Error",
+        "justification": "The symbol '{0}' results in the same translation ID as one or more other symbols. Rename symbol to resolve the problem."
+      },
+      {
+        "id": "AL0571",
+        "action": "Warning",
+        "justification": "The property 'Description' should only be used for internal comments. Use the property 'Caption' or 'CaptionML' in order to specify the profile caption"
+      },
+      {
+        "id": "AL0572",
+        "action": "Error",
+        "justification": "I/O operations on the file or folder '{0}' resulted in an exception with the Windows 32 error code '{1}'.."
+      },
+      {
+        "id": "AL0573",
+        "action": "Warning",
+        "justification": "0) is not valid for client expressions."
+      },
+      {
+        "id": "AL0574",
+        "action": "Error",
+        "justification": "This feature is under development and cannot be used in an extension."
+      },
+      {
+        "id": "AL0575",
+        "action": "Error",
+        "justification": "You cannot reference the {0} '{1}' because it is defined in the page customization '{2}'."
+      },
+      {
+        "id": "AL0576",
+        "action": "Error",
+        "justification": "The profile name '{0}' is not valid because it contains leading or trailing spaces."
+      },
+      {
+        "id": "AL0577",
+        "action": "Error",
+        "justification": "The view '{0}' cannot define layout changes because its property '{1}' is not set to false."
+      },
+      {
+        "id": "AL0578",
+        "action": "Error",
+        "justification": "The value for the property '{0}' is not valid because its length exceeds (1) characters ({2 characters)."
+      },
+      {
+        "id": "AL0579",
+        "action": "Error",
+        "justification": "The value for the property '{0}' for the language code '{1}' is not valid because its length exceeds (2) characters ({3} characters)."
+      },
+      {
+        "id": "AL0580",
+        "action": "Error",
+        "justification": "The field '{0}' is used by the system and cannot be specified as a table key."
+      },
+      {
+        "id": "AL0581",
+        "action": "Error",
+        "justification": "The length for the type '{0}' must be positive."
+      },
+      {
+        "id": "AL0582",
+        "action": "Error",
+        "justification": "'{0}' does not implement the interface member '{1}'."
+      },
+      {
+        "id": "AL0584",
+        "action": "Error",
+        "justification": "An interface member cannot have any variables."
+      },
+      {
+        "id": "AL0585",
+        "action": "Error",
+        "justification": "An interface cannot have any variables."
+      },
+      {
+        "id": "AL0586",
+        "action": "Warning",
+        "justification": "The identifier contains characters that are not valid: (0)."
+      },
+      {
+        "id": "AL0587",
+        "action": "Error",
+        "justification": "'{0}' is already listed in the interface list."
+      },
+      {
+        "id": "AL0588",
+        "action": "Warning",
+        "justification": "The type of parameter '{1}' on event subscriber '{0}' is of type 'Option', but the expected type is '{2}'. Please update the subscriber type to match the publisher."
+      },
+      {
+        "id": "AL0589",
+        "action": "Warning",
+        "justification": "The name '{0}' is used across multiple columns and data items. This will prevent extensibility of this column or data item."
+      },
+      {
+        "id": "AL0590",
+        "action": "Warning",
+        "justification": "The property (0) is only supported on {1}."
+      },
+     {
+        "id": "AL0591",
+        "action": "Error",
+        "justification": "The property {0} is only supported on {1}."
+      },
+      {
+        "id": "AL0592",
+        "action": "Warning",
+        "justification": "Compatibility: 0}."
+      },
+      {
+        "id": "AL0593",
+        "action": "Warning",
+        "justification": "The type of the parameter '{0}' on the event subscriber '{1}' has a smaller capacity than the parameter type '{2}' on the publisher."
+      },
+      {
+        "id": "AL0594",
+        "action": "Error",
+        "justification": "An error occurred during XML serialization of metadata for symbol: '{0}'. Error: (1)."
+      },
+      {
+        "id": "AL0595",
+        "action": "Error",
+        "justification": "'{0}' does not implement {1}."
+      },
+      {
+        "id": "AL0596",
+        "action": "Error",
+        "justification": "Value '{0}' does not implement interface '{1}' and there is no default implementation for the mentioned interface."
+      },
+      {
+        "id": "AL0598",
+        "action": "Warning",
+        "justification": "Cannot move or modify the {0} '{1}' in the same '{2}' that you added."
+      },
+      {
+        "id": "AL0599",
+        "action": "Error",
+        "justification": "A control add-in with the same internal name '{0}' is already defined."
+      },
+      {
+        "id": "AL0600",
+        "action": "Warning",
+        "justification": "The property '{0}' can only be set on elements of type Option."
+      },
+      {
+        "id": "AL0601",
+        "action": "Warning",
+        "justification": "{0} '{1}' is removed. (2)."
+      },
+      {
+        "id": "AL0602",
+        "action": "Warning",
+        "justification": "'{0}' is inaccessible due to its protection level."
+      },
+      {
+        "id": "AL0603",
+        "action": "Warning",
+        "justification": "An implicit conversion is being performed from a value of type '{0}' to a value of type '{1}'. This conversion can lead to unexpected runtime issues."
+      },
+      {
+        "id": "AL0604",
+        "action": "Warning",
+        "justification": "Use of implicit 'with' will be removed in the future. Qualify with '{0}'."
+      },
+      {
+        "id": "AL0605",
+        "action": "Hidden",
+        "justification": "Use of implicit 'with' will be removed in the future. Qualify with '{0}'."
+      },
+      {
+        "id": "AL0606",
+        "action": "Warning",
+        "justification": "The 'with' statement is deprecated and will be removed for cloud development in a future release."
+      },
+      {
+        "id": "AL0607",
+        "action": "Hidden",
+        "justification": "The 'with' statement is deprecated and will be removed for cloud development in a future release."
+      },
+      {
+        "id": "AL0608",
+        "action": "Warning",
+        "justification": "The OrderBy property must specify at least one field on which to sort the data."
+      },
+      {
+        "id": "AL0609",
+        "action": "Warning",
+        "justification": "Adding actions to CueGroups is not supported."
+      },
+      {
+        "id": "AL0610",
+        "action": "Warning",
+        "justification": "Moving actions in CueGroups is not supported."
+      },
+      {
+        "id": "AL0611",
+        "action": "Warning",
+        "justification": "Modifying actions in CueGroups is not supported."
+      },
+      {
+        "id": "AL0612",
+        "action": "Error",
+        "justification": "An interface member must be a 'procedure'."
+      },
+      {
+        "id": "AL0613",
+        "action": "Warning",
+        "justification": "Wrong signature. Correct signature for '{0}' is '{1}'."
+      },
+      {
+        "id": "AL0614",
+        "action": "Warning",
+        "justification": "The value '(0)' is not allowed for property '{1}'."
+      },
+      {
+        "id": "AL0615",
+        "action": "Warning",
+        "justification": "Field '{0}' is not specified as a source expression on page '{1}'. All fields specified in ODataKeyFields must be used as the source expression in a page control."
+      },
+      {
+        "id": "AL0616",
+        "action": "Error",
+        "justification": "Defining the contract '{0}' on interface '{1}' is not allowed because it is matching a built-in procedure for codeunits."
+      },
+      {
+        "id": "AL0617",
+        "action": "Warning",
+        "justification": "Event trigger 'OnBeforeActionEvent' cannot be used because the action '{0}' specifies the 'RunObject' property."
+      },
+      {
+        "id": "AL0619",
+        "action": "Error",
+        "justification": "The attribute '{0}' on procedure '{1}' is not allowed. Add attribute 'ServiceEnabled' to the procedure or move it into an application object of type API."
+      },
+      {
+        "id": "AL0620",
+        "action": "Error",
+        "justification": "Preprocessor directives must appear as the first non-whitespace character on a line "},
+  
+      {
+        "id": "AL0621",
+        "action": "Error",
+        "justification": "Preprocessor directive expected."
+      },
+      {
+        "id": "AL0622",
+        "action": "Error",
+        "justification": "#endregion directive expected."
+      },
+      {
+        "id": "AL0623",
+        "action": "Error",
+        "justification": "#endif directive expected."
+      },
+      {
+        "id": "AL0624",
+        "action": "Error",
+        "justification": "Unexpected preprocessor directive."
+      },
+      {
+        "id": "AL0625",
+        "action": "Error",
+        "justification": "Cannot define/undefine preprocessor symbols after first token in file."
+      },
+      {
+        "id": "AL0626",
+        "action": "Warning",
+        "justification": "Expected identifier or numeric literal,"
+      },
+      {
+        "id": "AL0627",
+        "action": "Warning",
+        "justification": "Expected 'disable' or 'restore' keyword."
+      },
+      {
+        "id": "AL0628",
+        "action": "Warning",
+        "justification": "Unrecognized #pragma directive."
+      },
+      {
+        "id": "AL0629",
+        "action": "Error",
+        "justification": "Preprocessor expression is not valid."
+      },
+      {
+        "id": "AL0630",
+        "action": "Error",
+        "justification": "Unrecognized escape sequence."
+      },
+      {
+        "id": "AL0631",
+        "action": "Error",
+        "justification": "Single-line comment or end-of-line expected."
+      },
+      {
+        "id": "AL0632",
+        "action": "Error",
+        "justification": "Closing parenthesis ')' expected."
+      },
+      {
+        "id": "AL0633",
+        "action": "Warning",
+        "justification": "Expected 'disable', 'enable' or 'restore' keyword."
+      },
+      {
+        "id": "AL0634",
+        "action": "Warning",
+        "justification": "Single-line comment or end-of-line expected."
+      },
+      {
+        "id": "AL0635",
+        "action": "Warning",
+        "justification": "A method with 'OnPrem' scope cannot be used as event subscriber. It will fail at runtime when the publisher has 'Cloud' scope."
+      },
+      {
+        "id": "AL0636",
+        "action": "Error",
+        "justification": "The data type on the field '{0}' is not valid because the ExtendedDatatype property is set to RichText. Valid data types are Text, BigText and Blob."
+      },
+      {
+        "id": "AL0637",
+        "action": "Error",
+        "justification": "The property 'NavigationPageld' must be defined on a page of pagetype 'API'."
+      },
+      {
+        "id": "AL0638",
+        "action": "Error",
+        "justification": "'Variant' is not a valid column type for column '{0}' in report '{1}'."
+      },
+      {
+        "id": "AL0639",
+        "action": "Warning",
+        "justification": "'Variant' is not a valid column type for column '{0}' in report '{1}'."
+      },
+      {
+        "id": "AL0640",
+        "action": "Warning",
+        "justification": "XML comment has badly formed XML -- '{0}'."
+      },
+      {
+        "id": "AL0641",
+        "action": "Warning",
+        "justification": "Parameter ' 0}' has no matching param tag in the XML comment for '{1}' (but other parameters do)."
+      },
+      {
+        "id": "AL0642",
+        "action": "Warning",
+        "justification": "Missing XML comment for publicly visible type or member '{0}'."
+      },
+      {
+        "id": "AL0643",
+        "action": "Warning",
+        "justification": "XML comment is not placed on a valid language element."
+      },
+      {
+        "id": "AL0644",
+        "action": "Warning",
+        "justification": "XML comment has a param tag for '{0}', but there is no parameter by that name."
+      },
+      {
+        "id": "AL0645",
+        "action": "Warning",
+        "justification": "XML comment on ' 1}' has a paramref tag for ' 0}', but there is no parameter by that name."
+      },
+      {
+        "id": "AL0646",
+        "action": "Error",
+        "justification": "XML comment has a duplicate param tag for '{0}'."
+      },
+      {
+        "id": "AL0647",
+        "action": "Warning",
+        "justification": "{0}. See also error AL{1}."
+      },
+      {
+        "id": "AL0648",
+        "action": "Warning",
+        "justification": "End-of-file found, '*/' expected."
+      },
+      {
+        "id": "AL0649",
+        "action": "Warning",
+        "justification": "Comma is not supported in enum value names or in captions. Enum Value = '{0}', Property = '{1}'."
+      },
+      {
+        "id": "AL0650",
+        "action": "Warning",
+        "justification": "The text with a length of {0) is longer than the MaxLength of {1} which means that the text will be trimmed."
+      },
+      {
+        "id": "AL0651",
+        "action": "Error",
+        "justification": "'{0}' cannot be contained since it causes a circular reference."
+      },
+      {
+        "id": "AL0652",
+        "action": "Error",
+        "justification": "The permission set '{0}' cannot contain itself."
+      },
+      {
+        "id": "AL0653",
+        "action": "Error",
+        "justification": "Ids are not supported as object reference."
+      },
+      {
+        "id": "AL0654",
+        "action": "Error",
+        "justification": "The property value contains an unexpected file extension: {0}. The expected extensions are {1}."
+      },
+      {
+        "id": "AL0655",
+        "action": "Warning",
+        "justification": "The property DataltemLinkReference can only refer to an ancestor Dataltem."
+      },
+      {
+        "id": "AL0656",
+        "action": "Error",
+        "justification": "The {0} '{1}' cannot be used as an anchor because it is already defined in the same '{2}'."
+      },
+      {
+        "id": "AL0657",
+        "action": "Error",
+        "justification": "The property {0} is mandatory for ListParts and PageParts."
+      },
+      {
+        "id": "AL0658",
+        "action": "Error",
+        "justification": "Member name '{0}' is only allowed on triggers."
+      },
+      {
+        "id": "AL0659",
+        "action": "Warning",
+        "justification": "The length of the enum identifier '{0}' should not exceed (1) characters as it may result in runtime issues in cases where there are other enums with the same first (1) characters."
+      },
+      {
+        "id": "AL0660",
+        "action": "Warning",
+        "justification": "The property '{0}' cannot be customized."
+      },
+      {
+        "id": "AL0665",
+        "action": "Error",
+        "justification": "'{0}' is not a valid return type in runtime version '{1}'. The supported runtime versions are: {2}."
+      },
+      {
+        "id": "AL0666",
+        "action": "Error",
+        "justification": "'{0}' is not available in runtime version '{1}'. The supported runtime versions are: {2}."
+      },
+      {
+        "id": "AL0667",
+        "action": "Warning",
+        "justification": "'{0}' is being deprecated in the versions: {1} {2}."
+      },
+      {
+        "id": "AL0668",
+        "action": "Error",
+        "justification": "This feature is not available on cross-platform builds of the AL compiler."
+      },
+      {
+        "id": "AL0670",
+        "action": "Error",
+        "justification": "Fast publishing failed because the RAD file has specified a non-existing application object of type: '{0}' name: '{1}' ID: '{2}' to be added or modified. Please do a full publishing before issuing a fast publishing again."
+      },
+      {
+        "id": "AL0671",
+        "action": "Error",
+        "justification": "Fast publishing failed because the RAD file has specified an existing application object of type: '{0}' name: '{1}' ID: '{2}' to be deleted. Please do a full publishing before issuing a fast publishing again."
+      },
+      {
+        "id": "AL0672",
+        "action": "Error",
+        "justification": "Filtering is only allowed on fields where FieldClass is set to Normal. Create a Filter column and specify the filter by using the 'ColumnFilter' property."
+      },
+      {
+        "id": "AL0673",
+        "action": "Error",
+        "justification": "The property '{0}' is required."
+      },
+      {
+        "id": "AL0674",
+        "action": "Error",
+        "justification": "The property '{0}' is required when property '{1}' is set to '{2}'."
+      },
+      {
+        "id": "AL0675",
+        "action": "Error",
+        "justification": "An implementation for the interface '{0}' is already specified in this list."
+      },
+      {
+        "id": "AL0676",
+        "action": "Error",
+        "justification": "The member '{0}' in object '{1}' cannot be declared as protected in object"
+      },
+      {
+        "id": "AL0677",
+        "action": "Warning",
+        "justification": "The member '{0}' in object '{1}' cannot be declared as protected in object type ' 2}'."
+      },
+      {
+        "id": "AL0678",
+        "action": "Warning",
+        "justification": "The name of {0} '{1}' conflicts with {0} '{2}' defined in {3} '{4}' by theextension '{5}'. Choose another name for one of them. Otherwise, this might cause runtime issues."
+      },
+      {
+        "id": "AL0679",
+        "action": "Warning",
+        "justification": "The application object '{0}' is not included in any entitlement and will therefore not be accessible in the cloud."
+      },
+      {
+        "id": "AL0680",
+        "action": "Error",
+        "justification": "Cannot use addBefore or addAfter on a top-level data item. The anchor {0} is a top level data item."
+      },
+      {
+        "id": "AL0681",
+        "action": "Error",
+        "justification": "A Dataltem with name '{0}' could not be found in the target {1}."
+      },
+      {
+        "id": "AL0682",
+        "action": "Error",
+        "justification": "A Dataltem or Column with name '{0}' could not be found in the target (1)."
+      },
+      {
+        "id": "AL0683",
+        "action": "Error",
+        "justification": "The permissionset '{0}' belongs to a different module and cannot be used when defining entitlements."
+      },
+      {
+        "id": "AL0684",
+        "action": "Warning",
+        "justification": "The permissionset '{0}' contains permissionsets or permission for objects from other module. Permissions on objects from other modules will be ignored."
+      },
+      {
+        "id": "AL0685",
+        "action": "Warning",
+        "justification": "The length ' 0}' of the calculation formula's target field '{1 ' is greater than the length '{2}' of the source flow field '{3}'. This could result in a runtime error. Please make sure that the target field's length is less than equal to the source field length."
+      },
+      {
+        "id": "AL0686",
+        "action": "Error",
+        "justification": "The base type already defines a method called '{0}' with the same parameter types."
+      },
+      {
+        "id": "AL0687",
+        "action": "Error",
+        "justification": "The key '{0}' on table '{1}' cannot contain the fields defined for the primary key in the IncludeFields property."
+      },
+      {
+        "id": "AL0688",
+        "action": "Error",
+        "justification": "The key '{0}' on table '{1}' cannot contain the fields defined for the key in the IncludeFields property."
+      },
+      {
+        "id": "AL0689",
+        "action": "Error",
+        "justification": "The key '{0}' on table '{1}' cannot contain the fields defined for the Sqlindex in the IncludeFields property."
+      },
+      {
+        "id": "AL0690",
+        "action": "Error",
+        "justification": "The primary key ' 0)' on table '{1}' (the first one in the key list) must not have the Included Fields property set."
+      },
+      {
+        "id": "AL0691",
+        "action": "Error",
+        "justification": "The primary key ' 0)' on table '{1}' cannot be obsolete. All related properties will have no effect."
+      },
+      {
+        "id": "AL0692",
+        "action": "Warning",
+        "justification": "The primary key '{0}' on table '{1}' cannot be obsolete. All related properties will have no effect."
+      },
+      {
+        "id": "AL0693",
+        "action": "Error",
+        "justification": "The field '{0}' which is part of the primary key of table '{1}' cannot be obsolete. All related properties will have no effect."
+      },
+      {
+        "id": "AL0694",
+        "action": "Warning",
+        "justification": "The field '{0}' which is part of the primary key of table '{1}' cannot be obsolete. All related properties will have no effect."
+      },
+      {
+        "id": "AL0695",
+        "action": "Warning",
+        "justification": "The method {0} will only be available for {1} development for runtime version {2}."
+      },
+      {
+        "id": "AL0696",
+        "action": "Error",
+        "justification": "Argument 0): The argument should be a valid Field type."
+      },
+      {
+        "id": "AL0697",
+        "action": "Warning",
+        "justification": "Argument (0): The argument should be a valid Field type."
+      },
+      {
+        "id": "AL0698",
+        "action": "Error",
+        "justification": "Type {0} cannot be used in a 'case' statement."
+      },
+      {
+        "id": "AL0699",
+        "action": "Error",
+        "justification": "The symbol '{0}' cannot be referenced in this context. You can only reference symbols from the base object '{1}', from extension objects defined in this app with an ID lower or equal to '{2}', or from extension objects defined in dependencies."
+      },
+      {
+        "id": "AL0700",
+        "action": "Warning",
+        "justification": "Dependency '{0 ' must be referenced in the property '{1}' rather than as an explicit dependency."
+      },
+      {
+        "id": "AL0701",
+        "action": "Error",
+        "justification": "Dependency '{0}' must be referenced in the property '{1}' rather than as an explicit dependency."
+      },
+      {
+        "id": "AL0702",
+        "action": "Warning",
+        "justification": "Dependency '{0}' is referenced in the property '{1}' and as an explicit dependency. Remove the explicit dependency."
+      },
+      {
+        "id": "AL0703",
+        "action": "Error",
+        "justification": "Dependency '{0}' is referenced in the property '{1}' and as an explicit dependency. Remove the explicit dependency."
+      },
+      {
+        "id": "AL0704",
+        "action": "Error",
+        "justification": "A layout must be specified through the 'ExcelLayout' property when the default layout type for a report is 'Excel'."
+      },
+      {
+        "id": "AL0705",
+        "action": "Error",
+        "justification": "Another layout with name '{0}' already exists."
+      },
+      {
+        "id": "AL0706",
+        "action": "Error",
+        "justification": "The property '{0}' cannot be used while also specifying the rendering section."
+      },
+      {
+        "id": "AL0707",
+        "action": "Error",
+        "justification": "Layouts of type '{0}' must specify a LayoutFile with one of the following extensions: {1}."
+      },
+      {
+        "id": "AL0708",
+        "action": "Error",
+        "justification": "MimeType values must be less than {0} characters in length."
+      },
+      {
+        "id": "AL0709",
+        "action": "Error",
+        "justification": "The layout file at path '{0}' specified in layout '{1}' in {2} {3} does not exist."
+      },
+      {
+        "id": "AL0710",
+        "action": "Error",
+        "justification": "The DefaultRendering Layout property can only be used with layouts specified in the report's rendering section."
+      },
+      {
+        "id": "AL0711",
+        "action": "Warning",
+        "justification": "A member of type (0) with name '{1}' is already defined in {2} '{3}' by the extension '{4}'. Duplicate member names are not allowed when defining CueActions."
+      },
+      {
+        "id": "AL0712",
+        "action": "Error",
+        "justification": "A member of type {0} with name '{1}' is already defined in {2} '{3}' by the extension '{4}'. Duplicate member names are not allowed when defining CueActions."
+      },
+      {
+        "id": "AL0713",
+        "action": "Error",
+        "justification": "Events in control add-ins should be implemented as triggers."
+      },
+      {
+        "id": "AL0714",
+        "action": "Error",
+        "justification": "The name '{0}' is an Area type. Using an Area type name will limit extensibility as dependent extension won't be able to reference it."
+      },
+      {
+        "id": "AL0715",
+        "action": "Warning",
+        "justification": "The {0} name '{1}' is reserved for future AL language features."
+      },
+      {
+        "id": "AL0716",
+        "action": "Error",
+        "justification": "The {0} name '{1}' is reserved for future AL language features."
+      },
+      {
+        "id": "AL0717",
+        "action": "Warning",
+        "justification": "The property 'CalcFormula' is required for the field '{0}' in {1} '{2}' because the field's property 'FieldClass' is set to 'FlowField\"."
+      },
+      {
+        "id": "AL0718",
+        "action": "Error",
+        "justification": "Report layouts must have a name."
+      },
+      {
+        "id": "AL0719",
+        "action": "Warning",
+        "justification": "Argument {0}: The argument should be a valid Field type. An argument of type Joker or Variant might have an underlying type that is not a valid Field type."
+      },
+      {
+        "id": "AL0720",
+        "action": "Error",
+        "justification": "An application object '{0} {1}' could not be found in the current extension. Only application objects that belong to the current extensions can be used in this context."
+      },
+      {
+        "id": "AL0721",
+        "action": "Error",
+        "justification": "Reports that use the rendering syntax must also define the DefaultRendering Layout property."
+      },
+      {
+        "id": "AL0722",
+        "action": "Error",
+        "justification": "The property '{0}' is not allowed on {1} '{2}' because the {3} '{4)' is using the ActionRef syntax or the app.json specifies the 'NoPromotedAction Properties' feature."
+      },
+      {
+        "id": "AL0723",
+        "action": "Error",
+        "justification": "The {0} '{1}' cannot be used as target of the ActionRef '{2}'. ActionRefs can only target Actions."
+      },
+      {
+        "id": "AL0724",
+        "action": "Error",
+        "justification": "An area of type '{0}' is not valid on pages of type ' 1}'."
+      },
+      {
+        "id": "AL0725",
+        "action": "Error",
+        "justification": "The action type '{0}' is not allowed in area '{1}'."
+      },
+      {
+        "id": "AL0726",
+        "action": "Error",
+        "justification": "An identifier, a literal, or an option access is expected as the value of a filter expression."
+      },
+      {
+        "id": "AL0727",
+        "action": "Warning",
+        "justification": "The {0} '{1}' can only be used if the property '{2}' is set."
+      },
+      {
+        "id": "AL0728",
+        "action": "Warning",
+        "justification": "The {0} '{1}' can only be used if the property '{2}' is set to '{3}'."
+      },
+      {
+        "id": "AL0729",
+        "action": "Warning",
+        "justification": "The {0} '{1}' can only be used if the property '{2}' is set with any of the values of: '{3}'."
+      },
+      {
+        "id": "AL0730",
+        "action": "Error",
+        "justification": "The field '{0}' cannot be used in a sum index."
+      },
+      {
+        "id": "AL0731",
+        "action": "Warning",
+        "justification": "The name '{0}' does not exist in the current context."
+      },
+      {
+        "id": "AL0732",
+        "action": "Error",
+        "justification": "Access modifier '{0}' is not allowed for member '{1}' in the context of object type '{2}'."
+      },
+      {
+        "id": "AL0733",
+        "action": "Warning",
+        "justification": "Access modifier '{0}' is not allowed for member '{1}' in the context of object type '{2}'."
+      },
+      {
+        "id": "AL0734",
+        "action": "Error",
+        "justification": "The value '{0}' of the property '{1}' is not a valid GUID."
+      },
+      {
+        "id": "AL0735",
+        "action": "Error",
+        "justification": "The custom action '{0}' cannot be defined in {1} '{2}' because '{2}' uses promoted action properties. Convert the promoted properties into ActionRefs in oder to use custom actions."
+      },
+      {
+        "id": "AL0736",
+        "action": "Error",
+        "justification": "The value '{0}' of the property 'FlowEnvironmentld' is not a valid. It must either be a GUID or must match the pattern 'Default-'."
+      },
+      {
+        "id": "AL0737",
+        "action": "Error",
+        "justification": "The {0} '{1}' cannot be referenced in {2} '{3}' because '{1}' is defined in the promoted part of the action part while '{3}' uses promoted action properties."
+      },
+      {
+        "id": "AL0738",
+        "action": "Error",
+        "justification": "The name of {0} '{1}' cannot be empty."
+      },
+      {
+        "id": "AL0739",
+        "action": "Warning",
+        "justification": "The name of {0} '{1}' cannot be empty."
+      },
+      {
+        "id": "AL0740",
+        "action": "Error",
+        "justification": "The permission set '{0}' cannot be excluded and included in the same permission set."
+      },
+      {
+        "id": "AL0741",
+        "action": "Error",
+        "justification": "The permission set '{0}' cannot exclude itself."
+      },
+      {
+        "id": "AL0742",
+        "action": "Error",
+        "justification": "The property '{0}' is not valid for action '{1}' defined in control '{2}' of type '{3}'."
+      },
+      {
+        "id": "AL0743",
+        "action": "Warning",
+        "justification": "The property '{0}' is not valid for action '{1}' defined in control '{2}' of type"
+      },
+      {
+        "id": "AL0744",
+        "action": "Error",
+        "justification": "The property '{0}' is not valid for action '{1}' defined in a report request page."
+      },
+      {
+        "id": "AL0745",
+        "action": "Warning",
+        "justification": "The property '{0}' is not valid for action '{1}' defined in a report request page."
+      },
+      {
+        "id": "AL0746",
+        "action": "Error",
+        "justification": "The auto-increment field '{0}' has already been defined for table '{1}'."
+      },
+      {
+        "id": "AL0747",
+        "action": "Error",
+        "justification": "The data type on the '{0}' control is not valid for this ExtendedData Type value. Valid data types are BigText and Text without max size."
+      },
+      {
+        "id": "AL0748",
+        "action": "Warning",
+        "justification": "The return type '(0)' of the (1) method '{2}' has 'Internal' accessibility. The return value will not be usable outside of this module without an implicit conversion."
+      },
+      {
+        "id": "AL0749",
+        "action": "Warning",
+        "justification": "The type '{1}' of the parameter '{0}' of the (2) method '{3}' has 'Internal' accessibility. The method will not be callable outside of this module without an implicit conversion."
+      },
+      {
+        "id": "AL0750",
+        "action": "Error",
+        "justification": "Enum values can't be nested. Use '{0}' instead."
+      },
+      {
+        "id": "AL0751",
+        "action": "Warning",
+        "justification": "Enum values can't be nested. Use '{0}' instead."
+      },
+      {
+        "id": "AL0752",
+        "action": "Error",
+        "justification": "The name of a dataitem cannot be empty because it can cause runtime errors."
+      },
+      {
+        "id": "AL0753",
+        "action": "Warning",
+        "justification": "The name of a dataitem cannot be empty because it can cause runtime errors."
+      },
+      {
+        "id": "AL0754",
+        "action": "Error",
+        "justification": "The '{0}' already defines a built-in member called '{1}'. Choose another name for {2} '{1}', or it might cause runtime issues."
+      },
+      {
+        "id": "AL0755",
+        "action": "Warning",
+        "justification": "The '{0}' already defines a built-in member called '{1}'. Choose another name for {2} '{1}', or it might cause runtime issues."
+      },
+      {
+        "id": "AL0756",
+        "action": "Warning",
+        "justification": "The division by Abs(integer) will change its behavior in release version 11. For more information visit the official documentation."
+      },
+      {
+        "id": "AL0757",
+        "action": "Error",
+        "justification": "The name of {0} '{1}' conflicts with {0} '{2}' defined in {3} '{4}' by the extension '{5}'. Choose another name for one of them. Otherwise, this might cause runtime issues."
+      },
+      {
+        "id": "AL0758",
+        "action": "Warning",
+        "justification": "The name of {0} '{1}' conflicts with {0} '{2}' defined in {3} '{4}' by the extension '{5}'. Choose another name for one of them. Otherwise, this might cause runtime issues."
+      },
+      {
+        "id": "AL0759",
+        "action": "Error",
+        "justification": "The value '{0}' specified for FormatRegion cannot be parsed as a valid format culture name."
+      },
+      {
+        "id": "AL0760",
+        "action": "Error",
+        "justification": "The value '{0}' specified for FormatRegion is not a standard format culture name."
+      },
+      {
+        "id": "AL0761",
+        "action": "Error",
+        "justification": "An incorrect value was used for the category. One of the values of the enum {0} {1} is expected which is available in platform version {2} and higher."
+      },
+      {
+        "id": "AL0762",
+        "action": "Error",
+        "justification": "Length of the argument '{0}' cannot exceed {1} characters."
+      },
+      {
+        "id": "AL0763",
+        "action": "Error",
+        "justification": "0} can contain only underscores and alphanumeric characters."
+      },
+      {
+        "id": "AL0764",
+        "action": "Error",
+        "justification": "{0} cannot be empty."
+      },
+      {
+        "id": "AL0765",
+        "action": "Error",
+        "justification": "An argument of type (0) cannot be used in an External Business Event."
+      },
+      {
+        "id": "AL0766",
+        "action": "Error",
+        "justification": "An External Business Event with {0} {1) and version (2) is already declared."
+      },
+      {
+        "id": "AL0767",
+        "action": "Error",
+        "justification": "The URL ' 0}' cannot be used as the ruleset path for this project because its configuration does not permit external rulesets."
+      },
+      {
+        "id": "AL0768",
+        "action": "Warning",
+        "justification": "The property '{0}' is required when property '{1}' is set to '{2}'."
+      },
+      {
+        "id": "AL0769",
+        "action": "Warning",
+        "justification": "The property '{0}' is required."
+      },
+      {
+        "id": "AL0772",
+        "action": "Error",
+        "justification": "The attribute '{0}' can only be used in combination with attribute '{1}'."
+      },
+      {
+        "id": "AL0773",
+        "action": "Warning",
+        "justification": "The number of files found in '{0}' exceeds (1). This may result in a slower compilation."
+      },
+      {
+        "id": "AL0774",
+        "action": "Error",
+        "justification": "Try methods should not specify an explicit return value, because the value will be discarded. The actual return value depends on whether the method returns an error or not."
+      },
+      {
+        "id": "AL0775",
+        "action": "Warning",
+        "justification": "Try methods should not specify an explicit return value, because the value will be discarded. The actual return value depends on whether the method returns an error or not."
+      },
+  
+      {
+        "id": "AL0776",
+        "action": "Error",
+        "justification": "The identifier '{0}' is not a valid permission value."
+      },
+      {
+        "id": "AL0777",
+        "action": "Error",
+        "justification": "The implicit conversion will overflow when converting from a 'Guid' to a '{0}' which is shorter than the converted textual representation of a 'Guid'."
+      },
+      {
+        "id": "AL0778",
+        "action": "Warning",
+        "justification": "The implicit conversion will overflow when converting from a 'Guid' to a '{0}' which is shorter than the converted textual representation of a 'Guid'."
+      },
+      {
+        "id": "AL0779",
+        "action": "Error",
+        "justification": "It is not allowed to call ModifyAll on a field of FieldClass='{0}'. "
+      },
+      {
+        "id": "AL0780",
+        "action": "Warning",
+        "justification": "It is not allowed to call ModifyAll on a field of FieldClass='{0}'. "
+      },
+      {
+        "id": "AL0781",
+        "action": "Error",
+        "justification": "Cannot find a reference of Dataltem with name '{0}'."
+      },
+      {
+        "id": "AL0782",
+        "action": "Warning",
+        "justification": "A page extension is only allowed to access control add-ins defined within its own extension scope."
+      },
+      {
+        "id": "AL0783",
+        "action": "Error",
+        "justification": "A page extension is only allowed to access control add-ins defined within its own extension scope."
+      },
+      {
+        "id": "AL0784",
+        "action": "Error",
+        "justification": "The version number '{0}' for the argument '{1}' does not match the expected format: X.Y where X and Y represent positive integers."
+      },
+      {
+        "id": "AL0785",
+        "action": "Error",
+        "justification": "The control with name '{0}' cannot be declared in the page customization '{1}' targeting page '(2)' because controls of type '{3}' are not supported in page customizations."
+      },
+      {
+        "id": "AL0786",
+        "action": "Error",
+        "justification": "The property '{0}' cannot be specified on the control '{1}' in the page customization '{2)' targeting page '{3}', because this property type is not supported in page customizations."
+      },
+      {
+        "id": "AL0787",
+        "action": "Error",
+        "justification": "The control with name '{0}' cannot be declared in the page customization '{1}' targeting page ' 2)' because it is not using a source table field as source expression."
+      },
+      {
+        "id": "AL0788",
+        "action": "Warning",
+        "justification": "An area of type '{0}' is only valid on pages of type(s) '{1}'."
+      },
+      {
+        "id": "AL0789",
+        "action": "Warning",
+        "justification": "Using directives are ignored if a namespace is not specified."
+      },
+      {
+        "id": "AL0790",
+        "action": "Warning",
+        "justification": "The using directive for '{0}' appeared previously in this namespace declaration."
+      },
+      {
+        "id": "AL0791",
+        "action": "Error",
+        "justification": "The namespace '{0} ' is unknown."
+      },
+      {
+        "id": "AL0792",
+        "action": "Hidden",
+        "justification": "Unused using directive '{0}'."
+      },
+      {
+        "id": "AL0793",
+        "action": "Error",
+        "justification": "The property '{0}' cannot be used on a multi-select action with '{1}' scope."
+      },
+      {
+        "id": "AL0794",
+        "action": "Error",
+        "justification": "The value '{0}' for property ' 1 ' is not valid for action '{2}' defined in control '{3}' of type '{4}'."
+      },
+      {
+        "id": "AL0795",
+        "action": "Error",
+        "justification": "The parameter '{0}' cannot be of type 'SecretText'."
+      },
+      {
+        "id": "AL0796",
+        "action": "Warning",
+        "justification": "The 'Unwrap' method should only be used inside a non-debuggable method otherwise the contents of the value will be viewable through the"
+      },
+      {
+        "id": "AL0797",
+        "action": "Error",
+        "justification": "{0} '{1}' is moved. (2)."
+      },
+      {
+        "id": "AL0798",
+        "action": "Error",
+        "justification": "Currently, the Moved (To/From) property is exclusively accessible to Microsoft and select publishers."
+      },
+      {
+        "id": "AL0799",
+        "action": "Error",
+        "justification": "The field with ID '{0}' and name '{1}' cannot be used as source expression in the page customization '{2}' targeting page '{3}'."
+      },
+      {
+        "id": "AL0800",
+        "action": "Error",
+        "justification": "The field '{0}' specifies ExtendedDataType '(1)'. This ExtendedData Type can only be set on a control."
+      },
+      {
+        "id": "AL0801",
+        "action": "Warning",
+        "justification": "{0} '{1}' is marked to be moved. (2)."
+      },
+      {
+        "id": "AL0802",
+        "action": "Error",
+        "justification": "The parameter '{0}' cannot be of type 'SecretText'."
+      },
+      {
+        "id": "AL0803",
+        "action": "Warning",
+        "justification": "The name of {0} '{1}' conflicts with {0} '{2}' defined in {3} '{4}' by the extension '{5 '. Choose another name for one of them. Otherwise, this might cause runtime issues."
+      },
+      {
+        "id": "AL0804",
+        "action": "Warning",
+        "justification": "You cannot reference the {0} '{1}' because it is defined in the page customization '{2}'."
+      },
+      {
+        "id": "AL0805",
+        "action": "Warning",
+        "justification": "The object ID '{0}' should not be surrounded with quotes."
+      },
+      {
+        "id": "AL0806",
+        "action": "Error",
+        "justification": "The object ID '{0}' should not be surrounded with quotes."
+      },
+      {
+        "id": "AL0807",
+        "action": "Warning",
+        "justification": "The integer '{0 ' should not be used as the name for the object."
+      },
+      {
+        "id": "AL0808",
+        "action": "Error",
+        "justification": "You cannot set the '{0}' property to '{1}' for {2} '{3})' in the page customization '{4}'."
+      },
+      {
+        "id": "AL0809",
+        "action": "Error",
+        "justification": "The variable '{0}' is not allowed to be of type 'SecretText' because it is declared as protected."
+      },
+      {
+        "id": "AL0810",
+        "action": "Error",
+        "justification": "The name '{0}' cannot be used for a system action. The allowed names in a '{1}' page are: '{2}'."
+      },
+      {
+        "id": "AL0811",
+        "action": "Error",
+        "justification": "The trigger '{0}' cannot be defined on the system action named '{1}' in a page of type '{2}'."
+      },
+      {
+        "id": "AL0812",
+        "action": "Error",
+        "justification": "The control '{0}' cannot be declared in the 'PromptOptions' area because it is not a page field of type 'Option'."
+      },
+      {
+        "id": "AL0813",
+        "action": "Error",
+        "justification": "The property '{0}' can only be specified when the property '{1}' has a value of '{2}' if the runtime version is '{3}' or higher."
+      },
+      {
+        "id": "AL0814",
+        "action": "Warning",
+        "justification": "The source of a column cannot be a flow filter."
+      },
+      {
+        "id": "AL0815",
+        "action": "Error",
+        "justification": "The source of a column cannot be a flow filter."
+      },
+      {
+        "id": "AL0816",
+        "action": "Warning",
+        "justification": "The property '{0}' cannot be set if the property '{1}' is set to '{2}'."
+      },
+      {
+        "id": "AL0817",
+        "action": "Error",
+        "justification": "Controls of type '{0}' are not allowed in the '{1}' area for pages of type '{2}'."
+      },
+      {
+        "id": "AL0818",
+        "action": "Warning",
+        "justification": "The {0} '{1}' already defines an event called '{2}' with the same parameter types in '{3 }."
+      },
+      {
+        "id": "AL0819",
+        "action": "Error",
+        "justification": "The 0} '{1}' already defines an event called '{2 ' with the same parameter types in '{3}'."
+      },
+      {
+        "id": "AL0820",
+        "action": "Warning",
+        "justification": "{0} '{1}' is missing."
+      },
+      {
+        "id": "AL0821",
+        "action": "Warning",
+        "justification": "The method '{0}' is missing or does not have exactly one parameter of type {1}."
+      },
+      {
+        "id": "AL0822",
+        "action": "Warning",
+        "justification": "'{0}' is an ambiguous reference between '{1}' defined by the extension '{2}' and ' 3}' defined by the extension '{4}'."
+      },
+      {
+        "id": "AL0823",
+        "action": "Warning",
+        "justification": "Field '{0}' is marked as Pending Move and cannot be used in an active key ."
+      },
+      {
+        "id": "AL0824",
+        "action": "Error",
+        "justification": "Field '{0}' is moved and cannot be used in an active key."
+      },
+      {
+        "id": "AL0825",
+        "action": "Error",
+        "justification": "Field '{0}' cannot be moved to {1} '{2}' because '{2}' is marked as Moved."
+      },
+      {
+        "id": "AL0826",
+        "action": "Warning",
+        "justification": "The type '{0}' cannot be used as a type argument in this context."
+      },
+      {
+        "id": "AL0827",
+        "action": "Error",
+        "justification": "Argument (0): The argument (0) of field class (1) is not supported. Allowed field class types are '{2}'."
+      },
+      {
+        "id": "AL0828",
+        "action": "Error",
+        "justification": "The field '{0}' with ID '{1}' can't be moved because it is part of the table's primary key."
+      },
+      {
+        "id": "AL0829",
+        "action": "Error",
+        "justification": "Symbol of kind {0} '{1}' cannot be moved to its own app."
+      },
+      {
+        "id": "AL0830",
+        "action": "Warning",
+        "justification": "The method '{0}' is not supported as the implementation for the interface method because it is a try function."
+      },
+      {
+        "id": "AL0831",
+        "action": "Error",
+        "justification": "The method '{0}' is not supported as the implementation for the interface method because it is a try function."
+      },
+      {
+        "id": "AL0832",
+        "action": "Error",
+        "justification": "Action area of type ' 0}' is not valid in control '{1}' of type '{2}'."
+      },
+      {
+        "id": "AL0833",
+        "action": "Error",
+        "justification": "{0} '{1}' cannot be defined outside an action area or group on this control type."
+      },
+      {
+        "id": "AL0834",
+        "action": "Error",
+        "justification": "'Moved To' property is required for a symbol of kind '{0}' {1} that has ObsoleteState set to Moved or Pending Move."
+      },
+      {
+        "id": "AL0835",
+        "action": "Warning",
+        "justification": "The LayoutFile '{0}' is already being used. To avoid build issues, a layout file shouldn't be updated by different layouts."
+      },
+      {
+        "id": "AL0836",
+        "action": "Warning",
+        "justification": "The {0} '{1}' contains a reference to the field '{2 ' which is defined in another object from the same app. If you are preparing to move this object to another extension in the future, this reference will be an issue."
+      },
+      {
+        "id": "AL0837",
+        "action": "Warning",
+        "justification": "The symbol '{0}' results in the same translation ID as one or more other symbols. Rename symbol to resolve the problem."
+      },
+      {
+        "id": "AL0838",
+        "action": "Error",
+        "justification": "The XLIFF file for text data could not be generated."
+      },
+      {
+        "id": "AL0839",
+        "action": "Error",
+        "justification": "The symbol '{0}' has same trans unit ID in Text Data XLIFF file as one or more other symbols."
+      },
+      {
+        "id": "AL0840",
+        "action": "Error",
+        "justification": "The file extension '{0}' is not valid. Example of an expected value is '.app'."
+      },
+      {
+        "id": "AL0841",
+        "action": "Error",
+        "justification": "The file extension '{0}' is already defined."
+      },
+      {
+        "id": "AL0842",
+        "action": "Warning",
+        "justification": "The type '{0}' of the {1} field '{2}' has 'Internal' accessibility. The field will not be usable outside of this module without an implicit conversion."
+      },
+      {
+        "id": "AL0843",
+        "action": "Error",
+        "justification": "The property '{0}' can only be used if the {1}'s type is '{2}'."
+      },
+      {
+        "id": "AL0844",
+        "action": "Error",
+        "justification": "The property '{0}' can only be used if the (1)'s type is one of these values: '{2}'."
+      },
+      {
+        "id": "AL0845",
+        "action": "Warning",
+        "justification": "The 0) '{1}' is already being used. The EntityName and Entity Names property values must be unique."
+      },
+      {
+        "id": "AL0846",
+        "action": "Error",
+        "justification": "The (0) '{1}' is already being used. The Entity Name and EntityNames property values must be unique."
+      },
+      {
+        "id": "AL0847",
+        "action": "Error",
+        "justification": "'{0}' does not contain a definition for '{1}'."
+      },
+      {
+        "id": "AL0848",
+        "action": "Warning",
+        "justification": "'{0}' is a keyword from version '{1 }."
+      },
+      {
+        "id": "AL0849",
+        "action": "Error",
+        "justification": "The page customization ' 0}' cannot be referenced from the profile extension '{1}' because it uses the property '{2 }."
+      },
+      {
+        "id": "AL0850",
+        "action": "Error",
+        "justification": "This feature is under development and is exclusively accessible to Microsoft."
+      },
+      {
+        "id": "AL0851",
+        "action": "Error",
+        "justification": "The type '{0}' doesn't support casting."
+      },
+      {
+        "id": "AL0852",
+        "action": "Error",
+        "justification": "Interface '{0}' cannot extend interface {1} since it causes a circular reference."
+      },
+      {
+        "id": "AL0853",
+        "action": "Error",
+        "justification": "'{0}' cannot be used as a part in '{1}' because it causes a circular reference."
+      },
+      {
+        "id": "AL0855",
+        "action": "Error",
+        "justification": "The variable name cannot be empty."
+      },
+      {
+        "id": "AL0856",
+        "action": "Error",
+        "justification": "Statements cannot start with a parenthesis in runtime version '{0}'. The supported runtime versions are: '{1}' or greater."
+      },
+      {
+        "id": "AL0857",
+        "action": "Error",
+        "justification": "The size of resource file '{0}' exceeds the maximum allowed size limit of '{1}' MB. File size: '{2}' MB."
+      },
+      {
+        "id": "AL0858",
+        "action": "Error",
+        "justification": "The total size of all resource files exceeds the maximum allowed size limit of '{0}' MB. Total size: '{1}' MB."
+      },
+      {
+        "id": "AL0859",
+        "action": "Error",
+        "justification": "The resource file (0) has a prohibited filetype."
+      },
+      {
+        "id": "AL0860",
+        "action": "Error",
+        "justification": "The path for resource file 0 is too long. The total combined length of the filename in addition to the directory structure starting from the \"\".resources\"\" folder must be shorter than {0} characters."
+      },
+      {
+        "id": "AL0861",
+        "action": "Error",
+        "justification": "There are too many resources included in the app file. Only up to {0} resources can be added. Currently there are (1 resources."
+      },
+      {
+        "id": "AL0862",
+        "action": "Error",
+        "justification": "There are multiple resources with the name (0)."
+      },
+      {
+        "id": "AL0863",
+        "action": "Error",
+        "justification": "The folder ' 0}' does not exist."
+      },
+      {
+        "id": "AL0864",
+        "action": "Warning",
+        "justification": "The control type 'ChartPart' is not supported."
+      },
+      {
+        "id": "AL0865",
+        "action": "Error",
+        "justification": "The control type 'ChartPart' is not supported."
+      },
+      {
+        "id": "AL0866",
+        "action": "Error",
+        "justification": "The resource '{0}' is empty. Resources cannot be zero-byte files."
+      },
+      {
+        "id": "AL0867",
+        "action": "Error",
+        "justification": "The method '{0}' is already declared in the interface '{1}' in the extension '{2}' by '{3}'."
+      },
+      {
+        "id": "AL0868",
+        "action": "Error",
+        "justification": "The method '{0}' from this interface is already declared in the interface '{1}' in the extension '{2}' by '{3}'. It will not be possible to invoke this method via this interface."
+      },
+      {
+        "id": "AL0869",
+        "action": "Warning",
+        "justification": "'{0}' '{1}' was expected to be found in app '{2}' but was instead found in app '{3}', which is propagating its dependencies to '{2 )' ."
+      },
+      {
+        "id": "AL0870",
+        "action": "Error",
+        "justification": "Expected verbatim string literal."
+      },
+      {
+        "id": "AL0871",
+        "action": "Error",
+        "justification": "Non valid '@' sequence."
+      },
+      {
+        "id": "AL0873",
+        "action": "Error",
+        "justification": "No enclosing loop within which to continue."
+      },
+      {
+        "id": "AL0874",
+        "action": "Error",
+        "justification": "Pages with SubType set to UserControlHost must specify exactly one control of type usercontrol in the Content Area."
+      },
+      {
+        "id": "AL0875",
+        "action": "Error",
+        "justification": "Pages with SubType set to UserControlHost do not support actions."
+      },
+      {
+        "id": "AL0876",
+        "action": "Error",
+        "justification": "The {0} '{1}' cannot be used if the property '{2}' is set to ' 3)'."
+      },
+      {
+        "id": "AL0877",
+        "action": "Error",
+        "justification": "The 0} '{1}' cannot be used if the property '{2}' is set with any of the values of: '{3}'."
+      },
+      {
+        "id": "AL0878",
+        "action": "Error",
+        "justification": "The 0} '{1}' cannot be used if the property '{2}' is set."
+      },
+      {
+        "id": "AL0879",
+        "action": "Error",
+        "justification": "The trigger '{0}' cannot be used if the property '{1}' of '{2}' is set."
+      },
+      {
+        "id": "AL0880",
+        "action": "Error",
+        "justification": "The trigger '{0}' cannot be used if the property '{1}' of '{2}' is set to '{3}'."
+      },
+      {
+        "id": "AL0881",
+        "action": "Error",
+        "justification": "The trigger '{0}' cannot be used if the property '{1}' of '{2}' is set with any of the values of :'{3}'."
+      },
+      {
+        "id": "AL0882",
+        "action": "Error",
+        "justification": "Pages with SubType set to UserControlHost must specify at most one field of type Text in the Navigation Area."
+      },
+      {
+        "id": "AL0883",
+        "action": "Error",
+        "justification": "The value '{0}' is not a valid HTTP status code."
+      },
+      {
+        "id": "AL0884",
+        "action": "Error",
+        "justification": "The value '{0}' is outside the allowed range for mocked HTTP status codes. Redirect (3**) status codes are not permitted."
+      },
+      {
+        "id": "AL0999",
+        "action": "Error",
+        "justification": "Internal error: {0}."
+      },
+      {
+        "id": "AL1000",
+        "action": "Warning",
+        "justification": "Ignoring/noconfig option because it was specified in a response file."
+      },
+      {
+        "id": "AL1001",
+        "action": "Error",
+        "justification": "Source file '{0}' could not be found."
+      },
+      {
+        "id": "AL1002",
+        "action": "Error",
+        "justification": "Error opening response file '{0}'."
+      },
+      {
+        "id": "AL1003",
+        "action": "Warning",
+        "justification": "An instance of analyzer {0} cannot be created from {1}: (2)."
+      },
+      {
+        "id": "AL1004",
+        "action": "Warning",
+        "justification": "The assembly (0) does not contain any analyzers."
+      },
+      {
+        "id": "AL1005",
+        "action": "Warning",
+        "justification": "Unable to load Analyzer assembly {0}: {1}."
+      },
+      {
+        "id": "AL1006",
+        "action": "Error",
+        "justification": "Metadata file '{0}' could not be found."
+      },
+      {
+        "id": "AL1007",
+        "action": "Error",
+        "justification": "Missing file specification for '{0}' option."
+      },
+      {
+        "id": "AL1008",
+        "action": "Error",
+        "justification": "Command-line syntax error: Missing '{0}' for '{1}' option."
+      },
+      {
+        "id": "AL1009",
+        "action": "Error",
+        "justification": "Unrecognized option: '{0}'."
+      },
+      {
+        "id": "AL1010",
+        "action": "Error",
+        "justification": "Command-line syntax error: Missing: <number> for '{0}' option."
+      },
+      {
+        "id": "AL1011",
+        "action": "Warning",
+        "justification": "Source file '{0}' specified multiple times."
+      },
+      {
+        "id": "AL1012",
+        "action": "Error",
+        "justification": "Could not write to output file '{0}' -- '{1}'."
+      },
+      {
+        "id": "AL1013",
+        "action": "Error",
+        "justification": "'{0}' is a binary file instead of a text file."
+      },
+      {
+        "id": "AL1014",
+        "action": "Error",
+        "justification": "Source file ' 0}' could not be opened -- {1}."
+      },
+      {
+        "id": "AL1015",
+        "action": "Error",
+        "justification": "Compilation canceled by user."
+      },
+      {
+        "id": "AL1017",
+        "action": "Error",
+        "justification": "The manifest file is not valid. {0}."
+      },
+      {
+        "id": "AL1018",
+        "action": "Error",
+        "justification": "Directory '{0}' could not be found."
+      },
+      {
+        "id": "AL1019",
+        "action": "Error",
+        "justification": "One or more dependencies defined in the project manifest are not valid. One or more of the required attributes: 'publisher', 'name', 'version', and 'id' are either missing or not valid."
+      },
+      {
+        "id": "AL1021",
+        "action": "Error",
+        "justification": "The package cache path has not been specified."
+      },
+      {
+        "id": "AL1022",
+        "action": "Error",
+        "justification": "A package with publisher '{0}', name '{1}', and a version compatible with '{2}' could not be found in the package cache folders: {3}."
+      },
+      {
+        "id": "AL1023",
+        "action": "Error",
+        "justification": "The package file (0) is not valid."
+      },
+      {
+        "id": "AL1024",
+        "action": "Error",
+        "justification": "A package with publisher ' 0}', name '{1}', and a version compatible with '{2}' could not be loaded{. 3}."
+      },
+      {
+        "id": "AL1025",
+        "action": "Warning",
+        "justification": "The file at location '{0}' does not match any definition."
+      },
+      {
+        "id": "AL1026",
+        "action": "Warning",
+        "justification": "A warning occurred during XML validation: '{0}'."
+      },
+      {
+        "id": "AL1028",
+        "action": "Error",
+        "justification": "An IO exception has happened when trying to write to output file '{0}' '{1}'."
+      },
+      {
+        "id": "AL1029",
+        "action": "Warning",
+        "justification": "Translation file '{0}' has invalid target language '{1}'."
+      },
+      {
+        "id": "AL1030",
+        "action": "Warning",
+        "justification": "Translation file '{0}' is missing a target language."
+      },
+      {
+        "id": "AL1031",
+        "action": "Info",
+        "justification": "Successfully included translations for: {0}."
+      },
+      {
+        "id": "AL1032",
+        "action": "Error",
+        "justification": "Translation file '{0}' has the same target language as another translation file."
+      },
+      {
+        "id": "AL1033",
+        "action": "Error",
+        "justification": "An error occurred while loading the included rule set file {0} - {1}."
+      },
+      {
+        "id": "AL1034",
+        "action": "Error",
+        "justification": "The link '{0}' must contain a placeholder with value 0 for the user locale."
+      },
+      {
+        "id": "AL1035",
+        "action": "Error",
+        "justification": "The manifest properties 'baseHelpUrl' and 'supportedLocales' must both be specified and have values."
+      },
+      {
+        "id": "AL1036",
+        "action": "Error",
+        "justification": "The locale '{0}' is not valid."
+      },
+      {
+        "id": "AL1037",
+        "action": "Error",
+        "justification": "The locale '{0}' is already defined."
+      },
+      {
+        "id": "AL1038",
+        "action": "Error",
+        "justification": "The version number ' 0 ' for the property '{1}' does not match the expected format: W.X.Y.Z where W, X, Y, and Z represent positive integers."
+      },
+      {
+        "id": "AL1039",
+        "action": "Error",
+        "justification": "The version number '{0}' for the property '{1}' does not match the expected format: X.Y where X and Y represent positive integers."
+      },
+  
+      {
+        "id": "AL1041",
+        "action": "Error",
+        "justification": "The property '{0}' must be defined in the manifest."
+      },
+      {
+        "id": "AL1042",
+        "action": "Error",
+        "justification": "The id '{0}' for the package with publisher '{1}', name '(2)', and version '{3}' specified in the project manifest does not match the id '{4}' of the package with the same name, publisher, and version found in the package cache folder."
+      },
+      {
+        "id": "AL1043",
+        "action": "Error",
+        "justification": "The runtime version '{0}' is not supported by the AL compiler."
+      },
+      {
+        "id": "AL1044",
+        "action": "Error",
+        "justification": "The value for the manifest property '{0}' is not valid. Expected type: {1}."
+      },
+  
+     {
+        "id": "AL1044",
+        "action": "Error",
+        "justification": "The value for the manifest property '{0}' is not valid. Expected type: {1}."
+      },
+      {
+        "id": "AL1045",
+        "action": "Error",
+        "justification": "The package cache (0) could not be found."
+      },
+      {
+        "id": "AL1046",
+        "action": "Error",
+        "justification": "The application ID ranges (0) are overlapping."
+      },
+      {
+        "id": "AL1047",
+        "action": "Error",
+        "justification": "The application ID range (0) is not valid."
+      },
+      {
+        "id": "AL1048",
+        "action": "Error",
+        "justification": "Both 'idRange' and 'idRanges' properties are added. You should use the 'idRanges' property and remove the 'idRange' property."
+      },
+      {
+        "id": "AL1049",
+        "action": "Error",
+        "justification": "A project without a manifest must have the /out option specified."
+      },
+      {
+        "id": "AL1050",
+        "action": "Error",
+        "justification": "Fast publishing requires an application file '{0}' to be build and published."
+      },
+      {
+        "id": "AL1051",
+        "action": "Error",
+        "justification": "Fast publishing requires that there are no manifest changes for the application '{0}'."
+      },
+      {
+        "id": "AL1052",
+        "action": "Error",
+        "justification": "The link '{0}' can only contain one placeholder with value 0 for the user locale. No other placeholder values are allowed."
+      },
+      {
+        "id": "AL1053",
+        "action": "Error",
+        "justification": "The value ' 0}' is not valid for the manifest property '{1}'."
+      },
+      {
+        "id": "AL1054",
+        "action": "Error",
+        "justification": "Invalid reference module: (0). Please clear the downloaded symbols cache and re-download symbols."
+      },
+      {
+        "id": "AL1055",
+        "action": "Warning",
+        "justification": "Invalid reference module: (0). Please clear the downloaded symbols cache and re-download symbols."
+      },
+      {
+        "id": "AL1056",
+        "action": "Warning",
+        "justification": "A package with publisher '{0}', name '{1}', and a version compatible with '{2}' could not be loaded. (3)."
+      },
+      {
+        "id": "AL1057",
+        "action": "Error",
+        "justification": "The module specification is not valid. One or more of the required attributes: 'publisher', 'name', and 'id' are either missing or not valid."
+      },
+      {
+        "id": "AL1058",
+        "action": "Warning",
+        "justification": "appld and Id are both specified for a dependency property. The appld value will be ignored."
+      },
+      {
+        "id": "AL1059",
+        "action": "Warning",
+        "justification": "Feature '(0)' can only be enabled, if feature '{1}' is also enabled."
+      },
+      {
+        "id": "AL1060",
+        "action": "Error",
+        "justification": "The max degree of parallelism must be -1 or positive."
+      },
+      {
+        "id": "AL1061",
+        "action": "Error",
+        "justification": "An error occurred during file validation: '{0}'."
+      },
+      {
+        "id": "AL1062",
+        "action": "Error",
+        "justification": "Too many key vault URLs specified."
+      },
+      {
+        "id": "AL1063",
+        "action": "Error",
+        "justification": "Key vault URL is too long."
+      },
+      {
+        "id": "AL1064",
+        "action": "Error",
+        "justification": "Key vault URL is not a valid Azure key vault URL. A valid key vault URL must use HTTPS and point to the Azure key vault domain."
+      },
+      {
+        "id": "AL1065",
+        "action": "Error",
+        "justification": "Key vault URL should not have a path or query string."
+      },
+      {
+        "id": "AL1066",
+        "action": "Error",
+        "justification": "Duplicate package dependency with application ID '{0}', publisher '{1}', and name '{2}'. Remove duplicate dependencies in the application manifest."
+      },
+      {
+        "id": "AL1067",
+        "action": "Error",
+        "justification": "Duplicate package dependency with publisher ' 0}', and name '{1}'. Remove duplicate dependencies in the application manifest."
+      },
+      {
+        "id": "AL1068",
+        "action": "Error",
+        "justification": "Duplicate package dependency with application ID '{0}', and publisher '{1}'.Remove duplicate dependencies in the application manifest."
+      },
+      {
+        "id": "AL1069",
+        "action": "Error",
+        "justification": "Duplicate package dependency with application ID '{0}', and name '{1}'.Remove duplicate dependencies in the application manifest."
+      },
+      {
+        "id": "AL1070",
+        "action": "Error",
+        "justification": "Duplicate package dependency with application ID '{0}'. Remove duplicate dependencies in the application manifest."
+      },
+      {
+        "id": "AL1071",
+        "action": "Error",
+        "justification": "Error writing to XML documentation file: (0)."
+      },
+      {
+        "id": "AL1072",
+        "action": "Warning",
+        "justification": "The name for the preprocessing symbol is not valid; '{0}' is not a valid identifier."
+      },
+      {
+        "id": "AL1073",
+        "action": "Error",
+        "justification": "The procedure with name (0) has the same name as a declared trigger."
+      },
+      {
+        "id": "AL1074",
+        "action": "Error",
+        "justification": "Both 'applicationInsightsKey' and 'applicationInsightsConnectionString' are added. You should use the 'applicationInsights ConnectionString' property and remove the 'applicationInsightsKey' property."
+      },
+      {
+        "id": "AL1075",
+        "action": "Error",
+        "justification": "Both 'ShowMyCode' and 'ResourceExposure Policy' properties are added. You should use the 'ResourceExposure Policy' property and remove the 'ShowMyCode' property."
+      },
+      {
+        "id": "AL1076",
+        "action": "Info",
+        "justification": "A package that satisfies the dependency on app with ID {0} with name '{1}' and publisher '{2 ' was found, but the name or publisher has changed. New name '(3)' and new publisher '{4)'. Consider updating the dependency reference to the new name/publisher."
+      },
+      {
+        "id": "AL1077",
+        "action": "Error",
+        "justification": "An error was encountered when trying to load the workspace: (0)."
+      },
+      {
+        "id": "AL1078",
+        "action": "Warning",
+        "justification": "Key vault URL is not a valid Azure key vault URL. A valid key vault URL must use HTTPS and point to the Azure key vault domain."
+      },
+      {
+        "id": "AL1079",
+        "action": "Info",
+        "justification": "Debugging will not work for this extension because 'allowDebugging' has been set to false and 'applyToDevExtension' to true."
+      },
+      {
+        "id": "AL1080",
+        "action": "Info",
+        "justification": "Source will still be visible for this extension via debugging because 'allowDebugging' has been set to true."
+      },
+      {
+        "id": "AL1081",
+        "action": "Error",
+        "justification": "Unable to update report layout '{0}' for '{1}'. Reason: {2}."
+      },
+      {
+        "id": "AL1082",
+        "action": "Error",
+        "justification": "The manifest property '{0}' is only available for Target '{1}'."
+      },
+      {
+        "id": "AL1100",
+        "action": "Error",
+        "justification": "File name '{0}' is empty, contains invalid characters, has a drive specification without an absolute path, or is too long."
+      },
+      {
+        "id": "AL1101",
+        "action": "Error",
+        "justification": "Target must specify one of 'internal', 'solution', 'extension'."
+      },
+      {
+        "id": "AL1130",
+        "action": "Error",
+        "justification": "The format of property '{0}' must be a timeout duration specified as '[d.]hh:mm:ss[.fffffff]'."
+      },
+      {
+        "id": "AL1150",
+        "action": "Error",
+        "justification": "The link in parameter '{0}' ({1}) is not valid. (2)."
+      },
+      {
+        "id": "AL1151",
+        "action": "Error",
+        "justification": "Cannot create a manifest for Extension '{0}' because the Name and Publisher match the current application. Remove this dependency from the application manifest."
+      },
+      {
+        "id": "AL1152",
+        "action": "Error",
+        "justification": "Dependency with ID '{0}' matches the current application ID. Remove this dependency from the application manifest."
+      },
+      {
+        "id": "AL1153",
+        "action": "Error",
+        "justification": "The referenced module '{1}' with runtime reference version '{0}' cannot be loaded by the compiler with version '{2}'."
+      },
+      {
+        "id": "AL1154",
+        "action": "Error",
+        "justification": "It is not possible to specify both '{0}' and '{1}' at the same time."
+      },
+      {
+        "id": "AL1155",
+        "action": "Error",
+        "justification": "Missing folder specification for '{0}' option."
+      },
+      {
+        "id": "AL1156",
+        "action": "Warning",
+        "justification": "Comments are not recommended inside the manifest file as they can cause interoperability issues with CI/CD pipelines or other integrations."
+      },
+      {
+        "id": "AL1401",
+        "action": "Warning",
+        "justification": "Reference '{0}' in application object '{1}' does not exist."
+      },
+      {
+        "id": "AL1402",
+        "action": "Warning",
+        "justification": "{ 0} '{1}' is missing."
+      },
+      {
+        "id": "AL1403",
+        "action": "Warning",
+        "justification": "'{0}' is an ambiguous reference between '{1}' defined by the extension '{2}' and '{3}' defined by the extension '{4}'."
+      },
+      {
+        "id": "AL1404",
+        "action": "Warning",
+        "justification": "The action '{0}' is not found in the target '{1}'."
+      },
+      {
+        "id": "AL1405",
+        "action": "Warning",
+        "justification": "The control '{0}' is not found in the target '{1}'."
+      },
+      {
+        "id": "AL1406",
+        "action": "Warning",
+        "justification": "The view '{0}' is not found in the target '{1}'."
+      },
+      {
+        "id": "AL1407",
+        "action": "Warning",
+        "justification": "At least one target has to be specified for the move."
+      },
+      {
+        "id": "AL1408",
+        "action": "Warning",
+        "justification": "Invalid application object identifier. A number or an application object name is expected."
+      },
+      {
+        "id": "AL1409",
+        "action": "Warning",
+        "justification": "Page '{0}' should be of type 'RoleCenter'."
+      },
+      {
+        "id": "AL1410",
+        "action": "Warning",
+        "justification": "The target 0} '{1}' for the extension object is not found."
+      },
+      {
+        "id": "AL1411",
+        "action": "Warning",
+        "justification": "Multiple page customizations have been specified for the same page (0) within the same profile."
+      },
+      {
+        "id": "AL1412",
+        "action": "Warning",
+        "justification": "{0} '{1}' is marked for removal. {2}."
+      },
+      {
+        "id": "AL1413",
+        "action": "Warning",
+        "justification": "A member of type {0} with name '{1}' is already defined in {2} '{3}' by the extension '{4}'."
+      },
+      {
+        "id": "AL1414",
+        "action": "Info",
+        "justification": "The page customization for page '{0}' does not make any modifications, so it can be removed without affecting any profiles or user personalization."
+      },
+      {
+        "id": "AL1415",
+        "action": "Warning",
+        "justification": "{0} '{1}' is removed. (2)."
+      },
+      {
+        "id": "AL1416",
+        "action": "Info",
+        "justification": "The 0} '{1}' cannot be moved relatively to '{2}' because '{2}' is missing. This move is ignored."
+      },
+      {
+        "id": "AL1417",
+        "action": "Info",
+        "justification": "The {0} '{1}' cannot be added relatively to '{2}' because ' 2)' is missing. '{1}' is added at a default location instead."
+      },
+      {
+        "id": "AL1418",
+        "action": "Warning",
+        "justification": "A Dataltem with name '{0}' could not be found in the target {1}."
+      },
+      {
+        "id": "AL1419",
+        "action": "Warning",
+        "justification": "A Dataltem or Column with name '{0}' could not be found in the target (1)."
+      },
+      {
+        "id": "AL1420",
+        "action": "Warning",
+        "justification": "The (0) '{1}' cannot be used as target of the ActionRef '(2)'. ActionRefs can only target Actions. Ignoring the ActionRef."
+      },
+      {
+        "id": "AL1421",
+        "action": "Warning",
+        "justification": "The 0} '{1}' is using the '{2}' property. This will be automatically converted to the new syntax when customizing the related page in the webclient."
+      },
+      {
+        "id": "AL1422",
+        "action": "Warning",
+        "justification": "The target action '{0}' cannot be resolved in page ' 1}'. Ignoring the ActionRef."
+      },
+      {
+        "id": "AL1423",
+        "action": "Warning",
+        "justification": "'{0}' does not contain a definition for '{1}'."
+      },
+      {
+        "id": "AL1424",
+        "action": "Warning",
+        "justification": "The name '{0}' does not exist in the current context."
+      },
+      {
+        "id": "AL1425",
+        "action": "Warning",
+        "justification": "The field with ID '{0}' and name '{1}' cannot be used as source expression in the page customization '{2}' targeting page '{3}'. Ignoring the page field."
+      },
+      {
+        "id": "AL1426",
+        "action": "Warning",
+        "justification": "The namespace '{0}' is unknown."
+      },
+       {
+        "Id": "PTE0001",
+        "action": "Error",
+        "justification": "Object ID must be in free range."
+      },
+      {
+        "Id": "PTE0002",
+        "action": "Error",
+        "justification": "Field ID must be in free range."
+      },
+      {
+        "Id": "PTE0003",
+        "action": "Error",
+        "justification": "Table ID must be in free range."
+      },
+      {
+        "Id": "PTE0004",
+        "action": "Error",
+        "justification": "Page ID must be in free range."
+      },
+      {
+        "Id": "PTE0005",
+        "action": "Error",
+        "justification": "Codeunit ID must be in free range."
+      },
+      {
+        "Id": "PTE0006",
+        "action": "Error",
+        "justification": "Query ID must be in free range."
+      },
+      {
+        "Id": "PTE0007",
+        "action": "Error",
+        "justification": "Report ID must be in free range."
+      },
+      {
+        "Id": "PTE0008",
+        "action": "Error",
+        "justification": "XmlPort ID must be in free range."
+      },
+      {
+        "Id": "PTE0009",
+        "action": "Error",
+        "justification": "MenuSuite ID must be in free range."
+      },
+      {
+        "Id": "PTE0010",
+        "action": "Error",
+        "justification": "Notification ID must be in free range."
+      },
+      {
+        "Id": "PTE0011",
+        "action": "Error",
+        "justification": "Profile ID must be in free range."
+      },
+      {
+        "Id": "PTE0012",
+        "action": "Error",
+        "justification": "PageExtension ID must be in free range."
+      },
+      {
+        "Id": "PTE0013",
+        "action": "Error",
+        "justification": "TableExtension ID must be in free range."
+      },
+      {
+        "Id": "PTE0014",
+        "action": "Error",
+        "justification": "Enum ID must be in free range."
+      },
+      {
+        "Id": "PTE0015",
+        "action": "Error",
+        "justification": "DotNet ID must be in free range."
+      },
+      {
+        "Id": "PTE0016",
+        "action": "Error",
+        "justification": "ControlAddIn ID must be in free range."
+      },
+      {
+        "Id": "PTE0017",
+        "action": "Error",
+        "justification": "PermissionSet ID must be in free range."
+      },
+      {
+        "Id": "PTE0018",
+        "action": "Error",
+        "justification": "Permission ID must be in free range."
+      },
+      {
+        "Id": "PTE0019",
+        "action": "Error",
+        "justification": "Interface ID must be in free range."
+      },
+      {
+        "Id": "PTE0020",
+        "action": "Error",
+        "justification": "ReportExtension ID must be in free range."
+      },
+      {
+        "Id": "PTE0021",
+        "action": "Error",
+        "justification": "ProfileExtension ID must be in free range."
+      },
+      {
+        "Id": "PTE0022",
+        "action": "Warning",
+        "justification": "The table field ordinal value should be within the allowed range."
+      },
+      {
+        "Id": "PTE0023",
+        "action": "Info",
+        "justification": "The enum ordinal value should be within the allowed range"
+      },
+      {
+        "Id": "PTE0024",
+        "action": "Error",
+        "justification": "Moving tables or fields is not allowed on per-tenant extensions."
+      },
+      {
+        "Id": "PTE0025",
+        "action": "Warning",
+        "justification": "Avoid using duplicate object names"
+      },
+      {
+        "id": "AW0001",
+        "action": "Warning",
+        "justification": "The Web client does not support displaying the Request page of XMLPorts."
+      },
+      {
+        "id": "AW0002",
+        "action": "Warning",
+        "justification": "The Web client does not support displaying both Actions and Fields in Cue Groups. Only Fields will be displayed."
+      },
+      {
+        "id": "AW0003",
+        "action": "Warning",
+        "justification": "The Web client does not support displaying Repeater controls containing Parts."
+      },
+      {
+        "id": "AW0004",
+        "action": "Warning",
+        "justification": "A Blob cannot be used as a source expression for a page field."
+      },
+      {
+        "id": "AW0005",
+        "action": "Info",
+        "justification": "Actions should use the Image property."
+      },
+      {
+        "id": "AW0006",
+        "action": "Info",
+        "justification": "Pages and reports should use the UsageCategory and ApplicationArea properties to be searchable."
+      },
+      {
+        "id": "AW0007",
+        "action": "Error",
+        "justification": "The Web client does not support displaying Repeater controls that contain FlowFilter fields."
+      },
+      {
+        "id": "AW0008",
+        "action": "Warning",
+        "justification": "The Web client only supports displaying Repeater controls in pages of type List, ListPart, and Worksheet."
+      },
+      {
+        "id": "AW0009",
+        "action": "Warning",
+        "justification": "Using a Blob with subtype Bitmap on a page field is deprecated. Instead use the Media/MediaSet data types."
+      },
+      {
+        "id": "AW0010",
+        "action": "Warning",
+        "justification": "A Repeater control used on a List page must be defined at the beginning of the area(Content) section."
+      },
+      {
+        "id": "AW0011",
+        "action": "Info",
+        "justification": "Add PromotedOnly=\"true\" to some or all promoted actions to avoid identical actions from appearing in both the promoted and default sections of the command bar."
+      },
+      {
+        "id": "AW0012",
+        "action": "Warning",
+        "justification": "The Web client does not support properties for teaching tips in certain contexts."
+      },
+      {
+        "id": "AW0013",
+        "action": "Warning",
+        "justification": "Groups containing promoted actions should not be hidden."
+      },
+      {
+        "id": "AW0014",
+        "action": "Warning",
+        "justification": "Groups containing ActionRef targets should not be hidden."
+      },
+      {
+        "id": "AW0015",
+        "action": "Warning",
+        "justification": "Actions with scope repeater must be promoted."
+      },
+      {
+        "id": "AW0016",
+        "action": "Warning",
+        "justification": "Rich Text Editor fields are only allowed while alone in a FastTab group."
+      }
+     ]
+  }
+      
+  
