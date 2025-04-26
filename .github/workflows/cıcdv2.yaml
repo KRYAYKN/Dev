@@ -73,7 +73,14 @@ jobs:
           BC_PASSWORD: ${{ secrets.BC_PASSWORD }}
           LICENSE_FILE: ${{ secrets.LICENSE_FILE }}
           RepositoryDirectory: ${{ github.workspace }}
-
+      - name: Increment App Version
+        if: needs.set-environment.outputs.release-environment != 'dev'
+        uses: KRYAYKN/ACTION-Increase-App-Version@main
+        with:
+          MAIN_APP_PATH: Saint-gobain.app
+          TEST_APP_PATH: Saint-gobain.test
+          Build_StagingDirectory: ${{ github.workspace }}\Artifacts
+          IncrementType: ${{ needs.set-environment.outputs.version-increment }}
       - name: Compile and Test AL Apps in Container
         uses: KRYAYKN/ACTION-Compile-app-separatelye@main
         with:
@@ -84,14 +91,7 @@ jobs:
           TEST_APP_PATH: Saint-gobain.test
           Build_StagingDirectory: ${{ github.workspace }}\Artifacts
 
-      - name: Increment App Version
-        if: needs.set-environment.outputs.release-environment != 'dev'
-        uses: KRYAYKN/ACTION-Increase-App-Version@main
-        with:
-          MAIN_APP_PATH: Saint-gobain.app
-          TEST_APP_PATH: Saint-gobain.test
-          Build_StagingDirectory: ${{ github.workspace }}\Artifacts
-          IncrementType: ${{ needs.set-environment.outputs.version-increment }}
+
 
       - name: Upload Build
         uses: actions/upload-artifact@v4
