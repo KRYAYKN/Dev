@@ -1,6 +1,7 @@
 report 50100 Provisionsabrechnung
 {
     ApplicationArea = All;
+    Caption = 'Commission calculation';
     // Key Sales Price:  Item No.,Sales Type,Sales Code,Starting Date,Currency Code,Variant Code,Unit of Measure Code,Minimum Quantity
     //
     // *** COSMO CONSULT ***
@@ -11,6 +12,7 @@ report 50100 Provisionsabrechnung
     DefaultLayout = RDLC;
     PreviewMode = PrintLayout;
     RDLCLayout = 'src\Reports\Layouts\Report 50028 - Provisionsabrechnung.rdlc';
+    UsageCategory = ReportsAndAnalysis;
 
     dataset
     {
