@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-GB" original="Please update this value">
+    <body>
+      <group id="body">
+        <trans-unit id="Table 1994964448 - Field 2486843031 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Credit Rating Agency</source>
+          <target>Credit Rating Agency</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Customer - Field Credit Rating Agency - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1994964448 - Field 3197070065 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payment Terms</source>
+          <target>Payment Terms</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Customer - Field Payment Terms - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1959004673 - NamedType 396720923" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Agent No.</source>
+          <target>Agent No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Provisionsabrechnung - NamedType Text50010</note>
+        </trans-unit>
+        <trans-unit id="Report 1959004673 - NamedType 1034417540" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Agent Name</source>
+          <target>Agent Name</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Provisionsabrechnung - NamedType Text50011</note>
+        </trans-unit>
+        <trans-unit id="Report 1959004673 - NamedType 1672114157" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer No.</source>
+          <target>Customer No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Provisionsabrechnung - NamedType Text50012</note>
+        </trans-unit>
+        <trans-unit id="Report 1959004673 - NamedType 2309810774" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Name</source>
+          <target>Customer Name</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Provisionsabrechnung - NamedType Text50013</note>
+        </trans-unit>
+        <trans-unit id="Report 1959004673 - NamedType 2140901751" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sale to Customer No.</source>
+          <target>Sale to Customer No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Provisionsabrechnung - NamedType Text50014</note>
+        </trans-unit>
+        <trans-unit id="Report 1959004673 - NamedType 2778598368" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sale to Customer Name</source>
+          <target>Sale to Customer Name</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Provisionsabrechnung - NamedType Text50015</note>
+        </trans-unit>
+        <trans-unit id="Report 1959004673 - NamedType 3416294985" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document No.</source>
+          <target>Document No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Provisionsabrechnung - NamedType Text50016</note>
+        </trans-unit>
+        <trans-unit id="Report 1959004673 - NamedType 4053991602" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Order No.</source>
+          <target>Order No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Provisionsabrechnung - NamedType Text50017</note>
+        </trans-unit>
+        <trans-unit id="Report 1959004673 - NamedType 3885082579" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item No.</source>
+          <target>Item No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Provisionsabrechnung - NamedType Text50018</note>
+        </trans-unit>
+        <trans-unit id="Report 1959004673 - NamedType 227811900" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item Description</source>
+          <target>Item Description</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Provisionsabrechnung - NamedType Text50019</note>
+        </trans-unit>
+        <trans-unit id="Report 1959004673 - NamedType 136984654" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount</source>
+          <target>Amount</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Provisionsabrechnung - NamedType Text50020</note>
+        </trans-unit>
+        <trans-unit id="Report 1959004673 - NamedType 3794255333" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit of Measure</source>
+          <target>Unit of Measure</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Provisionsabrechnung - NamedType Text50021</note>
+        </trans-unit>
+        <trans-unit id="Report 1959004673 - NamedType 3156558716" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Price per Ton</source>
+          <target>Price per Ton</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Provisionsabrechnung - NamedType Text50022</note>
+        </trans-unit>
+        <trans-unit id="Report 1959004673 - NamedType 2518862099" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ExWorks</source>
+          <target>ExWorks</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Provisionsabrechnung - NamedType Text50023</note>
+        </trans-unit>
+        <trans-unit id="Report 1959004673 - NamedType 1881165482" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Commision in %</source>
+          <target>Commision in %</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Provisionsabrechnung - NamedType Text50024</note>
+        </trans-unit>
+        <trans-unit id="Report 1959004673 - NamedType 1243468865" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Commission (%)</source>
+          <target>Commission (%)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Provisionsabrechnung - NamedType Text50025</note>
+        </trans-unit>
+        <trans-unit id="Report 1959004673 - NamedType 605772248" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Euro per to</source>
+          <target>Euro per to</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Provisionsabrechnung - NamedType Text50026</note>
+        </trans-unit>
+        <trans-unit id="Report 1959004673 - NamedType 4263042927" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Commission (to)</source>
+          <target>Commission (to)</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Provisionsabrechnung - NamedType Text50027</note>
+        </trans-unit>
+        <trans-unit id="Report 1959004673 - NamedType 943590294" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Commission Value</source>
+          <target>Commission Value</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Provisionsabrechnung - NamedType Text50028</note>
+        </trans-unit>
+        <trans-unit id="Report 1959004673 - NamedType 305893677" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Due Date</source>
+          <target>Due Date</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Provisionsabrechnung - NamedType Text50029</note>
+        </trans-unit>
+        <trans-unit id="Report 1959004673 - NamedType 4155419677" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document Date</source>
+          <target>Document Date</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Provisionsabrechnung - NamedType Text50030</note>
+        </trans-unit>
+        <trans-unit id="Report 1959004673 - NamedType 498148998" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cloased at date</source>
+          <target>Cloased at date</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Provisionsabrechnung - NamedType Text50031</note>
+        </trans-unit>
+        <trans-unit id="Report 1959004673 - NamedType 2880026443" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Open</source>
+          <target>Open</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Provisionsabrechnung - NamedType Text50032</note>
+        </trans-unit>
+        <trans-unit id="Report 1959004673 - NamedType 1725001928" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Commission</source>
+          <target>Commission</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Provisionsabrechnung - NamedType Text50040</note>
+        </trans-unit>
+        <trans-unit id="Report 1959004673 - NamedType 1448469655" size-unit="char" translate="yes" xml:space="preserve">
+          <source>CM-2M+1D</source>
+          <target>CM-2M+1D</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Provisionsabrechnung - NamedType Text50050</note>
+        </trans-unit>
+        <trans-unit id="Report 1959004673 - NamedType 2086166272" size-unit="char" translate="yes" xml:space="preserve">
+          <source>CM-1M</source>
+          <target>CM-1M</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Provisionsabrechnung - NamedType Text50051</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
