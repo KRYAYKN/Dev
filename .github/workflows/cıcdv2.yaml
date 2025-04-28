@@ -26,7 +26,7 @@ jobs:
       release-environment: ${{ steps.environment.outputs.release-environment }}
       ignore-validation: ${{ steps.environment.outputs.ignore-validation-for-environment }}
       version-increment: ${{ github.event.inputs.version_increment || 'patch' }}
-     
+    
     steps:
       - name: Determine Environment Settings
         uses: KRYAYKN/dev1@main
@@ -52,14 +52,18 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
+
       - name: Prepare Docker
         uses: KRYAYKN/ACTION-Prepare-Docker@main
+
       - name: Create Staging Directory
         uses: KRYAYKN/ACTION-Creating-Staging-Directory@main
         with:
           Build_StagingDirectory: ${{ github.workspace }}\Build\Staging
+
       - name: Install BcContainerHelper
         uses: KRYAYKN/ACTION-Install-Bccontainer-Helper@main
+
       - name: Create BC Container
         uses: KRYAYKN/ACTION-Create-BC-Container@main
         with:
@@ -71,23 +75,30 @@ jobs:
           RepositoryDirectory: ${{ github.workspace }}
       - name: Increment App Version
         if: needs.set-environment.outputs.release-environment != 'dev'
-        id: increment-version
         uses: KRYAYKN/ACTION-Increase-App-Version@main
         with:
-          Build_StagingDirectory: ${{ github.workspace }}\Build\Staging
+          MAIN_APP_PATH: Saint-gobain.app
+          TEST_APP_PATH: Saint-gobain.test
+          Build_StagingDirectory: ${{ github.workspace }}\Artifacts
           IncrementType: ${{ needs.set-environment.outputs.version-increment }}
-      - name: Compile AL Application
-        uses: KRYAYKN/ACTION-Compile-AL-App@main
+      - name: Compile and Test AL Apps in Container
+        uses: KRYAYKN/ACTION-Compile-app-separatelye@main
         with:
           CONTAINERNAME: ${{ vars.CONTAINERNAME }}
           BC_USERNAME: ${{ secrets.BC_USERNAME }}
           BC_PASSWORD: ${{ secrets.BC_PASSWORD }}
+          MAIN_APP_PATH: Saint-gobain.app
+          TEST_APP_PATH: Saint-gobain.test
           Build_StagingDirectory: ${{ github.workspace }}\Artifacts
+
+
+
       - name: Upload Build
         uses: actions/upload-artifact@v4
         with:
           name: build-package
           path: ${{ github.workspace }}\Artifacts
+
       - name: Notify Teams Based on Compile Result
         if: always()
         uses: KRYAYKN/Teams-Notification@main
@@ -101,7 +112,6 @@ jobs:
           actor: ${{ github.actor }}
           commit-message: ${{ github.event.head_commit.message }}
           run-id: ${{ github.run_id }}
-          
 
   publish-app:
     runs-on: windows-latest
@@ -149,5 +159,3 @@ jobs:
           commit-message: ${{ github.event.head_commit.message }}
           run-id: ${{ github.run_id }}
           environment: ${{ vars.ENVIRONMENT }}
-        
-#sssssSS

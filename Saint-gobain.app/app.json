@@ -1,35 +1,41 @@
 {
-    "id": "ab48383d-1c96-45ad-99cb-4181188821f9",
-    "name": "Saint-gobain",
-    "publisher": "pargesoft",
-    "version": "1.0.20241121.10002",
-    "brief": "",
-    "description": "",
-    "privacyStatement": "",
-    "EULA": "",
-    "help": "",
-    "url": "",
-    "logo": "",
-    "dependencies": [
-
-
-    ],
-    "screenshots": [],
-    "platform": "1.0.0.0",
-    "application": "25.5.0.0",
-    "idRanges": [
-      {
-        "from": 66100,
-        "to": 66600
-      }
-    ],
-    "resourceExposurePolicy": {
-      "allowDebugging": true,
-      "allowDownloadingSource": true,
-      "includeSourceInSymbolFile": true
-    },
-    "runtime": "12.0",
-    "features": [
-      "NoImplicitWith"
-    ]
+  "id": "cf7f36db-3927-4670-a759-20ed45f0be9b",
+  "name": "SG Formula Customization",
+  "publisher": "Parge Yazilim Danismanlik Tic. A.S.",
+  "version": "25.04.21.1000",
+  "brief": "SG Formula Customization",
+  "description": "SG Formula Customization",
+  "privacyStatement": "https://apps.pargesoft.com.tr/privacy-policy/",
+  "EULA": "https://apps.pargesoft.com.tr/eul",
+  "help": "https://pargesoft.microsoftcrmportals.com",
+  "url": "https://www.pargesoft.com",
+  "logo": "PargesoftLogo.png",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "25.0.0.0",
+  "application": "25.0.0.0",
+  "runtime": "12.0",
+  "internalsVisibleTo": [
+    {
+      "id": "404c13b6-6dbc-4b8e-9b7b-463aea827c56",
+      "name": "SG Formula Customization.Test",
+      "publisher": "Parge Yazilim Danismanlik Tic. A.S."
+    }
+  ],
+  "idRanges": [
+    {
+      "from": 50100,
+      "to": 72000
+    }
+  ],
+  "features": [
+    "NoImplicitWith",
+    "TranslationFile",
+    "GenerateCaptions"
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": false,
+    "includeSourceInSymbolFile": false
   }
+}
