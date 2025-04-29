@@ -106,7 +106,7 @@ jobs:
         with:
           teams-webhook: ${{ secrets.TEAMS_WEBHOOK_URL }}
           pipeline-status: ${{ job.status }}
-          job-context: compile-app
+          job-context: compile-app-codeAnalyse-unitTests
           repository: ${{ github.repository }}
           pull-number: ${{ github.event.pull_request.number }}
           ref-name: ${{ github.ref_name }}
@@ -116,7 +116,7 @@ jobs:
 
   publish-app:
     runs-on: windows-latest
-    needs: [set-environment, compile-app]
+    needs: [set-environment, compile-app-codeAnalyse-unitTests]
     if: needs.set-environment.outputs.release-environment != ''
     environment: ${{ needs.set-environment.outputs.release-environment }}
     steps:
