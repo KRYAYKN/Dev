@@ -13,10 +13,11 @@ on:
       - perftest
       - 'release/**'
       - 'deploy/**'
-      - 'validation/**'
+     
     paths-ignore:
       - 'README.md'
-      - '.github/**'  
+      - '.github/**'
+      - '.vscode/**'  
 
 jobs:
   set-environment:
@@ -45,7 +46,7 @@ jobs:
           echo "Version Increment: ${{ github.event.inputs.version_increment || 'patch' }}"
         shell: bash
 
-  compile-app:
+  compile-app-codeAnalyse-unitTests:
     runs-on: windows-latest
     needs: [set-environment]
     environment: ${{ needs.set-environment.outputs.release-environment }}
